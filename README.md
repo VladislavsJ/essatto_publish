@@ -224,15 +224,33 @@ the scale.
    than a fixed level, which suits black ink on white, or darker than the surrounding paper by a share of the
    drawing's own ink contrast, which also reads grey or faded walls on aged paper. The second replaces the first
    only when it finds clearly more wall, so clean drawings are read exactly as before.
+   The sheet is first resized so that a typical detected door is 110 px wide, which makes wall thickness in pixels
+   similar on a huge sheet and a small flat plan.
 2. **Openings are closed.** Each door and window box from the detector is bridged across its wall gap, so rooms
    become closed regions.
+   Doorways drawn as plain gaps, with no door symbol, are bridged between collinear wall runs.
 3. **Rooms** are the enclosed regions. Each gets an outline, area, perimeter, the doors and windows on its
    boundary, and baseboard length (perimeter minus door widths).
 4. **Scale** comes from the scale text and the paper size, and is cross-checked against the scale bar when there
    is one.
 5. **Names** are the OCR texts that fall inside each room.
 
-On the sample school sheet (14,000 x 9,902 px, A2 at 1:200) this gives 83 rooms in 2 buildings.
+On the school sheet (14,000 x 9,902 px, A2 at 1:200) this gives 85 rooms in 2 buildings; the stored sample
+analysis in `demo/` was made with the earlier settings and has 83.
+
+These settings were chosen on a benchmark: 798 held-out CubiCasa plans, scored against the dataset's room
+outlines (a room counts as found when it overlaps a true room by at least half).
+
+| Setting | F1 | Rooms found of 8,472 |
+|---|---|---|
+| Earlier: fixed darkness, half scale | 6.4 | 351 |
+| Same, full scale | 14.1 | 960 |
+| Contrast rule, enlarged x2 | 36.0 | 6,863 |
+| Scale from door size | 39.9 | 5,718 |
+| Scale from door size, thinner wall filter, collinear gaps bridged (current) | 44.6 | 7,180 |
+
+Even the current setting finds under half of the rooms on small flat plans, so traced rooms are used for answers
+only on sheets whose scale could be read; on other plans room types still come from the detector.
 
 ## 9. Models that fix specific problems
 

@@ -16,6 +16,7 @@ Steps
 import os, sys, json, re, sqlite3, argparse, math
 os.environ.setdefault("OPENCV_IO_MAX_IMAGE_PIXELS", str(2 ** 40))
 import cv2, numpy as np
+DOOR_PX = float(os.environ.get("BP_WALL_DOOR_PX", "110"))
 
 PAPER = {"A0": 1189, "A1": 841, "A2": 594, "A3": 420, "A4": 297}
 
@@ -44,8 +45,14 @@ def ocr_tiles(g):
 def trace(image, det_path, work=0.5, closures=None):
     """Phase A (needs no text): walls, openings, enclosed regions. Runs at the same time as OCR."""
     g0 = cv2.imread(image, cv2.IMREAD_GRAYSCALE); H0, W0 = g0.shape
-    k = work; g = cv2.resize(g0, (round(W0 * k), round(H0 * k)), interpolation=cv2.INTER_AREA); H, W = g.shape
     det = json.load(open(det_path)); th = det["thresholds"]
+    if work == "auto":
+        # Working scale from the drawing itself: the sheet is resized so that a typical detected door is DOOR_PX wide. Walls then
+        # have a similar thickness in pixels whatever the size of the sheet, which the "thick stroke" test depends on. On 798
+        # held-out plans this was the largest single gain (benchmark in README: rooms found with half scale 351, this rule 5,718).
+        dd = sorted(max(b[2] - b[0], b[3] - b[1]) for c, s_, *b in det["boxes"] if c == "door" and s_ >= 0.5)
+        work = float(np.clip(DOOR_PX / dd[len(dd) // 2], 0.25, min(4.0, 12000 / max(W0, H0)))) if len(dd) >= 2 else (0.5 if max(W0, H0) >= 3000 else 1.0)
+    k = float(work); g = cv2.resize(g0, (round(W0 * k), round(H0 * k)), interpolation=cv2.INTER_AREA if k <= 1 else cv2.INTER_CUBIC); H, W = g.shape
     boxes = [(c, s, np.array(b) * k) for c, s, *b in det["boxes"] if s >= th.get(c, 0.25)]
     doors = [b for c, s, b in boxes if c == "door"]; wins = [b for c, s, b in boxes if c == "window"]
 
@@ -56,7 +63,7 @@ def trace(image, det_path, work=0.5, closures=None):
     def _thick(dark):
         dist = cv2.distanceTransform(dark, cv2.DIST_L2, 3)
         hw = float(np.percentile(dist[dist > 2.5], 75)) if (dist > 2.5).any() else 4.0     # typical wall half-thickness (px, working scale)
-        t_ = max(3, int(round(hw * float(os.environ.get("BP_WALL_OPEN", "0.9")))))
+        t_ = max(3, int(round(hw * float(os.environ.get("BP_WALL_OPEN", "0.45")))))
         return hw, t_, cv2.morphologyEx(dark, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (t_, t_)))
     dark = (g < 110).astype(np.uint8); half_w, t, walls = _thick(dark); ink = {"rule": "darker than 110 of 255"}
     mode = os.environ.get("BP_WALL_INK", "auto")       # auto | fixed (darkness only) | contrast (always by contrast); for benchmarking
@@ -159,6 +166,15 @@ def trace(image, det_path, work=0.5, closures=None):
             cv2.line(closed, (int(round(x0)), int(round(y0))), (int(round(x1)), int(round(y1))), 1, max(3, t // 2))
             openings.append({"kind": cl["kind"], "seg": (x0, y0, x1, y1), "width_px": math.hypot(x1 - x0, y1 - y0), "box": [x0, y0, x1, y1], "by": cl.get("by")})
 
+    # ---- 2b doorways drawn as plain gaps, with no door symbol for the detector: bridge gaps up to GAP wall thicknesses between
+    # COLLINEAR wall runs. Only runs along the wall direction are bridged, so two parallel walls of a corridor are not joined.
+    gapf = float(os.environ.get("BP_WALL_GAPCLOSE", "7"))
+    if gapf > 0:
+        wt_ = max(2, int(round(wall_t))); L_ = max(3, int(round(gapf * wall_t)))
+        for horiz in (True, False):
+            runs = cv2.morphologyEx(closed, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (3 * wt_, 1) if horiz else (1, 3 * wt_)))
+            closed |= cv2.morphologyEx(runs, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_RECT, (L_, 1) if horiz else (1, L_)))
+
     # ---- 3 rooms: enclosed free space
     free = (closed == 0).astype(np.uint8)
     n, lab, st, cen = cv2.connectedComponentsWithStats(free, 4)
@@ -168,7 +184,7 @@ def trace(image, det_path, work=0.5, closures=None):
 
 def finish(A, ocr, out, scale=None, paper=None, debug=False):
     """Phase B (needs the text): scale, room outlines, names, flags, database. ocr = [{text, conf, x, y, h}] in working pixels."""
-    os.makedirs(out, exist_ok=True); image_name = os.path.basename(A["image"])
+    os.makedirs(out, exist_ok=True); image_name = os.path.basename(A["image"]); ink_rule = A.get("ink")
     g, k, W0, H0, W, H = A["g"], A["k"], A["W0"], A["H0"], A["W"], A["H"]; closed, free, lab, st, cen, n = A["closed"], A["free"], A["lab"], A["st"], A["cen"], A["n"]
     border, openings, unclosed, wall_t, t, doors, wins = A["border"], A["openings"], A["unclosed"], A["wall_t"], A["t"], A["doors"], A["wins"]
     txt = " | ".join(o["text"] for o in ocr)
@@ -297,7 +313,7 @@ def finish(A, ocr, out, scale=None, paper=None, debug=False):
     con.commit()
     np.savez(os.path.join(out, "state.npz"), closed=closed, lab=lab.astype(np.int32), k=k, wall_t=wall_t, m_per_px=(m_per_px or 0), room_cc=np.array([r["cc"] for r in rooms]))
     json.dump(ocr, open(os.path.join(out, "ocr.json"), "w"))
-    summary = {"wall_ink": A.get("ink"), "rooms": len(rooms), "buildings": len(set(r["building"] for r in rooms)), "area_m2": round(sum(r["area_m2"] for r in rooms), 1) if m_per_px else None,
+    summary = {"wall_ink": ink_rule, "work_scale": round(k, 3), "rooms": len(rooms), "buildings": len(set(r["building"] for r in rooms)), "area_m2": round(sum(r["area_m2"] for r in rooms), 1) if m_per_px else None,
                "doors_closed": sum(o["kind"] == "door" for o in openings), "doors": len(doors), "windows_closed": sum(o["kind"] == "window" for o in openings), "windows": len(wins), "scale": scale, "paper": paper}
     if not debug: return summary
     ov = cv2.cvtColor(g, cv2.COLOR_GRAY2BGR); rng = np.random.RandomState(3); tint = np.zeros_like(ov)

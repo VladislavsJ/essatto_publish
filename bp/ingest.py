@@ -619,8 +619,8 @@ def _prepare_raster(img_path: str) -> dict:
 
 
 SHEET_ROOMS_DIR = os.path.realpath(os.path.join(CACHE_DIR, "sheet_rooms"))
-SHEET_ROOMS_MIN_PX = int(os.environ.get("BP_SHEET_ROOMS_MIN_PX", "3000"))
-SHEET_WORK = 0.5
+SHEET_ROOMS_MIN_PX = int(os.environ.get("BP_SHEET_ROOMS_MIN_PX", "1500"))
+SHEET_WORK = "auto"       # the tracer picks its working scale from the size of the detected doors (sheet_rooms.trace)
 
 
 DEMO_DIR = os.path.realpath(os.path.join(ROOT_DIR, "demo"))
@@ -674,7 +674,7 @@ def _finish_sheet_rooms(img_path: str, holder: dict, ocr_boxes: list[dict]):
     if holder.get("thread"): holder["thread"].join(timeout=600)
     if holder.get("error") or "A" not in holder: return "failed: " + str(holder.get("error") or "tracing did not finish")
     try:
-        k = SHEET_WORK; out = holder["out"]; ocr = []
+        k = float(holder["A"]["k"]); out = holder["out"]; ocr = []
         for b in ocr_boxes:
             q = b["box"]
             ocr.append({"text": b["text"].strip(), "conf": b["conf"], "x": sum(pt[0] for pt in q) / 4 * k, "y": sum(pt[1] for pt in q) / 4 * k, "h": abs(q[2][1] - q[0][1]) * k})

@@ -22,6 +22,15 @@ def _capped(*a, **k):
     return _orig(*a, **k)
 llm._gemini = _capped
 
+from bp import claude_api as _CA          # the same cap for Claude calls (question planner, room look)
+_orig_claude = _CA.call
+def _capped_claude(*a, **k):
+    with _lock:
+        _calls[0] += 1
+        if _calls[0] > MAX_CALLS: return None, f"the demo's limit of {MAX_CALLS} model calls is used up; questions the rules recognise still work"
+    return _orig_claude(*a, **k)
+_CA.call = _capped_claude
+
 @app.middleware("http")
 async def gate(request: Request, call_next):
     p = request.url.path
