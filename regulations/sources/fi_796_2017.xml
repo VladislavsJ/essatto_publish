@@ -1,0 +1,464 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:finlex="http://data.finlex.fi/schema/finlex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <act contains="originalVersion" name="main">
+        <meta>
+            <identification source="#organization_fi.finlex">
+                <FRBRWork>
+                    <FRBRthis value="/akn/fi/act/statute/2017/796/!main"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/796"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/796/alkup"/>
+                    <FRBRdate date="2017-11-24" name="dateIssued"/>
+                    <FRBRdate date="2017-12-05" name="datePublished"/>
+                    <FRBRauthor as="#role_author" href="#organization_fi.parliament"/>
+                    <FRBRcountry value="fi"/>
+                    <FRBRsubtype value="statute"/>
+                    <FRBRnumber value="796"/>
+                    <FRBRprescriptive value="true"/>
+                    <FRBRauthoritative value="true"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/akn/fi/act/statute/2017/796/fin@/!main"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/796/fin@"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/796/alkup/fin"/>
+                    <FRBRdate date="2017-11-24" name="dateIssued"/>
+                    <FRBRdate date="2017-12-05" name="datePublished"/>
+                    <FRBRauthor as="#role_author" href="#organization_fi.parliament"/>
+                    <FRBRlanguage language="fin"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/akn/fi/act/statute/2017/796/fin@/!main.xml"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/796/fin@.akn"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/796/alkup/fin/xml"/>
+                    <FRBRdate date="2025-02-21" name="dateProduced"/>
+                    <FRBRdate date="2017-12-05" name="datePublished"/>
+                    <FRBRauthor as="#role_editor" href="#organization_fi.finlex"/>
+                    <FRBRformat value="xml"/>
+                </FRBRManifestation>
+            </identification>
+            <references source="#organization_fi.finlex">
+                <TLCOrganization eId="organization_fi.finlex" href="/akn/ontology/organization/fi.finlex" showAs="Finlex"/>
+                <TLCRole eId="role_author" href="/akn/ontology/role/author" showAs="Tekijä"/>
+                <TLCRole eId="role_editor" href="/akn/ontology/role/editor" showAs="Toimittaja"/>
+                <TLCConcept eId="decree" href="/akn/ontology/concept/statute/type-statute.decree" showAs="Asetus"/>
+                <TLCConcept eId="new-statute" href="/akn/ontology/concept/statute/category-statute.new-statute" showAs="Uusi säädös"/>
+            </references>
+            <proprietary source="#organization_fi.finlex">
+                <finlex:typeStatute refersTo="#decree"/>
+                <finlex:categoryStatute refersTo="#new-statute"/>
+                <finlex:documentYear>2017</finlex:documentYear>
+            </proprietary>
+        </meta>
+        <preface>
+            <p>
+                <docNumber>796/2017</docNumber>
+                <docTitle>Ympäristöministeriön asetus rakennuksen ääniympäristöstä</docTitle>
+            </p>
+        </preface>
+        <preamble>
+            <formula name="enactingClause">
+                <p>Ympäristöministeriön päätöksen mukaisesti säädetään maankäyttö- ja rakennuslain (132/1999) 117 f §:n 3 momentin nojalla, sellaisena kuin se on laissa 958/2012:</p>
+            </formula>
+        </preamble>
+        <body>
+            <hcontainer finlex:outline="Säädöksen teksti" name="statuteProvisionsWrapper">
+                <section eId="sec_1">
+                    <num>1 §</num>
+                    <heading>Soveltamisala</heading>
+                    <subsection eId="sec_1__subsec_1">
+                        <content>
+                            <p>Tässä asetuksessa säädetään rakennusten ääneneristyksestä, melun- ja tärinäntorjunnasta ja ääniolosuhteista sekä rakennusten piha- ja oleskelualueiden ja oleskeluun käytettä-vien parvekkeiden meluntorjunnasta ja ääniolosuhteista.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_1__subsec_2">
+                        <content>
+                            <p>Tätä asetusta sovelletaan rakennuksiin, joissa on asuntoja, majoitus- tai potilashuoneita, taikka opetus-, kokous-, ruokailu-, hoito-, harrastus-, liikunta- tai toimistotiloja.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_1__subsec_3">
+                        <content>
+                            <p>Tätä asetusta sovelletaan uuden rakennuksen rakentamiseen, rakennuksen korjaus- ja muutostyöhön sekä rakennuksen käyttötarkoituksen muuttamiseen maankäyttö- ja rakennuslain (132/1999) mukaisessa rakentamisen suunnittelussa, lupamenettelyssä ja valvonnassa.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_2">
+                    <num>2 §</num>
+                    <heading>Määritelmät</heading>
+                    <subsection eId="sec_2__subsec_1">
+                        <intro eId="sec_2__subsec_1__intro">
+                            <p>Tässä asetuksessa tarkoitetaan:</p>
+                        </intro>
+                        <paragraph eId="sec_2__subsec_1__para_1">
+                            <num>1) </num>
+                            <content>
+                                <p>
+                                    <i>äänitasoeroluvulla</i>
+                                    <i>D</i>
+                                    <sub>nT,w</sub>
+                                     mittalukua, joka kuvaa huonetilojen välistä ilmaääneneristystä;
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_2">
+                            <num>2) </num>
+                            <content>
+                                <p>
+                                    <i>askeläänitasoluvulla</i>
+                                    <i>L</i>
+                                    ’
+                                    <sub>nT,w</sub>
+                                    + 
+                                    <i>C</i>
+                                    <sub>I,50-2500</sub>
+                                     mittalukua, joka kuvaa huonetilojen välistä askelääneneristystä;
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_3">
+                            <num>3) </num>
+                            <content>
+                                <p>
+                                    <i>keskiäänitasolla</i>
+                                    <i>L</i>
+                                    <sub>Aeq,T</sub>
+                                     mittalukua, joka kuvaa muun kuin tilapäisen äänen melun voimakkuutta huone- tai ulkotilassa;
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_4">
+                            <num>4) </num>
+                            <content>
+                                <p>
+                                    <i>enimmäisäänitasolla</i>
+                                    <i>L</i>
+                                    <sub>AFmax,T</sub>
+                                     mittalukua, joka kuvaa muun kuin tilapäisen äänen ajoittaisen lyhytaikaisen melun voimakkuutta huone- tai ulkotilassa;
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_5">
+                            <num>5) </num>
+                            <content>
+                                <p>
+                                    <i>jälkikaiunta-ajalla</i>
+                                    <i>T</i>
+                                     mittalukua, joka kuvaa huonetilan kaiuntaisuutta;
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_6">
+                            <num>6) </num>
+                            <content>
+                                <p>
+                                    <i>runkoäänellä</i>
+                                     rakenteen tai muun kiinteän kappaleen melua aiheuttavaa mekaanista värähtelyä;
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_7">
+                            <num>7) </num>
+                            <content>
+                                <p>
+                                    <i>tärinällä</i>
+                                     ihmisen havaitsemaa häiritsevää mekaanista värähtelyä.
+                                </p>
+                            </content>
+                        </paragraph>
+                    </subsection>
+                </section>
+                <section eId="sec_3">
+                    <num>3 §</num>
+                    <heading>Rakennuksen ääniympäristön suunnittelu ja toteutus</heading>
+                    <subsection eId="sec_3__subsec_1">
+                        <content>
+                            <p>Rakennuksen suunnittelussa ja toteutuksessa on otettava huomioon rakennuspaikan melu- ja tärinäolosuhteet.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_3__subsec_2">
+                        <content>
+                            <p>Rakennuksen ääniympäristöä koskeva olennainen tekninen vaatimus täyttyy, jos rakennuksen ääneneristys, melun- ja tärinäntorjunta sekä ääniolosuhteet suunnitellaan ja toteutetaan tilan käyttötarkoitus huomioon ottaen tämän asetuksen mukaisesti.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_3__subsec_3">
+                        <content>
+                            <p>Jos 2 momentissa tarkoitettua menettelyä ei ole tarkoituksenmukaista soveltaa rakennuksen tai sen ulkopuolisen ääniympäristön erityisten ominaisuuksien, tilan erityisen käytön tai käyttäjäryhmän taikka muun erityisen syyn vuoksi, rakennushankkeeseen ryhtyvän on osoitettava rakennuslupamenettelyn yhteydessä, että suunnittelu johtaa tilan käyttötarkoitus huomioon ottaen ääneneristyksen, melun- ja tärinäntorjunnan sekä ääniolosuhteiden kannalta olennaisen teknisen vaatimuksen täyttymiseen.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_4">
+                    <num>4 §</num>
+                    <heading>Vaatimukset uuden rakennuksen ääneneristykselle</heading>
+                    <subsection eId="sec_4__subsec_1">
+                        <content>
+                            <p>Asuntojen sekä majoitus- ja potilashuoneiden ilma- ja askelääneneristyksen suunnittelussa ja toteutuksessa on noudatettava seuraavia lukuarvoja:</p>
+                            <table>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Huonetila</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>
+                                            Pienin sallittu äänitasoeroluku 
+                                            <i>D</i>
+                                            <sub>nT,w</sub>
+                                            (dB)
+                                        </p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>
+                                            Suurin sallittu askeläänitasoluku 
+                                            <i>L</i>
+                                            ’
+                                            <sub>nT,w</sub>
+                                            + 
+                                            <i>C</i>
+                                            <sub>I, 50-2500</sub>
+                                            (dB)
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Asuntojen, majoitus- tai potilashuoneiden välillä</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>55</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>53</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Uloskäytävästä asuin-, majoitus- tai potilashuoneeseen</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>39</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>63</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_4__subsec_2">
+                        <content>
+                            <p>Jos asunto, majoitus- tai potilashuone kytkeytyy rakenteellisesti tiloihin, joissa syntyy voimakasta, erityisen häiritsevää tai pienitaajuista ääntä, riittävän ääneneristyksen toteutumiseen on kiinnitettävä suunnittelussa ja toteutuksessa erityistä huomiota. Impulssimaisen, kapeakaistaisen tai pienitaajuisen melun yhden tunnin keskiäänitaso ei saa ylittää nukkumiseen tai lepoon käytettävissä huoneissa 25 desibeliä.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_4__subsec_3">
+                        <content>
+                            <p>Opetus-, kokous-, ruokailu-, hoito-, harrastus-, liikunta- ja toimistotilojen ääneneristys on suunniteltava ja toteutettava tilan käyttötarkoitus huomioon ottaen siten, että niissä saavutetaan toimintaa vastaava riittävän hyvä ääniympäristö. Sisäänvedettyjen parvekkeiden, viherhuoneiden ja kattoterassien ääneneristys on suunniteltava ja toteutettava siten, että ääniympäristöstä ei aiheudu asukkaille haittaa.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_5">
+                    <num>5 §</num>
+                    <heading>Vaatimukset uuden rakennuksen melun- ja tärinäntorjunnalle</heading>
+                    <subsection eId="sec_5__subsec_1">
+                        <content>
+                            <p>Rakennuksen, jossa on asuntoja, majoitus- tai potilashuoneita, ulkovaipan ääneneristys on suunniteltava ja toteutettava siten, että ääneneristys on vähintään 30 desibeliä ja impulssimaisen, kapeakaistaisen tai pienitaajuisen melun keskiäänitaso ei ylitä nukkumiseen tai lepoon käytettävissä huoneissa 25 desibeliä.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_5__subsec_2">
+                        <content>
+                            <p>Rakennuksen hissien ja taloteknisten laitteiden asennukset on suunniteltava ja toteutettava siten, että niiden synnyttämä äänitaso ei ylitä asuntojen asuinhuoneissa tai oleskelutiloissa, majoitus- tai potilashuoneissa, saman tai läheisten asuinrakennusten avattavien ikkunoiden tai tuuletusluukkujen ulkopuolella, oleskeluun käytettävillä parvekkeilla tai virkistykseen käytettävillä piha- tai oleskelualueilla seuraavia lukuarvoja:</p>
+                            <table>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Huone- ja ulkotila</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Jatkuva laajakaistainen ääni</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p/>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Impulssimainen tai kapeakaistainen ääni</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p/>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>
+                                            Keskiäänitaso 
+                                            <i>L</i>
+                                            <sub>Aeq,T</sub>
+                                             (dB)
+                                        </p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>
+                                            Enimmäisääni-taso 
+                                            <i>L</i>
+                                            <sub>AFmax,T</sub>
+                                             (dB)
+                                        </p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>
+                                            Keskiäänitaso 
+                                            <i>L</i>
+                                            <sub>Aeq,T</sub>
+                                             (dB)
+                                        </p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>
+                                            Enimmäisääni-taso 
+                                            <i>L</i>
+                                            <sub>AFmax,T</sub>
+                                             (dB)
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Asuin-, majoitus- tai potilashuone</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>28</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>33</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>25</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>30</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Asunnon keittiö tai rakennuksen harrastustila</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>33</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>38</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>30</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>35</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Porrashuone tai uloskäytävä</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>38</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>43</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>35</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>40</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>Ulkotila</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>45</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>50</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>40</p>
+                                    </td>
+                                    <td class="colsep-1 rowsep-1">
+                                        <p>45</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_5__subsec_3">
+                        <content>
+                            <p>Rakennuksen, jossa on asuntoja, majoitus- tai potilashuoneita, runkoääni- ja tärinäeristys sekä opetus-, kokous-, ruokailu-, hoito-, harrastus-, liikunta- ja toimistotilojen melun- ja tärinäntorjunta on suunniteltava ja toteutettava tilan käyttötarkoitus huomioon ottaen siten, että niissä saavutetaan toimintaa vastaava riittävän hyvä ääniympäristö.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_6">
+                    <num>6 §</num>
+                    <heading>Vaatimukset uuden rakennuksen ääniolosuhteille</heading>
+                    <subsection eId="sec_6__subsec_1">
+                        <content>
+                            <p>Rakennuksen, jossa on potilashuoneita, opetus-, kokous-, ruokailu-, hoito-, harrastus-, liikunta- tai toimistotiloja, ääniolosuhteet on suunniteltava ja toteutettava siten, että tilassa saavutetaan sen käyttötarkoitus huomioon ottaen riittävä puheenerotettavuus.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_6__subsec_2">
+                        <content>
+                            <p>Rakennus, jossa on asuntoja, majoitus- tai potilashuoneita, on suunniteltava ja toteuttava siten, että porrashuoneen ja uloskäytävän jälkikaiunta-aika on enintään 1,3 sekuntia. Virkistykseen käytettävät rakennuksen piha- ja oleskelualueet sekä oleskeluun käytettävät parvekkeet on suunniteltava ja toteutettava siten, että melun keskiäänitaso ei ylitä kello 7–22 55 desibeliä ja viherhuoneet vastaavasti siten, että melun keskiäänitaso ei ylitä 45 desibeliä.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_7">
+                    <num>7 §</num>
+                    <heading>Korjausrakentaminen, muutostyö ja rakennuksen käyttötarkoituksen muutos</heading>
+                    <subsection eId="sec_7__subsec_1">
+                        <content>
+                            <p>Rakennuksen ääneneristystä, melun- ja tärinäntorjuntaa, ääniolosuhteita sekä virkistykseen käytettävien rakennuksen piha- ja oleskelualueiden sekä oleskeluun käytettävien parvekkeiden meluntorjuntaa ja ääniolosuhteita ei saa rakennuksen korjaus- tai muutostyössä heikentää.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_7__subsec_2">
+                        <content>
+                            <p>Rakennuksen käyttötarkoitusta muutettaessa rakennuksen ääneneristys, melun- ja tärinäntorjunta ja ääniolosuhteet sekä virkistykseen käytettävien rakennuksen piha- ja oleskelualueiden sekä oleskeluun käytettävien parvekkeiden meluntorjunta ja ääniolosuhteet on suunniteltava ja toteutettava siten, että ääniympäristöstä ei aiheudu asukkaille haittaa.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_8">
+                    <num>8 §</num>
+                    <heading>Voimaantulo</heading>
+                    <subsection eId="sec_8__subsec_1">
+                        <content>
+                            <p>Tämä asetus tulee voimaan 1 päivänä tammikuuta 2018.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_8__subsec_2">
+                        <content>
+                            <p>Ennen tämän asetuksen voimaantuloa vireille tulleisiin hankkeisiin sovelletaan tämän asetuksen voimaan tullessa voimassa olleita säännöksiä.</p>
+                        </content>
+                    </subsection>
+                </section>
+            </hcontainer>
+            <hcontainer finlex:outline="Esityöt ja allekirjoitukset" name="conclusions">
+                <hcontainer finlex:outline="Esityöt" name="preliminaryWork">
+                    <content>
+                        <p>Euroopan parlamentin ja neuvoston direktiivi 2015/1535/EU (32015L1535); EUVL L 241, 17.9.2015, s. 1</p>
+                    </content>
+                </hcontainer>
+                <hcontainer finlex:outline="Allekirjoitukset" name="signatures">
+                    <content>
+                        <p>Helsingissä 24 päivänä marraskuuta 2017</p>
+                        <p>
+                            <signature>
+                                <role refersTo="">Asunto-, energia- ja ympäristöministeri</role>
+                                <person refersTo="">Kimmo Tiilikainen</person>
+                            </signature>
+                            <signature>
+                                <role refersTo="">Ympäristöneuvos</role>
+                                <person refersTo="">Ari Saarinen</person>
+                            </signature>
+                        </p>
+                    </content>
+                </hcontainer>
+            </hcontainer>
+        </body>
+    </act>
+</akomaNtoso>

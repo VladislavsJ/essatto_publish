@@ -1,0 +1,600 @@
+{"pattern": "baseboard_room", "lang": "English", "q": "How many metres of skirting do we need for the library? Take the full wall run and subtract the door openings."}
+{"pattern": "baseboard_room", "lang": "English", "q": "lin m baseboard, classroom, pls"}
+{"pattern": "baseboard_room", "lang": "English", "q": "Please provide the total linear length of floor trim required for the staff office."}
+{"pattern": "baseboard_room", "lang": "English", "q": "what's the skirting length for the corridor, skirting only"}
+{"pattern": "baseboard_room", "lang": "English", "q": "Quantity takeoff needed: linear metres of baseboard for the meeting room."}
+{"pattern": "baseboard_room", "lang": "English", "q": "How much skirting for the toilet? Just the room itself."}
+{"pattern": "baseboard_room", "lang": "English", "q": "estimator here, need floor trim run in the lobby, lm total incl. returns"}
+{"pattern": "baseboard_room", "lang": "English", "q": "Hey, roughly how long is the baseboard in the plant room?"}
+{"pattern": "baseboard_room", "lang": "Finnish", "q": "Paljonko lattialistaa tarvitaan kirjastoon? Anna metrit."}
+{"pattern": "baseboard_room", "lang": "Finnish", "q": "Kuinka monta metriä listoitusta luokkahuoneeseen?"}
+{"pattern": "baseboard_room", "lang": "Finnish", "q": "tarvitaan lattialistat keittiö, montako metriä?"}
+{"pattern": "baseboard_room", "lang": "Finnish", "q": "Mikä on henkilökunnan toimiston lattialistojen kokonaispituus metreinä?"}
+{"pattern": "baseboard_room", "lang": "Finnish", "q": "käytävän lattialista, montako lm tarvitaan? Ei ovia."}
+{"pattern": "baseboard_room", "lang": "Finnish", "q": "Laske lattialistan määrä kokoushuoneeseen, lm."}
+{"pattern": "baseboard_room", "lang": "Finnish", "q": "WC:n listoitus metreinä, kiitso"}
+{"pattern": "baseboard_room", "lang": "Finnish", "q": "Aulan lattialistat, paljonko lm yhteensä?"}
+{"pattern": "baseboard_room", "lang": "German", "q": "Wie viele Laufmeter Sockelleiste benötigen wir für die Bibliothek?"}
+{"pattern": "baseboard_room", "lang": "German", "q": "Sockelleisten Länge Klassenzimmer, bitte in m"}
+{"pattern": "baseboard_room", "lang": "German", "q": "kurz: Fußleisten m für Küche?"}
+{"pattern": "baseboard_room", "lang": "German", "q": "Bitte die gesamte Länge der Sockelleisten im Personalbüro ermitteln."}
+{"pattern": "baseboard_room", "lang": "German", "q": "Flur, Sockelleiste lfm, wie viel?"}
+{"pattern": "baseboard_room", "lang": "German", "q": "Welche Gesamtlänge an Fußleisten fällt im Lager an?"}
+{"pattern": "baseboard_room", "lang": "German", "q": "Besprechungsraum Sockelleiste Mengenermittlung, bitte Meter angeben"}
+{"pattern": "baseboard_room", "lang": "German", "q": "Sockelleiste Empfang, wieviel m brauchen wir für die Lieferung?"}
+{"pattern": "baseboard_room", "lang": "Swedish", "q": "Hur många meter golvlist behövs i biblioteket?"}
+{"pattern": "baseboard_room", "lang": "Swedish", "q": "Golvlist i klassrummet, löpmeter tack"}
+{"pattern": "baseboard_room", "lang": "Swedish", "q": "kök, golvlist, hur lång?"}
+{"pattern": "baseboard_room", "lang": "Swedish", "q": "Kan ni räkna ut totala längden golvlist för personalkontoret?"}
+{"pattern": "baseboard_room", "lang": "Swedish", "q": "korridoren, listlängd lm?"}
+{"pattern": "baseboard_room", "lang": "Swedish", "q": "Behöver mängdförteckning på sockellist för förrådet, hur många meter?"}
+{"pattern": "baseboard_room", "lang": "Swedish", "q": "Mötesrum, lister, hur mycket löpmeter?"}
+{"pattern": "baseboard_room", "lang": "Swedish", "q": "Hallen, golvlisst, ca hur många meter, typ?"}
+{"pattern": "baseboard_room", "lang": "Norwegian", "q": "Hvor mange løpemeter gulvlist trengs i biblioteket?"}
+{"pattern": "baseboard_room", "lang": "Norwegian", "q": "Gulvlist i klasserommet, hvor lang?"}
+{"pattern": "baseboard_room", "lang": "Norwegian", "q": "kjøkken gulvlist lm pls"}
+{"pattern": "baseboard_room", "lang": "Norwegian", "q": "Vennligst oppgi total lengde gulvlist for personalkontoret."}
+{"pattern": "baseboard_room", "lang": "Norwegian", "q": "gang, sokkellist, hvor mange meter?"}
+{"pattern": "baseboard_room", "lang": "Norwegian", "q": "Mengde gulvlister for lagerrommet, lengde i meter"}
+{"pattern": "baseboard_room", "lang": "Norwegian", "q": "møterom, hvor mye sokkellist?"}
+{"pattern": "baseboard_room", "lang": "Norwegian", "q": "Resepsjon, lister i meter, trengs til bestilling"}
+{"pattern": "baseboard_all", "lang": "English", "q": "What's the total linear metres of skirting board for the whole building, all floors?"}
+{"pattern": "baseboard_all", "lang": "English", "q": "need the full run of baseboad in lm for the entire floor plan, deduct door openings pls"}
+{"pattern": "baseboard_all", "lang": "English", "q": "Total skirting length, whole job, from the drawings?"}
+{"pattern": "baseboard_all", "lang": "English", "q": "How many metres of base trim across all levels on this set?"}
+{"pattern": "baseboard_all", "lang": "English", "q": "Give me the combined lineal footage of baseboard for the complete plan."}
+{"pattern": "baseboard_all", "lang": "English", "q": "lm of skirting, whole project, ta"}
+{"pattern": "baseboard_all", "lang": "English", "q": "Can you pull the total baseboard length for the entire structure, every level included?"}
+{"pattern": "baseboard_all", "lang": "English", "q": "Estimator here: total baseboard run for all floors, excluding openings, please."}
+{"pattern": "baseboard_all", "lang": "Finnish", "q": "Mikä on koko rakennuksen lattialistojen kokonaispituus metreinä?"}
+{"pattern": "baseboard_all", "lang": "Finnish", "q": "Tarvitsen koko pohjakuvan lattialistat jm, ovet vähennettynä."}
+{"pattern": "baseboard_all", "lang": "Finnish", "q": "Paljonko lattialsitoja yhteensä koko kerroksille?"}
+{"pattern": "baseboard_all", "lang": "Finnish", "q": "Kaikki lattialistat yhteensä, metriä, koko talo."}
+{"pattern": "baseboard_all", "lang": "Finnish", "q": "lattialistaa kaikkiaan jm koko kohteeseen? kiitos"}
+{"pattern": "baseboard_all", "lang": "Finnish", "q": "Laske yhteen koko taloon tulevat listat metreinä, pls"}
+{"pattern": "baseboard_all", "lang": "Finnish", "q": "Koko kohteen lattialistojen määrä metreinä, ilman aukkoja."}
+{"pattern": "baseboard_all", "lang": "Finnish", "q": "Mikä on rakennuksen lattialistojen kokonaismitta, kaikki tasot?"}
+{"pattern": "baseboard_all", "lang": "German", "q": "Wie viele laufende Meter Sockelleisten brauchen wir für das gesamte Gebäude?"}
+{"pattern": "baseboard_all", "lang": "German", "q": "Gesamtlänge Fußleisten über alle Etagen, bitte ohne Türöffnungen."}
+{"pattern": "baseboard_all", "lang": "German", "q": "Kannst du die Summe der Sockelleisten in lfm für den ganzen Plan ausgeben?"}
+{"pattern": "baseboard_all", "lang": "German", "q": "Bitte Gesamtmenge Sockelleiste in m für alle Geschosse."}
+{"pattern": "baseboard_all", "lang": "German", "q": "Wie viel Fußleiste insgesamt, Meter, komplette Baustelle?"}
+{"pattern": "baseboard_all", "lang": "German", "q": "Lfm Sockelleistn gesamt, Rohbau + Ausbau, passt so?"}
+{"pattern": "baseboard_all", "lang": "German", "q": "Brauchen wir Sockelleisten-Meter für den kompletten Grundriss, abzüglich Öffnungen?"}
+{"pattern": "baseboard_all", "lang": "German", "q": "Gesamtlänge Fußleisten für alle Ebenen, bitte in Meter."}
+{"pattern": "baseboard_all", "lang": "Swedish", "q": "Hur många löpmeter golvlist behövs för hela byggnaden?"}
+{"pattern": "baseboard_all", "lang": "Swedish", "q": "Total längd golvlister i meter över alla plan, avdrag för dörrar."}
+{"pattern": "baseboard_all", "lang": "Swedish", "q": "Vad blir summan av golvlist i lm för hela ritningen?"}
+{"pattern": "baseboard_all", "lang": "Swedish", "q": "Behöver veta totalt antal meter lister för alla våningar."}
+{"pattern": "baseboard_all", "lang": "Swedish", "q": "lm golvlsit, hela huset, tack"}
+{"pattern": "baseboard_all", "lang": "Swedish", "q": "Kan ni räkna ut hur mycket golvlist totalt i meter för projektet?"}
+{"pattern": "baseboard_all", "lang": "Swedish", "q": "Sockellist totalt i meter, alla plan, inga hål för dörrar."}
+{"pattern": "baseboard_all", "lang": "Swedish", "q": "Summa golvlister i meter för hela objektet, tack på förhand."}
+{"pattern": "baseboard_all", "lang": "Norwegian", "q": "Hvor mange løpemeter gulvlist trenger vi til hele bygget?"}
+{"pattern": "baseboard_all", "lang": "Norwegian", "q": "Total lengde på sokkellister for alle etasjer, trekk fra døråpninger."}
+{"pattern": "baseboard_all", "lang": "Norwegian", "q": "Kan du gi meg summen av gulvlister i lm for hele planen?"}
+{"pattern": "baseboard_all", "lang": "Norwegian", "q": "Trenger totalt antall meter gulvlist, alle plan."}
+{"pattern": "baseboard_all", "lang": "Norwegian", "q": "lm gulvlsit hele huset? takk"}
+{"pattern": "baseboard_all", "lang": "Norwegian", "q": "Hva blir det totalt i meter sokkellist for hele prosjektet?"}
+{"pattern": "baseboard_all", "lang": "Norwegian", "q": "Gulvlist, total lengde i meter, hele bygningen, ingen fradrag for åpninger."}
+{"pattern": "baseboard_all", "lang": "Norwegian", "q": "Summer opp alle gulvlister i meter for hele anlegget, takk."}
+{"pattern": "area_room", "lang": "English", "q": "What's the floor area of the kitchen on sheet A-101?"}
+{"pattern": "area_room", "lang": "English", "q": "Need the m² for the library, can you pull that off the plan?"}
+{"pattern": "area_room", "lang": "English", "q": "gross area of classroom 3, wat's it come to"}
+{"pattern": "area_room", "lang": "English", "q": "Could you give me the net floor area of the corridor for the flooring take-off?"}
+{"pattern": "area_room", "lang": "English", "q": "Staff office floor area, square metres please."}
+{"pattern": "area_room", "lang": "English", "q": "Plant room, how big is the floor? m2 only"}
+{"pattern": "area_room", "lang": "English", "q": "Quantity survey: floor area of the meeting room, m2?"}
+{"pattern": "area_room", "lang": "English", "q": "Pls confirm the store floor area for the screed order."}
+{"pattern": "area_room", "lang": "Finnish", "q": "Mikä on keittiön lattiapinta-ala piirustuksesta?"}
+{"pattern": "area_room", "lang": "Finnish", "q": "Kirjaston pinta-ala m², tarvitsen lattiatöihin."}
+{"pattern": "area_room", "lang": "Finnish", "q": "montako m2 on luokka 3:n lattia"}
+{"pattern": "area_room", "lang": "Finnish", "q": "Paljonko käytävän lattiapinta-ala on, bruttomitta?"}
+{"pattern": "area_room", "lang": "Finnish", "q": "Henkilökunnan toimiston m² kerro, laatoitustilaus menossa."}
+{"pattern": "area_room", "lang": "Finnish", "q": "konehuoneen pinta-ala? m2 riittää"}
+{"pattern": "area_room", "lang": "Finnish", "q": "Kokoushuoneen lattia-ala, tarvitaan mattotilaukseen."}
+{"pattern": "area_room", "lang": "Finnish", "q": "Vastaanoton lattia-ala neliöinä, pls."}
+{"pattern": "area_room", "lang": "German", "q": "Wie groß ist die Grundfläche der Küche in m²?"}
+{"pattern": "area_room", "lang": "German", "q": "Bibliothek – Nettoraumfläche bitte, für die Bodenbelagsabrechnung."}
+{"pattern": "area_room", "lang": "German", "q": "wieviel qm hat das Klassenzimmer 2"}
+{"pattern": "area_room", "lang": "German", "q": "Flurfläche in m² ablesen, Fliesen bestellen."}
+{"pattern": "area_room", "lang": "German", "q": "Personalbüro: Raumfläche, Quadratmeter?"}
+{"pattern": "area_room", "lang": "German", "q": "Technikraum, Fläche m2 — kann man das aus dem Plan lesen?"}
+{"pattern": "area_room", "lang": "German", "q": "Besprechungsraum Fläche in m² für die Angebotskalkulation, danke"}
+{"pattern": "area_room", "lang": "German", "q": "Emfpang: Bodenfläche bitte, Estrich ausschreiben"}
+{"pattern": "area_room", "lang": "Swedish", "q": "Vad är golvarean för köket i m²?"}
+{"pattern": "area_room", "lang": "Swedish", "q": "Bibliotekets yta kvm, behöver det för golvoffert."}
+{"pattern": "area_room", "lang": "Swedish", "q": "hur många kvm är klassrum 4"}
+{"pattern": "area_room", "lang": "Swedish", "q": "Korridoren – golvyta i kvadratmeter tack."}
+{"pattern": "area_room", "lang": "Swedish", "q": "Personalkontoret, area m2? Mattbeställning"}
+{"pattern": "area_room", "lang": "Swedish", "q": "maskinrummets golvyta, kvm"}
+{"pattern": "area_room", "lang": "Swedish", "q": "Mötesrummets areal i kvm för kalkylen."}
+{"pattern": "area_room", "lang": "Swedish", "q": "Förrådet: yta på golvet? kvm pls"}
+{"pattern": "area_room", "lang": "Norwegian", "q": "Hva er gulvarealet på kjøkkenet i m²?"}
+{"pattern": "area_room", "lang": "Norwegian", "q": "Biblioteket, m2 takk, skal ha fliser bestilt."}
+{"pattern": "area_room", "lang": "Norwegian", "q": "kor mange kvm er klasserom 2"}
+{"pattern": "area_room", "lang": "Norwegian", "q": "Korridor – golvareal i kvm, for gulvbelegg."}
+{"pattern": "area_room", "lang": "Norwegian", "q": "Personalkontoret areal? trenger til tilbud"}
+{"pattern": "area_room", "lang": "Norwegian", "q": "maskinrommet, gulvflate m2 pls"}
+{"pattern": "area_room", "lang": "Norwegian", "q": "Møterommets areal i kvadratmeter for kalkyle."}
+{"pattern": "area_room", "lang": "Norwegian", "q": "Resepsjonen gulvareal kvm? linoleum-bestilling"}
+{"pattern": "area_total", "lang": "English", "q": "What's the total floor area of the whole plan, all floors combined?"}
+{"pattern": "area_total", "lang": "English", "q": "Need the gross sqm for the full building off this drawing."}
+{"pattern": "area_total", "lang": "English", "q": "total m2 on this sheet? whole thing"}
+{"pattern": "area_total", "lang": "English", "q": "Could you give me the overall floor area of the entire drawing set? Just the sum."}
+{"pattern": "area_total", "lang": "English", "q": "Quick one, total square footage of the plan across every level?"}
+{"pattern": "area_total", "lang": "English", "q": "Pls calc the gross floor area for the whole building from these plans"}
+{"pattern": "area_total", "lang": "English", "q": "Estimating: what's the aggregate floor area across the full layout?"}
+{"pattern": "area_total", "lang": "English", "q": "Whats the total area of the whole floor plan in sq m, every level added up?"}
+{"pattern": "area_total", "lang": "Finnish", "q": "Mikä on koko pohjakuvan kokonaispinta-ala, kaikki kerrokset yhteensä?"}
+{"pattern": "area_total", "lang": "Finnish", "q": "Paljonko koko rakennuksen bruttoalaa tästä piirrustuksesta on?"}
+{"pattern": "area_total", "lang": "Finnish", "q": "Kokonaisneliöt koko planista m2?"}
+{"pattern": "area_total", "lang": "Finnish", "q": "Tarvitsen koko talon kokonaispinta-alan tähän kuvaan, laskettuna yhteen."}
+{"pattern": "area_total", "lang": "Finnish", "q": "moi, paljonko neliöitä yhteensä tässä pohjassa? kaikki kerrokset"}
+{"pattern": "area_total", "lang": "Finnish", "q": "Mikä on koko piirustuksen kokonaislattiapinta-ala (m²)?"}
+{"pattern": "area_total", "lang": "Finnish", "q": "Laskisitko koko rakennuksen kerrosalan tästä kuvasta?"}
+{"pattern": "area_total", "lang": "Finnish", "q": "Kokonaispinta-ala koko pohjapiirrokselta, ei yksittäisiä tiloja, vaan koko plan."}
+{"pattern": "area_total", "lang": "German", "q": "Wie groß ist die Gesamtfläche des gesamten Grundrisses, alle Geschosse zusammen?"}
+{"pattern": "area_total", "lang": "German", "q": "Wie viel m² Gesamtnutzfläche hat das komplette Gebäude laut Plan?"}
+{"pattern": "area_total", "lang": "German", "q": "Gesamtfläche Plan in m²? Alles zusammen bitte."}
+{"pattern": "area_total", "lang": "German", "q": "Brauche die Summe der Grundfläche über den ganzen Plan, ist das machbar?"}
+{"pattern": "area_total", "lang": "German", "q": "kurze Frage: wieviel qm insgesamt auf dem Plan?"}
+{"pattern": "area_total", "lang": "German", "q": "Bitte die Gesamtgeschossfläche für das ganze Bauwerk aus dieser Zeichnung ermitteln."}
+{"pattern": "area_total", "lang": "German", "q": "Kalkulation: Gesamtfläche des kompletten Grundrisses in Quadratmetern?"}
+{"pattern": "area_total", "lang": "German", "q": "Wie viele Quadratmeter hat die gesamte Zeichnung insgesamt, wenn man alle Ebenen zusammenrechnet?"}
+{"pattern": "area_total", "lang": "Swedish", "q": "Vad är den totala golvytan för hela ritningen, alla plan sammanlagt?"}
+{"pattern": "area_total", "lang": "Swedish", "q": "Hur många kvm BTA har hela byggnaden enligt planen?"}
+{"pattern": "area_total", "lang": "Swedish", "q": "Totalyta i kvm på hela planen? tack"}
+{"pattern": "area_total", "lang": "Swedish", "q": "Kan du räkna ihop hela golvarean för alla våningar på den här ritningen?"}
+{"pattern": "area_total", "lang": "Swedish", "q": "snabb fråga, total yta på hela plan, kvm?"}
+{"pattern": "area_total", "lang": "Swedish", "q": "Beräkna bruttoarean för hela huset utifrån planritningen."}
+{"pattern": "area_total", "lang": "Swedish", "q": "Vad blir sammanlagd golvyta för hela layouten i m²?"}
+{"pattern": "area_total", "lang": "Swedish", "q": "Hur stor är planens totala yta, alla våningsplan räknade ihop?"}
+{"pattern": "area_total", "lang": "Norwegian", "q": "Hva er totalt gulvareal for hele planen, alle etasjer samlet?"}
+{"pattern": "area_total", "lang": "Norwegian", "q": "Hvor mange kvm BRA har hele bygget etter tegningen?"}
+{"pattern": "area_total", "lang": "Norwegian", "q": "Total areal i m² på hele plantegningen? takk"}
+{"pattern": "area_total", "lang": "Norwegian", "q": "Kan du summere hele gulvarealet for alle etasjer på denne tegningen?"}
+{"pattern": "area_total", "lang": "Norwegian", "q": "rask en: totalt kvadratmeter på planen?"}
+{"pattern": "area_total", "lang": "Norwegian", "q": "Beregn bruttoarealet for hele bygningen fra denne plantegningen."}
+{"pattern": "area_total", "lang": "Norwegian", "q": "Hva blir samlet gulvflate i m² for hele oppsettet?"}
+{"pattern": "area_total", "lang": "Norwegian", "q": "Hvor stort er det totale arealet av hele tegningen, alt lagt sammen?"}
+{"pattern": "wall_area_room", "lang": "English", "q": "Need wall area for kitchen to paint, plaster or tile. Ceiling height 2.7 m. What's the wall surface in m²?"}
+{"pattern": "wall_area_room", "lang": "English", "q": "Estimator here. What's the total wall surface of the library for painting? Clear height is 3.2 m."}
+{"pattern": "wall_area_room", "lang": "English", "q": "quick one: wall sqm in the classroom, plaster + paint, ceiling 2.9m"}
+{"pattern": "wall_area_room", "lang": "English", "q": "Please calculate the net wall area of the corridor for tiling up to the ceiling. Ceiling height 2400 mm."}
+{"pattern": "wall_area_room", "lang": "English", "q": "What is the wall surface of the staff office to be plastered, given a 2.6 m ceiling?"}
+{"pattern": "wall_area_room", "lang": "English", "q": "Hall walls need painting, ceiling is 4.5m high. Total wall m2 pls"}
+{"pattern": "wall_area_room", "lang": "English", "q": "Plant room, tiling the walls, ceiling hgt 3.0 m. How many square metres of wall?"}
+{"pattern": "wall_area_room", "lang": "English", "q": "Meeting room wl surface for the paint job, ceilng 2.75 m. Can you pull that off the drawing?"}
+{"pattern": "wall_area_room", "lang": "Finnish", "q": "Mikä on keittiön seinäpinta-ala m²:nä maalausta varten, huonekorkeus 2,7 m?"}
+{"pattern": "wall_area_room", "lang": "Finnish", "q": "Kirjaston seinät maalataan, kattokorkeus 3,1 m. Paljonko seinäneliöitä yhteensä?"}
+{"pattern": "wall_area_room", "lang": "Finnish", "q": "luokan seinien pinta-ala tasoitukseen ja maalaukseen, huonekorkeus 2,8m"}
+{"pattern": "wall_area_room", "lang": "Finnish", "q": "Käytävän seinäpinta-ala laatoitukseen kattoon asti, kattokorkeus 2400 mm. Montako m2?"}
+{"pattern": "wall_area_room", "lang": "Finnish", "q": "Henkilökunnan toimiston seinät rappaukseen, kattokorkeus 2,6 m. Laske seinäneliöt."}
+{"pattern": "wall_area_room", "lang": "Finnish", "q": "Sali: seinien pinta-ala maalaukseen, huonekorkeus 4,2 m?"}
+{"pattern": "wall_area_room", "lang": "Finnish", "q": "Konehuoneen seinät laatoitukseen, katto 3,0 m, mikä seinäpinta-ala neliöinä"}
+{"pattern": "wall_area_room", "lang": "Finnish", "q": "Kokoushuoneen seinäpinta-alaa m² maalaukseen, kattokorkeus 2,75 m, kiitos"}
+{"pattern": "wall_area_room", "lang": "German", "q": "Wie groß ist die Wandfläche der Küche in m² zum Streichen? Raumhöhe 2,70 m."}
+{"pattern": "wall_area_room", "lang": "German", "q": "Bibliothek: Wandfläche für Putz und Anstrich, lichte Höhe 3,20 m. Bitte Quadratmeter."}
+{"pattern": "wall_area_room", "lang": "German", "q": "Klassenzimmer Wände fliesen, Deckenhöhe 2,90 m, wieviel m² Wand?"}
+{"pattern": "wall_area_room", "lang": "German", "q": "Flur: nur die Wandfläche ausrechnen, Raumhöhe 2,50 m. Wie viel m² Wand zu kacheln?"}
+{"pattern": "wall_area_room", "lang": "German", "q": "Personalbüro, Wände verputzen, Höhe 2,60 m. Wie viel Quadratmeter Wandfläche?"}
+{"pattern": "wall_area_room", "lang": "German", "q": "Saal Wandfläche streichen, Deckenhöhe 4,50 m, Gesamt m²?"}
+{"pattern": "wall_area_room", "lang": "German", "q": "Technikraum Wände kacheln, Raumhöhe 3 m, m² bitte"}
+{"pattern": "wall_area_room", "lang": "German", "q": "Besprechungsrum: Wandfläche für Malerarbeiten, Höhe 2,75 m. Kannst du das aus dem Plan ablesen?"}
+{"pattern": "wall_area_room", "lang": "Swedish", "q": "Hur många kvm vägg i köket ska målas? Takhöjd 2,7 m."}
+{"pattern": "wall_area_room", "lang": "Swedish", "q": "Bibliotek, väggarea för spackling och målning, takhöjd 3,1 m, tack"}
+{"pattern": "wall_area_room", "lang": "Swedish", "q": "klassrum väggyta kvm, puts + målning, tak 2,9m"}
+{"pattern": "wall_area_room", "lang": "Swedish", "q": "Korridor: väggarea för kakel upp till taket, takhöjd 2400 mm"}
+{"pattern": "wall_area_room", "lang": "Swedish", "q": "Personalkontoret, väggarea för putsning, rumshöjd 2,6 m. Vad blir det i m²?"}
+{"pattern": "wall_area_room", "lang": "Swedish", "q": "Hallen, väggytor för måleri, takhöjd 4,5 m, total kvm?"}
+{"pattern": "wall_area_room", "lang": "Swedish", "q": "Teknikrum vägg för kakel, takhöjd 3,0 m, hur mycket kvm vägg"}
+{"pattern": "wall_area_room", "lang": "Swedish", "q": "Mötesrum: väggyta m² till målning, takhöjd 2,75 m. Kan du räkna från ritningen?"}
+{"pattern": "wall_area_room", "lang": "Norwegian", "q": "Hvor mange m² vegg skal males på kjøkkenet? Takhøyde 2,7 m."}
+{"pattern": "wall_area_room", "lang": "Norwegian", "q": "Biblioteket: veggflate for maling og sparkling, takhøyde 3,1 m, takk"}
+{"pattern": "wall_area_room", "lang": "Norwegian", "q": "klasserom veggareal m2 puss og maling, tak 2,9m"}
+{"pattern": "wall_area_room", "lang": "Norwegian", "q": "Korridoren veggflate for flis opp til tak, takhøyde 2400 mm"}
+{"pattern": "wall_area_room", "lang": "Norwegian", "q": "Personalkontoret, veggareal til pussing, romhøyde 2,6 m. Hva blir det i kvm?"}
+{"pattern": "wall_area_room", "lang": "Norwegian", "q": "Sal: veggflater til maling, takhøyde 4,5 m, totalt m2?"}
+{"pattern": "wall_area_room", "lang": "Norwegian", "q": "Teknisk rom vegger flislegging, takhøyde 3,0 m, hvor mange kvm?"}
+{"pattern": "wall_area_room", "lang": "Norwegian", "q": "Møterommet veggareal til maling, takhøyde 2,75 m. Kan du hente det fra tegningen?"}
+{"pattern": "perimeter_room", "lang": "English", "q": "What's the perimeter of the kitchen? Need the lm of wall for the skirting order."}
+{"pattern": "perimeter_room", "lang": "English", "q": "circumference of library pls"}
+{"pattern": "perimeter_room", "lang": "English", "q": "Could you give me the total run around the classroom walls for the trim quote?"}
+{"pattern": "perimeter_room", "lang": "English", "q": "Corridor perimeter, metres. Client wants the dado rail costed."}
+{"pattern": "perimeter_room", "lang": "English", "q": "Please confirm the perimiter of the staff office so I can price the cable tray."}
+{"pattern": "perimeter_room", "lang": "English", "q": "Hall circumfrence? Need it for the LVT edge strip."}
+{"pattern": "perimeter_room", "lang": "English", "q": "Plant room, what's the perimeter at finished wall face?"}
+{"pattern": "perimeter_room", "lang": "English", "q": "lobby perim, quick one"}
+{"pattern": "perimeter_room", "lang": "Finnish", "q": "Mikä on keittiön ympärysmitta metreinä? Tarvitsen sitä listoitukseen."}
+{"pattern": "perimeter_room", "lang": "Finnish", "q": "Kirjaston kehämitta, kiitos. Lattialistat tilataan huomenna."}
+{"pattern": "perimeter_room", "lang": "Finnish", "q": "Paljonko on luokan seinien kokonaispituus eli ympärysmitta?"}
+{"pattern": "perimeter_room", "lang": "Finnish", "q": "käytävän piiri m, tarvitaan kaapelikouruun"}
+{"pattern": "perimeter_room", "lang": "Finnish", "q": "Henkilökunnan toimiston ympärysmitta? Pitää hinnoitella maalaus."}
+{"pattern": "perimeter_room", "lang": "Finnish", "q": "Salin ympärysmittaa tarvitaan reunalistan tarjoukseen, mitä se on?"}
+{"pattern": "perimeter_room", "lang": "Finnish", "q": "konehuoneen ympäärysmitta, metrit"}
+{"pattern": "perimeter_room", "lang": "Finnish", "q": "Aulan kehämitta ennen kuin tilaan listat, kertoisitko?"}
+{"pattern": "perimeter_room", "lang": "German", "q": "Wie groß ist der Umfang der Küche in Metern? Ich brauche ihn für die Sockelleisten."}
+{"pattern": "perimeter_room", "lang": "German", "q": "Umfang Bibliothek bitte, für die Wandverkleidung."}
+{"pattern": "perimeter_room", "lang": "German", "q": "Welche Gesamtlänge hat der Klassenraum entlang der Wände?"}
+{"pattern": "perimeter_room", "lang": "German", "q": "Flur Umfang? Brauch ich für die Kabelkanäle, Umfnag wäre gut."}
+{"pattern": "perimeter_room", "lang": "German", "q": "Wie viel Meter Umfang hat das Personalbüro? Für die Tapeziermenge."}
+{"pattern": "perimeter_room", "lang": "German", "q": "Halle Umfang in m, Angebot Randprofile"}
+{"pattern": "perimeter_room", "lang": "German", "q": "Technikraum Umfang bei Rohfußboden, bitte bestätigen."}
+{"pattern": "perimeter_room", "lang": "German", "q": "Lager Umfang?? Für die Regalbefestigung an der Wand."}
+{"pattern": "perimeter_room", "lang": "Swedish", "q": "Vad är omkretsen på köket i meter? Behöver den till golvlisterna."}
+{"pattern": "perimeter_room", "lang": "Swedish", "q": "omkrets biblioteket tack"}
+{"pattern": "perimeter_room", "lang": "Swedish", "q": "Hur lång är klassrummets totala väggomkrets? Det ska offereras taklist."}
+{"pattern": "perimeter_room", "lang": "Swedish", "q": "Korridor omkrets, kabelränna, hur många meter?"}
+{"pattern": "perimeter_room", "lang": "Swedish", "q": "Kan ni ange omkretsen för personalkontoret? Ska prissättas med målning."}
+{"pattern": "perimeter_room", "lang": "Swedish", "q": "Hallens omkrest i m, behöver det för kantlisten"}
+{"pattern": "perimeter_room", "lang": "Swedish", "q": "Maskinrummets omkrets vid färdigt golv, tack."}
+{"pattern": "perimeter_room", "lang": "Swedish", "q": "Mötesrummets omkrets? Snabb fråga inför beställning av list."}
+{"pattern": "perimeter_room", "lang": "Norwegian", "q": "Hva er omkretsen på kjøkkenet i meter? Trenger det til listene."}
+{"pattern": "perimeter_room", "lang": "Norwegian", "q": "omkrets bibliotek, takk"}
+{"pattern": "perimeter_room", "lang": "Norwegian", "q": "Hvor lang er den totale veggomkretsen i klasserommet? Skal prises for takliste."}
+{"pattern": "perimeter_room", "lang": "Norwegian", "q": "Korridor omkretsen, kabelbro, hvor mange meter?"}
+{"pattern": "perimeter_room", "lang": "Norwegian", "q": "Kan dere oppgi omkretsen på personalkontoret? Skal prises med maling."}
+{"pattern": "perimeter_room", "lang": "Norwegian", "q": "Hallens omkertsen i m, trengs til kantlisten"}
+{"pattern": "perimeter_room", "lang": "Norwegian", "q": "Teknisk rom, omkrets ved ferdig gulv, takk."}
+{"pattern": "perimeter_room", "lang": "Norwegian", "q": "Møterommets omkrets? Rask sjekk før bestilling av lister."}
+{"pattern": "count_doors", "lang": "English", "q": "How many doors are on this plan? Need the count for the schedule."}
+{"pattern": "count_doors", "lang": "English", "q": "Can you count the doors on the floor plan? I need the number for the hardware order."}
+{"pattern": "count_doors", "lang": "English", "q": "qty of doors on the plan?"}
+{"pattern": "count_doors", "lang": "English", "q": "Can you tally all the door openings on the drawing, including the exterior ones?"}
+{"pattern": "count_doors", "lang": "English", "q": "Estimator here. Total door count per the plan, please."}
+{"pattern": "count_doors", "lang": "English", "q": "Doors on this sheet, how many? Need them for the frame order."}
+{"pattern": "count_doors", "lang": "English", "q": "hw takeoff, how many door leaves are shown on the plan"}
+{"pattern": "count_doors", "lang": "English", "q": "Quick count: how many dors are drawn on this floor plan?"}
+{"pattern": "count_doors", "lang": "Finnish", "q": "Montako ovea tässä pohjapiirustuksessa on?"}
+{"pattern": "count_doors", "lang": "Finnish", "q": "Paljonko ovia kerroksessa on yhteensä? Tarvitsen määrän ovitilausta varten."}
+{"pattern": "count_doors", "lang": "Finnish", "q": "Montako ovea pohjakuvassa näkyy?"}
+{"pattern": "count_doors", "lang": "Finnish", "q": "Laske ovet piirustuksesta, tarvitsen lukumäärän urakkalaskentaan."}
+{"pattern": "count_doors", "lang": "Finnish", "q": "Ovien määrä tältä pohjapiirrokselta, kiitos."}
+{"pattern": "count_doors", "lang": "Finnish", "q": "Kuinka monta oviaukkoa piirustuksessa on?"}
+{"pattern": "count_doors", "lang": "Finnish", "q": "Ovien lukumäärä pohjakuvasta?"}
+{"pattern": "count_doors", "lang": "Finnish", "q": "Montako oveta tästä piirustukses löytyy?"}
+{"pattern": "count_doors", "lang": "German", "q": "Wie viele Türen sind auf diesem Grundriss eingezeichnet?"}
+{"pattern": "count_doors", "lang": "German", "q": "Können Sie die Türanzahl aus dem Plan für die Ausschreibung zählen?"}
+{"pattern": "count_doors", "lang": "German", "q": "Anzahl Türen im Plan? Brauche das für die Bestellung."}
+{"pattern": "count_doors", "lang": "German", "q": "Wie viele Türöffnungen zeigt die Zeichnung insgesamt?"}
+{"pattern": "count_doors", "lang": "German", "q": "Zähl mal die Türen auf dem Plan, bitte, die Zargen müssen bestellt werden."}
+{"pattern": "count_doors", "lang": "German", "q": "Kalkulation: Gesamtzahl der Türblätter laut Grundriss?"}
+{"pattern": "count_doors", "lang": "German", "q": "Wieviel Türen hat der Plan?"}
+{"pattern": "count_doors", "lang": "German", "q": "Wie viele Tueren sind im Grundriss drin?"}
+{"pattern": "count_doors", "lang": "Swedish", "q": "Hur många dörrar finns på den här ritningen?"}
+{"pattern": "count_doors", "lang": "Swedish", "q": "Kan du räkna antalet dörrar i planritningen? Behöver siffran till beställningen."}
+{"pattern": "count_doors", "lang": "Swedish", "q": "Antal dörrar på plan? Snabbt svar tack."}
+{"pattern": "count_doors", "lang": "Swedish", "q": "Hur många dörröppningar syns på plankartan totalt?"}
+{"pattern": "count_doors", "lang": "Swedish", "q": "Mängdning: hur många dörrar finns i planen, inklusive ytterdörrar?"}
+{"pattern": "count_doors", "lang": "Swedish", "q": "Vi ska beställa dörrblad, hur många dörrar är ritade här?"}
+{"pattern": "count_doors", "lang": "Swedish", "q": "Räkna dörrarna på ritningen, tack, vi behöver siffran till offerten."}
+{"pattern": "count_doors", "lang": "Swedish", "q": "Hur många dörrar är det på plnen?"}
+{"pattern": "count_doors", "lang": "Norwegian", "q": "Hvor mange dører er tegnet inn på denne planen?"}
+{"pattern": "count_doors", "lang": "Norwegian", "q": "Kan du telle dørene på plantegningen? Trenger tallet til bestillingen."}
+{"pattern": "count_doors", "lang": "Norwegian", "q": "Antall dører på planen? Raskt svar."}
+{"pattern": "count_doors", "lang": "Norwegian", "q": "Hvor mange døråpninger viser tegningen totalt?"}
+{"pattern": "count_doors", "lang": "Norwegian", "q": "Mengdeberegning: hvor mange dører står på plan, inkludert ytterdører?"}
+{"pattern": "count_doors", "lang": "Norwegian", "q": "Hvor mange dørblad skal vi bestille etter denne tegningen?"}
+{"pattern": "count_doors", "lang": "Norwegian", "q": "Tell dørene på plantegninga, takk."}
+{"pattern": "count_doors", "lang": "Norwegian", "q": "Hvro mange dører er det på plan?"}
+{"pattern": "count_windows", "lang": "English", "q": "How many windows are on this plan total?"}
+{"pattern": "count_windows", "lang": "English", "q": "Count the windows on the drawing, please. I need the number for the glazing order."}
+{"pattern": "count_windows", "lang": "English", "q": "Qty of windows across the whole sheet?"}
+{"pattern": "count_windows", "lang": "English", "q": "Estimator here: total window count on the floor plan for the takeoff."}
+{"pattern": "count_windows", "lang": "English", "q": "how many windows r on the plan"}
+{"pattern": "count_windows", "lang": "English", "q": "Quick one, windows on the plan, how many?"}
+{"pattern": "count_windows", "lang": "English", "q": "Could you tally the total number of window openings shown on the floor plan sheet?"}
+{"pattern": "count_windows", "lang": "English", "q": "Window count for the joinery schedule, whole floor plan. Check carefully, the plan has alot of wndows."}
+{"pattern": "count_windows", "lang": "Finnish", "q": "Kuinka monta ikkunaa pohjapiirustuksessa on yhteensä?"}
+{"pattern": "count_windows", "lang": "Finnish", "q": "Montako ikkunaa piirustukseen tulee? Tarvitsen lukumäärän ikkunatilausta varten."}
+{"pattern": "count_windows", "lang": "Finnish", "q": "Ikkunoita kaikkiaan piirustuksessa, mikä määrä?"}
+{"pattern": "count_windows", "lang": "Finnish", "q": "moneen ikkunaa tässä pohjakuvassa on"}
+{"pattern": "count_windows", "lang": "Finnish", "q": "Laskisitko ikkunat pohjapiirroksesta määräluetteloa varten?"}
+{"pattern": "count_windows", "lang": "Finnish", "q": "Ikkunoiden kokonaismäärä pohjapiirustuksella, kiitos."}
+{"pattern": "count_windows", "lang": "Finnish", "q": "Paljonko ikkunoita on piirrustuksessa? Urakoitsijan mittaus."}
+{"pattern": "count_windows", "lang": "Finnish", "q": "Ikkunat pohjakuvasta, montako kpl?"}
+{"pattern": "count_windows", "lang": "German", "q": "Wie viele Fenster sind insgesamt im Grundriss eingezeichnet?"}
+{"pattern": "count_windows", "lang": "German", "q": "Anzahl Fenster auf dem Plan? Brauche die Menge für die Fensterbestellung."}
+{"pattern": "count_windows", "lang": "German", "q": "Wieviele Fenster hat der Grundriss, Stück bitte?"}
+{"pattern": "count_windows", "lang": "German", "q": "Mengenermittlung: Fensteranzahl im gesamten Grundrissplan, bitte zählen."}
+{"pattern": "count_windows", "lang": "German", "q": "Zähl mal kurz die Fenster auf der Zeichnung, die Baustelle wartet."}
+{"pattern": "count_windows", "lang": "German", "q": "Wie viele Fensteröffnungen zeigt der Grundriss?"}
+{"pattern": "count_windows", "lang": "German", "q": "Fenster insgesamt? Pläne liegen vor, brauch die Zahl für das LV."}
+{"pattern": "count_windows", "lang": "German", "q": "Wie viel Fentster sind auf dem Plan drauf?"}
+{"pattern": "count_windows", "lang": "Swedish", "q": "Hur många fönster finns totalt på planritningen?"}
+{"pattern": "count_windows", "lang": "Swedish", "q": "Antal fönster i ritningen, behöver det till fönsterbeställningen."}
+{"pattern": "count_windows", "lang": "Swedish", "q": "Hur många fönster är inritade på planen?"}
+{"pattern": "count_windows", "lang": "Swedish", "q": "Mängdavtagning: totalt antal fönster på plan, tack."}
+{"pattern": "count_windows", "lang": "Swedish", "q": "kolla hur många fönster det är på ritningen, snabbt"}
+{"pattern": "count_windows", "lang": "Swedish", "q": "Vad blir antalet fönster på den här plantegningen?"}
+{"pattern": "count_windows", "lang": "Swedish", "q": "Räkna fönstren på planen, vi behöver totalen till offerten."}
+{"pattern": "count_windows", "lang": "Swedish", "q": "Hur många fönstr finns på ritningen?"}
+{"pattern": "count_windows", "lang": "Norwegian", "q": "Hvor mange vinduer er det totalt på plantegningen?"}
+{"pattern": "count_windows", "lang": "Norwegian", "q": "Antall vinduer på tegningen? Trenger tallet til vindusbestillingen."}
+{"pattern": "count_windows", "lang": "Norwegian", "q": "Hvor mange vinduer har planen, stykk?"}
+{"pattern": "count_windows", "lang": "Norwegian", "q": "Mengdeberegning: totalt antall vinduer i planen, takk."}
+{"pattern": "count_windows", "lang": "Norwegian", "q": "tell vinduene på tegninga, fort"}
+{"pattern": "count_windows", "lang": "Norwegian", "q": "Hvor mange vindu er tegnet inn på grunnplanen?"}
+{"pattern": "count_windows", "lang": "Norwegian", "q": "Vinduer totalt i planen? Trenger tall til tilbudet."}
+{"pattern": "count_windows", "lang": "Norwegian", "q": "Hvor mange vinduer er det på plantegninga, kan du telle?"}
+{"pattern": "count_rooms", "lang": "English", "q": "How many rooms are on this plan?"}
+{"pattern": "count_rooms", "lang": "English", "q": "Total count of spaces on the drawing, please. I need it for the estimate."}
+{"pattern": "count_rooms", "lang": "English", "q": "Quick one: how many rooms we talking about on this sheet?"}
+{"pattern": "count_rooms", "lang": "English", "q": "Could you tell me the number of distinct spaces shown on the floor plan?"}
+{"pattern": "count_rooms", "lang": "English", "q": "Rooms on the plan, how many? Need the count before I price the finishes."}
+{"pattern": "count_rooms", "lang": "English", "q": "Count the enclosed spaces on this drawing for me."}
+{"pattern": "count_rooms", "lang": "English", "q": "how mny rooms on ths plan"}
+{"pattern": "count_rooms", "lang": "English", "q": "Give me the room tally for sheet A-101. How many are there?"}
+{"pattern": "count_rooms", "lang": "Finnish", "q": "Kuinka monta huonetta tässä pohjapiirustuksessa on?"}
+{"pattern": "count_rooms", "lang": "Finnish", "q": "Montako tilaa piirustuksessa on yhteensä?"}
+{"pattern": "count_rooms", "lang": "Finnish", "q": "Paljonko huoneita tällä pohjakuvalla on? Tarvitsen määrän tarjousta varten."}
+{"pattern": "count_rooms", "lang": "Finnish", "q": "Laske kuinka monta erillistä tilaa kerroksessa on."}
+{"pattern": "count_rooms", "lang": "Finnish", "q": "montako huonettta tossa planissa on"}
+{"pattern": "count_rooms", "lang": "Finnish", "q": "Huonemäärä tästä piirroksesta, kiitos."}
+{"pattern": "count_rooms", "lang": "Finnish", "q": "Kuinka monta tilaa pohjapiirrokseen on merkitty?"}
+{"pattern": "count_rooms", "lang": "Finnish", "q": "Montako huonetta tällä kuvalla on ennen kuin lasken pinnoitteet?"}
+{"pattern": "count_rooms", "lang": "German", "q": "Wie viele Räume sind auf diesem Grundriss dargestellt?"}
+{"pattern": "count_rooms", "lang": "German", "q": "Anzahl der Räume im Plan bitte, brauch ich für die Kalkulation."}
+{"pattern": "count_rooms", "lang": "German", "q": "Wieviel Räume hat der Plan?"}
+{"pattern": "count_rooms", "lang": "German", "q": "Bitte zählen Sie die Raumanzahl auf Blatt A-201."}
+{"pattern": "count_rooms", "lang": "German", "q": "wieviele räume gibts da auf dem plan"}
+{"pattern": "count_rooms", "lang": "German", "q": "Gesamtzahl der Räume auf dieser Zeichnung?"}
+{"pattern": "count_rooms", "lang": "German", "q": "Kannst du mal schnell die Raumzahl vom Grundriss sagen?"}
+{"pattern": "count_rooms", "lang": "German", "q": "Wie viele Räume zähle ich im Plan? Für das Aufmaß."}
+{"pattern": "count_rooms", "lang": "Swedish", "q": "Hur många rum finns på den här planritningen?"}
+{"pattern": "count_rooms", "lang": "Swedish", "q": "Antal rum på ritningen, tack. Behöver det till kalkylen."}
+{"pattern": "count_rooms", "lang": "Swedish", "q": "Hur många utrymmen är märkta på planen?"}
+{"pattern": "count_rooms", "lang": "Swedish", "q": "Räkna rummen på plan A-101 åt mig."}
+{"pattern": "count_rooms", "lang": "Swedish", "q": "hur mänga rum är det på ritningen"}
+{"pattern": "count_rooms", "lang": "Swedish", "q": "Vad är totala antalet rum på detta underlag?"}
+{"pattern": "count_rooms", "lang": "Swedish", "q": "Kan du säga hur många rum det är på planen? Ett snabbt svar räcker."}
+{"pattern": "count_rooms", "lang": "Swedish", "q": "Rumsantal på golvplanen, hur många?"}
+{"pattern": "count_rooms", "lang": "Norwegian", "q": "Hvor mange rom er det på denne plantegningen?"}
+{"pattern": "count_rooms", "lang": "Norwegian", "q": "Antall rom på tegningen, takk. Trengs til tilbudet."}
+{"pattern": "count_rooms", "lang": "Norwegian", "q": "Hvor mange rom er tegnet inn på planen?"}
+{"pattern": "count_rooms", "lang": "Norwegian", "q": "Tell rommene på plan A-101 for meg."}
+{"pattern": "count_rooms", "lang": "Norwegian", "q": "hvor mage rom er det på planen"}
+{"pattern": "count_rooms", "lang": "Norwegian", "q": "Totalt antall rom på denne tegningen?"}
+{"pattern": "count_rooms", "lang": "Norwegian", "q": "Kan du si hvor mange rom det er på grunnplanen? Greit med rask svar."}
+{"pattern": "count_rooms", "lang": "Norwegian", "q": "Romtelling på plantegningen, hvor mange blir det?"}
+{"pattern": "count_toilets", "lang": "English", "q": "How many toilets are shown on this plan?"}
+{"pattern": "count_toilets", "lang": "English", "q": "Quick count, how many WC bowls on the drawing?"}
+{"pattern": "count_toilets", "lang": "English", "q": "Can you tell me the total number of water closets on the floor plan?"}
+{"pattern": "count_toilets", "lang": "English", "q": "Number of WC pans in the sanitary layout, pls"}
+{"pattern": "count_toilets", "lang": "English", "q": "Ho many toilet pans we looking at on this sheet?"}
+{"pattern": "count_toilets", "lang": "English", "q": "For the estimate: how many toilet fixtures are drawn here?"}
+{"pattern": "count_toilets", "lang": "English", "q": "Need a count of the WCs on the plan for the materials takeoff."}
+{"pattern": "count_toilets", "lang": "English", "q": "how many loos on this drawing lol, need it for the order"}
+{"pattern": "count_toilets", "lang": "Finnish", "q": "Montako WC-istuinta tässä pohjapiirroksessa on?"}
+{"pattern": "count_toilets", "lang": "Finnish", "q": "Paljonko vessanpöntöitä piirustuksessa on yhteensä?"}
+{"pattern": "count_toilets", "lang": "Finnish", "q": "Kuinka monta WC-kaukaloa tälle kerrokselle on merkitty?"}
+{"pattern": "count_toilets", "lang": "Finnish", "q": "Laske kuinka monta wc-istuinta pohjakuvasta löytyy, tarvitaan tarjouslaskentaan."}
+{"pattern": "count_toilets", "lang": "Finnish", "q": "Mones vessa tuossa kuvassa, eli montako pönttöä?"}
+{"pattern": "count_toilets", "lang": "Finnish", "q": "Montako WC-pönttöä on merkitty kerrospiirrokseen?"}
+{"pattern": "count_toilets", "lang": "Finnish", "q": "Tarvitsen WC-istuinten määrän materiaaliluetteloon, paljonko niitä on?"}
+{"pattern": "count_toilets", "lang": "Finnish", "q": "Montako wc-pönttöä pohjapiirustuksessa, pitää tilata (kiitos)"}
+{"pattern": "count_toilets", "lang": "German", "q": "Wie viele WC-Becken sind auf diesem Grundriss eingezeichnet?"}
+{"pattern": "count_toilets", "lang": "German", "q": "Wieviele WCs hat der Plan insgesamt?"}
+{"pattern": "count_toilets", "lang": "German", "q": "Könnten Sie mir die Anzahl der Toilettenbecken aus der Ausführungsplanung nennen?"}
+{"pattern": "count_toilets", "lang": "German", "q": "Kurze Frage: wie viele Klos sind auf dem Plan?"}
+{"pattern": "count_toilets", "lang": "German", "q": "Stückzahl WC-Keramik laut Sanitärplan bitte."}
+{"pattern": "count_toilets", "lang": "German", "q": "Für das Aufmaß: wieviele Toiletten sind hier dargestellt?"}
+{"pattern": "count_toilets", "lang": "German", "q": "Zähl mal kurz die Sitzkeramik im Grundriss, wie viele?"}
+{"pattern": "count_toilets", "lang": "German", "q": "Wieviele WC-Anlagen sind im Plan verzeichnet, bitte für die Ausschreibung?"}
+{"pattern": "count_toilets", "lang": "Swedish", "q": "Hur många toaletter är inritade på den här planritningen?"}
+{"pattern": "count_toilets", "lang": "Swedish", "q": "Kan du räkna antalet WC-stolar i ritningen?"}
+{"pattern": "count_toilets", "lang": "Swedish", "q": "Vad är det totala antalet WC-skålar på plan?"}
+{"pattern": "count_toilets", "lang": "Swedish", "q": "Hur många toalettstolar ska vi beställa enligt ritningen?"}
+{"pattern": "count_toilets", "lang": "Swedish", "q": "Antal WC enligt sanitetsplanen, tack."}
+{"pattern": "count_toilets", "lang": "Swedish", "q": "Hur många wc-stolar finns på den här ritningen, behöver det till kalkylen?"}
+{"pattern": "count_toilets", "lang": "Swedish", "q": "räkna toaletterna på plan, hur många blir det?"}
+{"pattern": "count_toilets", "lang": "Swedish", "q": "Hur många toaletter syns på plan, behöver mängden till materialbeställningen?"}
+{"pattern": "count_toilets", "lang": "Norwegian", "q": "Hvor mange toalettskåler er tegnet inn på denne plantegningen?"}
+{"pattern": "count_toilets", "lang": "Norwegian", "q": "Kan du telle opp antall WC-er i tegningen?"}
+{"pattern": "count_toilets", "lang": "Norwegian", "q": "Hva er totalt antall WC-stoler på plan?"}
+{"pattern": "count_toilets", "lang": "Norwegian", "q": "Hvor mange do er det på tegningen? Trenger til bestillingen."}
+{"pattern": "count_toilets", "lang": "Norwegian", "q": "Antall toalettsett iht. sanitærtegningen, takk."}
+{"pattern": "count_toilets", "lang": "Norwegian", "q": "Hvor mange WC-er ser vi på denne tegningen, til mengdeberegningen?"}
+{"pattern": "count_toilets", "lang": "Norwegian", "q": "telle wc på planen, hvor mange blir det?"}
+{"pattern": "count_toilets", "lang": "Norwegian", "q": "Hvor mange toaletter er vist på plantegningen, trenger tallet til tilbudet?"}
+{"pattern": "doors_of_room", "lang": "English", "q": "How many doors does the kitchen have and how wide are they?"}
+{"pattern": "doors_of_room", "lang": "English", "q": "Library: what doors and windows are on the drawing, and what are the widths?"}
+{"pattern": "doors_of_room", "lang": "English", "q": "Need the door schedule for the classroom, count and clear width of each door please."}
+{"pattern": "doors_of_room", "lang": "English", "q": "Which doors come off the corridor and how wide is each one? Any glazed screens too?"}
+{"pattern": "doors_of_room", "lang": "English", "q": "staff ofice - doors & windows, what sizes?"}
+{"pattern": "doors_of_room", "lang": "English", "q": "Hall: door leaves and clear opening widths?"}
+{"pattern": "doors_of_room", "lang": "English", "q": "For the plant room, which doors go in and out and how wide are they?"}
+{"pattern": "doors_of_room", "lang": "English", "q": "Toilet door widths, I need them for the accessibility check. Any windows in there?"}
+{"pattern": "doors_of_room", "lang": "Finnish", "q": "Montako ovea keittiössä on ja mikä niiden leveys on?"}
+{"pattern": "doors_of_room", "lang": "Finnish", "q": "Kirjaston ovet ja ikkunat, leveys mm?"}
+{"pattern": "doors_of_room", "lang": "Finnish", "q": "Luokkahuoneen ovet: mitä ovia siellä on ja mikä on valoaukon leveys?"}
+{"pattern": "doors_of_room", "lang": "Finnish", "q": "Käytävältä lähtevät ovet, leveydet ja määrä, kiitos."}
+{"pattern": "doors_of_room", "lang": "Finnish", "q": "henkilökunnan toimiston ovet ja ikkunat, leveydet?"}
+{"pattern": "doors_of_room", "lang": "Finnish", "q": "Konehuoneen ovet, paljonko leveyttä kussakin?"}
+{"pattern": "doors_of_room", "lang": "Finnish", "q": "Kokoushuoneessa millaiset ovet ja mitkä leveydet niillä on?"}
+{"pattern": "doors_of_room", "lang": "Finnish", "q": "Varaston ovi, leveys? Onko siinä ikkunoita?"}
+{"pattern": "doors_of_room", "lang": "German", "q": "Wie viele Türen hat die Küche und wie breit sind sie lichtlich?"}
+{"pattern": "doors_of_room", "lang": "German", "q": "Bibliothek: Türen und Fenster, Breiten bitte."}
+{"pattern": "doors_of_room", "lang": "German", "q": "Klassenzi. Türbreiten?"}
+{"pattern": "doors_of_room", "lang": "German", "q": "Welche Türen gehen vom Flur ab, und wie breit sind die?"}
+{"pattern": "doors_of_room", "lang": "German", "q": "Personalbüro, Türen und Fenster mit Maßen?"}
+{"pattern": "doors_of_room", "lang": "German", "q": "Technikraum: Türbreite und Anzahl der Türen?"}
+{"pattern": "doors_of_room", "lang": "German", "q": "Besprechungsraum: Türen, Breite in mm, gibt es Fenster?"}
+{"pattern": "doors_of_room", "lang": "German", "q": "Lager: wie viele Türen und welche Breite haben sie?"}
+{"pattern": "doors_of_room", "lang": "Swedish", "q": "Hur många dörrar har köket och vilken bredd är de?"}
+{"pattern": "doors_of_room", "lang": "Swedish", "q": "Bibliotek: dörrar och fönster, bredder?"}
+{"pattern": "doors_of_room", "lang": "Swedish", "q": "Klassrummet: vilka dörrar finns och vilka fria öppningsmått har de?"}
+{"pattern": "doors_of_room", "lang": "Swedish", "q": "Korridoren, vilka dörrar går ut därifrån och hur breda är de?"}
+{"pattern": "doors_of_room", "lang": "Swedish", "q": "persnalkontoret dörrar o fönster mått"}
+{"pattern": "doors_of_room", "lang": "Swedish", "q": "Maskinrummet, dörrbredd och antal dörrar?"}
+{"pattern": "doors_of_room", "lang": "Swedish", "q": "Mötesrummet: dörrbredd?"}
+{"pattern": "doors_of_room", "lang": "Swedish", "q": "Toalett, dörrbredd behövs för tillgänglighetskravet. Finns fönster?"}
+{"pattern": "doors_of_room", "lang": "Norwegian", "q": "Hvor mange dører er det på kjøkkenet, og hvor brede er de?"}
+{"pattern": "doors_of_room", "lang": "Norwegian", "q": "Bibliotek: dører og vinduer, bredde i mm?"}
+{"pattern": "doors_of_room", "lang": "Norwegian", "q": "Klasserommet, dørbredder og hvor mange dører er det?"}
+{"pattern": "doors_of_room", "lang": "Norwegian", "q": "Hvilke dører går ut fra gangen, og hvor brede er de?"}
+{"pattern": "doors_of_room", "lang": "Norwegian", "q": "Kontoret, dør og vindu, mål?"}
+{"pattern": "doors_of_room", "lang": "Norwegian", "q": "Teknisk rom, dørbredde og antall, takk."}
+{"pattern": "doors_of_room", "lang": "Norwegian", "q": "Møterommet: hvilke dører og vinduer finnes, og hvor brede er de?"}
+{"pattern": "doors_of_room", "lang": "Norwegian", "q": "lager dør bredde?"}
+{"pattern": "largest_room", "lang": "English", "q": "Which room on this plan is the biggest one? Need the sqm for the flooring takeoff."}
+{"pattern": "largest_room", "lang": "English", "q": "What's the largest room here, by area?"}
+{"pattern": "largest_room", "lang": "English", "q": "Hey, which space is the big one, the one with the most square meters?"}
+{"pattern": "largest_room", "lang": "English", "q": "Quick q: largest room on the drawing?"}
+{"pattern": "largest_room", "lang": "English", "q": "For the estimate, identify the room with the greatest floor area."}
+{"pattern": "largest_room", "lang": "English", "q": "Which room has the biggest footprint on this sheet? Need the dims."}
+{"pattern": "largest_room", "lang": "English", "q": "Witch one's the biggest room, we're pricing the screed."}
+{"pattern": "largest_room", "lang": "English", "q": "Largest room by net area on this layout, which is it?"}
+{"pattern": "largest_room", "lang": "Finnish", "q": "Mikä huone on tässä pohjapiirroksessa suurin pinta-alaltaan?"}
+{"pattern": "largest_room", "lang": "Finnish", "q": "Mikä on isoin huone tällä piirustuksella?"}
+{"pattern": "largest_room", "lang": "Finnish", "q": "Mikä tila on se suurin? Tarvitsen neliöt lattiamateriaaliin."}
+{"pattern": "largest_room", "lang": "Finnish", "q": "Mikä huone on suurin, m2?"}
+{"pattern": "largest_room", "lang": "Finnish", "q": "Arvioinnin takia: mikä on pinta-alaltaan suurin tila?"}
+{"pattern": "largest_room", "lang": "Finnish", "q": "Missä huoneessa on suurin pohjapinta-ala? Pitää tietää mitoitus."}
+{"pattern": "largest_room", "lang": "Finnish", "q": "Mikä on se isoin huone, sanokaa vaan"}
+{"pattern": "largest_room", "lang": "Finnish", "q": "Suurin huone tässä kerroksessa, mikä se on?"}
+{"pattern": "largest_room", "lang": "German", "q": "Welcher Raum ist auf diesem Grundriss der größte?"}
+{"pattern": "largest_room", "lang": "German", "q": "Was ist der größte Raum hier, von der Fläche her?"}
+{"pattern": "largest_room", "lang": "German", "q": "Welcher Raum hat die größte Grundfläche? Brauch die m² für die Estrich-Kalkulation."}
+{"pattern": "largest_room", "lang": "German", "q": "Kurze Frage: größter Raum im Plan?"}
+{"pattern": "largest_room", "lang": "German", "q": "Für das Angebot: welcher Raum hat die größte Fläche?"}
+{"pattern": "largest_room", "lang": "German", "q": "Welches Zimmer is das größte, wir kalkulieren den Bodenbelag."}
+{"pattern": "largest_room", "lang": "German", "q": "Welcher ist der größte Raum auf der Zeichnung? Netto-Fläche bitte."}
+{"pattern": "largest_room", "lang": "German", "q": "Welcher Raum ist der grösste auf dem Plan, Schätzung reicht."}
+{"pattern": "largest_room", "lang": "Swedish", "q": "Vilket rum är störst på den här ritningen?"}
+{"pattern": "largest_room", "lang": "Swedish", "q": "Vilken är den största ytan i planlösningen?"}
+{"pattern": "largest_room", "lang": "Swedish", "q": "Vilket rum har störst golvyta? Behöver kvm till golvoffert."}
+{"pattern": "largest_room", "lang": "Swedish", "q": "Snabbfråga: största rummet på ritningen?"}
+{"pattern": "largest_room", "lang": "Swedish", "q": "För kalkylen, vilket rum har störst area?"}
+{"pattern": "largest_room", "lang": "Swedish", "q": "Vilket rum är det största, vi ska prissätta golvet."}
+{"pattern": "largest_room", "lang": "Swedish", "q": "Vilket är största rummet? kvm tack"}
+{"pattern": "largest_room", "lang": "Swedish", "q": "Vilket rum har störst nettoarea i den här layouten?"}
+{"pattern": "largest_room", "lang": "Norwegian", "q": "Hvilket rom er størst på denne tegningen?"}
+{"pattern": "largest_room", "lang": "Norwegian", "q": "Hva er det største rommet her, etter areal?"}
+{"pattern": "largest_room", "lang": "Norwegian", "q": "Hvilket rom har størst gulvareal? Trenger kvm til tilbudet."}
+{"pattern": "largest_room", "lang": "Norwegian", "q": "Kort spørsmål: største rommet på plantegningen?"}
+{"pattern": "largest_room", "lang": "Norwegian", "q": "Til kalkylen, hvilket rom har størst areal?"}
+{"pattern": "largest_room", "lang": "Norwegian", "q": "Hvilket rom er det største, vi skal prise gulvet."}
+{"pattern": "largest_room", "lang": "Norwegian", "q": "Hvilken er største rom? kvm takk"}
+{"pattern": "largest_room", "lang": "Norwegian", "q": "Største rommet i denne planen, hvilket er det?"}
+{"pattern": "regulation_check", "lang": "English", "q": "Does this plan pass inspection as drawn, or are we missing stuff the code requires?"}
+{"pattern": "regulation_check", "lang": "English", "q": "Check the sheet against the local building code. Will the inspector flag anything?"}
+{"pattern": "regulation_check", "lang": "English", "q": "quick one: plan ok for code? fire sep, exits, widths, the usual"}
+{"pattern": "regulation_check", "lang": "English", "q": "Would this drawing get approved by the building official under current regulations?"}
+{"pattern": "regulation_check", "lang": "English", "q": "Go through the plan vs the rules, tell me where it fails and cite the clause."}
+{"pattern": "regulation_check", "lang": "English", "q": "Any code violations on this layout I should fix before we submit for permit?"}
+{"pattern": "regulation_check", "lang": "English", "q": "Hey, will this pass the AHJ review or do we need to redo the sheet?"}
+{"pattern": "regulation_check", "lang": "English", "q": "Have we met the minimum egress and accessibility requirements on this drawing, yes or no?"}
+{"pattern": "regulation_check", "lang": "Finnish", "q": "Täyttääkö tämä piirustus rakentamismääräykset, menisikö tarkastuksesta läpi?"}
+{"pattern": "regulation_check", "lang": "Finnish", "q": "Onko pohjapiirros MRL-vaatimusten mukainen vai löytyykö puutteita ennen lupahakemusta?"}
+{"pattern": "regulation_check", "lang": "Finnish", "q": "Tarkastaja ei hyväksy tätä ainakaan näin, mitä pitää korjata määräysten mukaan?"}
+{"pattern": "regulation_check", "lang": "Finnish", "q": "Kattaako kuva palomääräykset (poistumistiet, paloluokat) ja menisikö katselmuksessa läpi?"}
+{"pattern": "regulation_check", "lang": "Finnish", "q": "Vastaako tämä kaava nykyisiä määräyksiä, vai pitääkö muuttaa ennen rakennusvalvontaa?"}
+{"pattern": "regulation_check", "lang": "Finnish", "q": "Ok vai ei? Tarkista pohja määräyksiä vasten ja sano missä pykälässä on vika."}
+{"pattern": "regulation_check", "lang": "Finnish", "q": "Esteettömyys ja leveydet kunnossa piirroksessa, vai jääkö katselmukseen?"}
+{"pattern": "regulation_check", "lang": "Finnish", "q": "Pitääkö tämän kuvan mukaan tehdä jotain toisin, että lupa menee läpi?"}
+{"pattern": "regulation_check", "lang": "German", "q": "Entspricht der Grundriss der Landesbauordnung und den DIN-Normen, oder fällt er bei der Bauabnahme durch?"}
+{"pattern": "regulation_check", "lang": "German", "q": "Kann der Prüfingenieur den Plan so freigeben, oder fehlt was laut Vorschrift?"}
+{"pattern": "regulation_check", "lang": "German", "q": "Passt das so mit Fluchtweg und Brandschutz, oder muss ich nachbessern bevor wir einreichen?"}
+{"pattern": "regulation_check", "lang": "German", "q": "Prüf mal den Plan gegen die Regeln, wo genau hakt es, mit Paragraph bitte."}
+{"pattern": "regulation_check", "lang": "German", "q": "Würde das Bauamt diesen Plan genehmigen, ja oder nein?"}
+{"pattern": "regulation_check", "lang": "German", "q": "Sind die Mindestbreiten und Barrierefreiheit laut Norm eingehalten?"}
+{"pattern": "regulation_check", "lang": "German", "q": "Ist die Zeichnung normkonform oder gibts Verstöße die der Abnahme nicht standhalten?"}
+{"pattern": "regulation_check", "lang": "German", "q": "Was müssen wir an der Planung ändern, damit der Kontrollcheck durchgeht?"}
+{"pattern": "regulation_check", "lang": "Swedish", "q": "Klarar ritningen Boverkets byggregler eller underkänns den vid kontrollen?"}
+{"pattern": "regulation_check", "lang": "Swedish", "q": "Skulle byggnadsnämnden godkänna den här planen som den ser ut nu?"}
+{"pattern": "regulation_check", "lang": "Swedish", "q": "Kollar du mot reglerna: utrymningsvägar, brandcellsgränser, bredder. Vad fallerar?"}
+{"pattern": "regulation_check", "lang": "Swedish", "q": "Finns något som kontrollanten kommer att anmärka på innan vi lämnar in?"}
+{"pattern": "regulation_check", "lang": "Swedish", "q": "Kort fråga: går den här ritnign igenom besiktningen eller ska vi rita om?"}
+{"pattern": "regulation_check", "lang": "Swedish", "q": "Uppfyller layouten kraven för tillgänglighet och utrymning enligt BBR?"}
+{"pattern": "regulation_check", "lang": "Swedish", "q": "Vilka paragrafer är fel i ritningen, behöver vi justera något för att få bygglov?"}
+{"pattern": "regulation_check", "lang": "Swedish", "q": "Är det någon grej här som inte klarar en slutbesiktning, eller är den ok?"}
+{"pattern": "regulation_check", "lang": "Norwegian", "q": "Oppfyller tegningen TEK17 og brannkrav, eller vil kontrollerende ingeniør ha merknader?"}
+{"pattern": "regulation_check", "lang": "Norwegian", "q": "Vil kommunen godkjenne denne planen slik den er, eller må vi endre noe først?"}
+{"pattern": "regulation_check", "lang": "Norwegian", "q": "Sjekk mot regelverket: rømningsveier, bredder, branncellebegrensninger. Hva stryker?"}
+{"pattern": "regulation_check", "lang": "Norwegian", "q": "Hvis vi sender inn i dag, får vi avslag på noe i tegnnig?"}
+{"pattern": "regulation_check", "lang": "Norwegian", "q": "Kort: er planen ok etter forskriften, ja eller nei, og hvilken paragraf er feil?"}
+{"pattern": "regulation_check", "lang": "Norwegian", "q": "Tilgjengelighet og universell utforming, er det oppfylt på denne tegningen?"}
+{"pattern": "regulation_check", "lang": "Norwegian", "q": "Ser det bra ut for ferdigattest, eller ligger det noe som ikke går gjennom tilsyn?"}
+{"pattern": "regulation_check", "lang": "Norwegian", "q": "Må vi rette noe på planen før søknaden, for å unngå at tiltaket blir avvist?"}
+{"pattern": "look_in_room", "lang": "English", "q": "What's drawn inside the kitchen? Appliances, counters, cabinets, anything with a tag?"}
+{"pattern": "look_in_room", "lang": "English", "q": "Can you list the furnture in the library? Shelves, desks, reading spots, whatever's in the room."}
+{"pattern": "look_in_room", "lang": "English", "q": "Classroom: which fixtures and equipment are shown, and are there any notes written inside?"}
+{"pattern": "look_in_room", "lang": "English", "q": "Just the corridor, please. Are any doors, cabinets, or equipment drawn along it?"}
+{"pattern": "look_in_room", "lang": "English", "q": "Staff office layout: what furniture is drawn in there and where's the desk sitting?"}
+{"pattern": "look_in_room", "lang": "English", "q": "Hall plan. Which seating, stage, or AV gear is drawn inside?"}
+{"pattern": "look_in_room", "lang": "English", "q": "plant room equip + notes pls. Anything labelled inside the room?"}
+{"pattern": "look_in_room", "lang": "English", "q": "For the meeting room, describe the layout and what's drawn inside: table, chairs, screen, anything else?"}
+{"pattern": "look_in_room", "lang": "Finnish", "q": "Mitä vastaanotossa piirustuksessa on? Tiskit, istuimet, mitään muuta sisällä?"}
+{"pattern": "look_in_room", "lang": "Finnish", "q": "varasto: mitä hyllyjä ja laitteita on piirretty sisään, onko siellä merkintöjä?"}
+{"pattern": "look_in_room", "lang": "Finnish", "q": "Konehuoneen laitteet ja kaapit, mikä on piirretty ja mitä siinä lukee?"}
+{"pattern": "look_in_room", "lang": "Finnish", "q": "Kokoushuoneen pöydät ja tuolit, miten ne on sijoitettu piirustukseses?"}
+{"pattern": "look_in_room", "lang": "Finnish", "q": "WC-tilan kalusteet ja laitteet, onko huomautuksia huoneessa?"}
+{"pattern": "look_in_room", "lang": "Finnish", "q": "Eteisen layout, mitä kalusteita tai kaappeja siinä on piirretty?"}
+{"pattern": "look_in_room", "lang": "Finnish", "q": "Keittiön laitteet ja tasot, mikä kohta on merkitty ja miten?"}
+{"pattern": "look_in_room", "lang": "Finnish", "q": "Kirjaston hyllyt ja lukupisteet, onko huoneen sisällä muuta huomioitavaa?"}
+{"pattern": "look_in_room", "lang": "German", "q": "Was steht in der Küche auf dem Plan? Geräte, Arbeitsplatten, Schränke?"}
+{"pattern": "look_in_room", "lang": "German", "q": "Lager: welche Regale und Geräte sind eingezeichnet, und gibt es Notizen im Raum?"}
+{"pattern": "look_in_room", "lang": "German", "q": "Technikraum, bitte nur das was drin ist: Schaltschränke, Pumpen, Beschriftungen?"}
+{"pattern": "look_in_room", "lang": "German", "q": "Besprechungsraum, Tische, Stühle, Medientechnik. Wie ist das Layout?"}
+{"pattern": "look_in_room", "lang": "German", "q": "Toilette: Sanitärobjekte und Lüftung, was ist da eingezeichnet?"}
+{"pattern": "look_in_room", "lang": "German", "q": "Flur, nur die Ausstattung: Türen, Schränke, Feuerlöscher, was ist gezeichnet?"}
+{"pattern": "look_in_room", "lang": "German", "q": "Personalbüro, welche Möbel stehen drin und wie sind die Schreibtische angeordnet?"}
+{"pattern": "look_in_room", "lang": "German", "q": "Halle: welche Bestuhlung oder Technik ist drin, und gibt es Hinweise im Raum?"}
+{"pattern": "look_in_room", "lang": "Swedish", "q": "Vad finns i köket på ritningen? Maskiner, bänkar, skåp?"}
+{"pattern": "look_in_room", "lang": "Swedish", "q": "förråd: hyllor och utrustning inritat? Några noteringar inne i rummet?"}
+{"pattern": "look_in_room", "lang": "Swedish", "q": "Teknikrummet, vilka aggregat och skåp syns på planen?"}
+{"pattern": "look_in_room", "lang": "Swedish", "q": "Mötesrummet, möbler och AV-utrustning, hur är layouten?"}
+{"pattern": "look_in_room", "lang": "Swedish", "q": "toalett inredning och armaturer, vad står det i rummet?"}
+{"pattern": "look_in_room", "lang": "Swedish", "q": "Korridoren bara, dörrar och skåp som är ritade längs den?"}
+{"pattern": "look_in_room", "lang": "Swedish", "q": "Personalkontoret, skrivbord och förvaring, var placerade är de?"}
+{"pattern": "look_in_room", "lang": "Swedish", "q": "Biblioteket, hyllor och läsplatser, vad är ritat inne i rummet?"}
+{"pattern": "look_in_room", "lang": "Norwegian", "q": "Hva er tegnet inne i kjøkkenet? Apparater og benker?"}
+{"pattern": "look_in_room", "lang": "Norwegian", "q": "lager: hyller, utstyr, noen merknader inne i rommet?"}
+{"pattern": "look_in_room", "lang": "Norwegian", "q": "Teknisk rom, skap og pumper, hva står tegnet der inne?"}
+{"pattern": "look_in_room", "lang": "Norwegian", "q": "Møterommet, bord, stoler, skjerm? Beskriv oppsettet."}
+{"pattern": "look_in_room", "lang": "Norwegian", "q": "Toalett, sanitærutstyr og ventilasjon, hva er innlagt?"}
+{"pattern": "look_in_room", "lang": "Norwegian", "q": "Gangen, bare innredningen: dører og skap som er vist?"}
+{"pattern": "look_in_room", "lang": "Norwegian", "q": "Resepsjonen, disk og sitteplasser, noe annet i rommet?"}
+{"pattern": "look_in_room", "lang": "Norwegian", "q": "klasserom: pulter, tavle, utstyr? Noen noter inne i rommet?"}
+{"pattern": "other", "lang": "English", "q": "What's the clear width of the door opening on the north wall, per the drawing?"}
+{"pattern": "other", "lang": "English", "q": "Which way does the door swing on sheet A-101, is it dimenssioned?"}
+{"pattern": "other", "lang": "English", "q": "need the grid line spacing between gridlines 3 and 4, dimension on drwg?"}
+{"pattern": "other", "lang": "English", "q": "Is the window head height shown anywhere on this plan or only on the elevation?"}
+{"pattern": "other", "lang": "English", "q": "Wall thickness for the partitions on the east side, is that stud or finished face?"}
+{"pattern": "other", "lang": "English", "q": "Scale on this sheet, 1:50 or 1:100? Both?"}
+{"pattern": "other", "lang": "English", "q": "Where are the fire rated walls marked on the plan, which legend symbol?"}
+{"pattern": "other", "lang": "English", "q": "Does the drawing show the duct chase dimensions or only a hatch?"}
+{"pattern": "other", "lang": "Finnish", "q": "Mikä on oven aukon leveys tämän seinän kohdalla piirustuksen mukaan?"}
+{"pattern": "other", "lang": "Finnish", "q": "Mihin suuntaan ovi aukeaa, onko se mitoitettu?"}
+{"pattern": "other", "lang": "Finnish", "q": "Mitkä akselilinjojen välit tässä pohjapiirroksessa on, lukuarvo?"}
+{"pattern": "other", "lang": "Finnish", "q": "Näkyykö ikkunan yläreunan korkeus tässä pohjassa vai vain julkisivussa?"}
+{"pattern": "other", "lang": "Finnish", "q": "Montako mm on väliseinän paksuus itäpuolella, runko vai pinta?"}
+{"pattern": "other", "lang": "Finnish", "q": "Mikä mittakaava tällä arkilla, 1:50 vai 1:100?"}
+{"pattern": "other", "lang": "Finnish", "q": "Missä palomuuriseinät on merkitty, mikä selitemerkki?"}
+{"pattern": "other", "lang": "Finnish", "q": "Onko kanavakuilun mitat piirretty vai pelkkä tiheä kuvio?"}
+{"pattern": "other", "lang": "German", "q": "Wie breit ist die lichte Türöffnung an der Nordwand laut Plan?"}
+{"pattern": "other", "lang": "German", "q": "Schlägt die Tür nach innen oder außen auf, steht das drauf?"}
+{"pattern": "other", "lang": "German", "q": "Achsabstand zwischen Achse 3 und 4, Maß eingetragen?"}
+{"pattern": "other", "lang": "German", "q": "Ist die Fensterbrüstungshöhe im Grundriss angegeben oder nur im Schnitt?"}
+{"pattern": "other", "lang": "German", "q": "Welche Wandstärke haben die Trennwände auf der Ostseite, Rohbau oder Fertigmaß?"}
+{"pattern": "other", "lang": "German", "q": "Maßstab 1:50 oder 1:100, steht das oben links?"}
+{"pattern": "other", "lang": "German", "q": "Wo sind die Brandwände im Plan markiert, welches Legendensymbol?"}
+{"pattern": "other", "lang": "German", "q": "Sind die Schachtmaße eingezeichnet oder nur schraffiert?"}
+{"pattern": "other", "lang": "Swedish", "q": "Vad är den fria dörrbredden på norra väggen enligt ritningen?"}
+{"pattern": "other", "lang": "Swedish", "q": "Åt vilket håll slår dörren, står det utritat?"}
+{"pattern": "other", "lang": "Swedish", "q": "Axelavstånd mellan axel 3 och 4, är måttet satt?"}
+{"pattern": "other", "lang": "Swedish", "q": "Visas fönstrets överkant på plan eller bara i fasaden?"}
+{"pattern": "other", "lang": "Swedish", "q": "Väggtjocklek på innerväggarna österut, regelstomme eller färdigt mått?"}
+{"pattern": "other", "lang": "Swedish", "q": "Skala på arket, 1:50 eller 1:100?"}
+{"pattern": "other", "lang": "Swedish", "q": "Var är brandväggarna markerade, vilken symbol i teckenförklaringen?"}
+{"pattern": "other", "lang": "Swedish", "q": "Finns schaktmått utritade eller bara skravering?"}
+{"pattern": "other", "lang": "Norwegian", "q": "Hva er åpningsbredden på døra i nordveggen slik den er tegnet?"}
+{"pattern": "other", "lang": "Norwegian", "q": "Hvilken vei slår døra, er den målsatt?"}
+{"pattern": "other", "lang": "Norwegian", "q": "Akseavstand mellom akse 3 og 4, står målet på tegningen?"}
+{"pattern": "other", "lang": "Norwegian", "q": "Er vindusbrystningshøyden vist på planen eller bare på snitt?"}
+{"pattern": "other", "lang": "Norwegian", "q": "Veggtykkelsen på skillevegger på østsiden, stender eller ferdig mål?"}
+{"pattern": "other", "lang": "Norwegian", "q": "Målestokk 1:50 eller 1:100 på dette arket?"}
+{"pattern": "other", "lang": "Norwegian", "q": "Hvor er brannskillende vegger markert, hvilket symbol i tegnforklaringen?"}
+{"pattern": "other", "lang": "Norwegian", "q": "Er sjaktmål tegnet inn eller bare skravert?"}

@@ -1,0 +1,1150 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:finlex="http://data.finlex.fi/schema/finlex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <act contains="originalVersion" name="main">
+        <meta>
+            <identification source="#organization_fi.finlex">
+                <FRBRWork>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1047/!main"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1047"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1047/alkup"/>
+                    <FRBRdate date="2017-12-22" name="dateIssued"/>
+                    <FRBRdate date="2017-12-28" name="datePublished"/>
+                    <FRBRauthor as="#role_author" href="#organization_fi.parliament"/>
+                    <FRBRcountry value="fi"/>
+                    <FRBRsubtype value="statute"/>
+                    <FRBRnumber value="1047"/>
+                    <FRBRprescriptive value="true"/>
+                    <FRBRauthoritative value="true"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1047/fin@/!main"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1047/fin@"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1047/alkup/fin"/>
+                    <FRBRdate date="2017-12-22" name="dateIssued"/>
+                    <FRBRdate date="2017-12-28" name="datePublished"/>
+                    <FRBRauthor as="#role_author" href="#organization_fi.parliament"/>
+                    <FRBRlanguage language="fin"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1047/fin@/!main.xml"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1047/fin@.akn"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1047/alkup/fin/xml"/>
+                    <FRBRdate date="2025-02-21" name="dateProduced"/>
+                    <FRBRdate date="2017-12-28" name="datePublished"/>
+                    <FRBRauthor as="#role_editor" href="#organization_fi.finlex"/>
+                    <FRBRformat value="xml"/>
+                </FRBRManifestation>
+            </identification>
+            <references source="#organization_fi.finlex">
+                <TLCOrganization eId="organization_fi.finlex" href="/akn/ontology/organization/fi.finlex" showAs="Finlex"/>
+                <TLCRole eId="role_author" href="/akn/ontology/role/author" showAs="Tekijä"/>
+                <TLCRole eId="role_editor" href="/akn/ontology/role/editor" showAs="Toimittaja"/>
+                <TLCConcept eId="decree" href="/akn/ontology/concept/statute/type-statute.decree" showAs="Asetus"/>
+                <TLCConcept eId="new-statute" href="/akn/ontology/concept/statute/category-statute.new-statute" showAs="Uusi säädös"/>
+            </references>
+            <proprietary source="#organization_fi.finlex">
+                <finlex:typeStatute refersTo="#decree"/>
+                <finlex:categoryStatute refersTo="#new-statute"/>
+                <finlex:documentYear>2017</finlex:documentYear>
+            </proprietary>
+        </meta>
+        <preface>
+            <p>
+                <docNumber>1047/2017</docNumber>
+                <docTitle>Ympäristöministeriön asetus rakennusten vesi- ja viemärilaitteistoista</docTitle>
+            </p>
+        </preface>
+        <preamble>
+            <formula name="enactingClause">
+                <p>Ympäristöministeriön päätöksen mukaisesti säädetään maankäyttö- ja rakennuslain (132/1999) 117 c §:n 3 momentin, 117 d §:n 2 momentin, 117 f §:n 3 momentin, 117 g §:n 4 momentin, 117 i §:n 4 momentin, 122 a §:n 3 momentin ja 150 f §:n 4 momentin nojalla, sellaisina kuin niistä ovat 117 c §:n 3 momentti, 117 d §:n 2 momentti, 117 f §:n 3 momentti ja 117 i §:n 4 momentti laissa 958/2012, 117 g §:n 4 momentti laissa 1151/2016 sekä 122 a §:n 3 momentti ja 150 f §:n 4 momentti laissa 41/2014:</p>
+            </formula>
+        </preamble>
+        <body>
+            <hcontainer finlex:outline="Säädöksen teksti" name="statuteProvisionsWrapper">
+                <chapter eId="chp_1">
+                    <num>1 luku</num>
+                    <heading>Yleistä</heading>
+                    <section eId="chp_1__sec_1">
+                        <num>1 §</num>
+                        <heading>Soveltamisala</heading>
+                        <subsection eId="chp_1__sec_1__subsec_1">
+                            <content>
+                                <p>Tämä asetus koskee uuden rakennuksen sekä kiinteistöllä sijaitsevien vesi- ja viemärilaitteistojen suunnittelua ja rakentamista. Asetus koskee myös rakennuksen laajennusta ja kerrosalaan laskettavan tilan lisäämistä, korjaus- ja muutostyötä sekä käyttötarkoituksen muutosta.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_1__sec_2">
+                        <num>2 §</num>
+                        <heading>Määritelmät</heading>
+                        <subsection eId="chp_1__sec_2__subsec_1">
+                            <intro eId="chp_1__sec_2__subsec_1__intro">
+                                <p>Tässä asetuksessa tarkoitetaan:</p>
+                            </intro>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_1">
+                                <num>1)</num>
+                                <content>
+                                    <p>
+                                        <i>erityisellä vesilaitteistolla</i>
+                                         laitteistoa muun kuin talousveden johtamista varten,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_2">
+                                <num>2)</num>
+                                <content>
+                                    <p>
+                                        <i>hulevedellä</i>
+                                         maan pinnalta, rakennuksen katolta tai muilta vastaavilta pinnoilta pois johdettavia sade- tai sulamisvesiä,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_3">
+                                <num>3)</num>
+                                <content>
+                                    <p>
+                                        <i>ilmavälillä</i>
+                                         vesikalusteen juoksuputken alareunan (tai vastaavan) ja sen alapuolella olevan säiliön (tai vastaavan) korkeimman mahdollisen vedenpinnan välistä vapaata pystysuoraa etäisyyttä,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_4">
+                                <num>4)</num>
+                                <content>
+                                    <p>
+                                        <i>jakojohdolla</i>
+                                         vesijohtoa, joka palvelee kahta tai useampaa vesipistettä,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_5">
+                                <num>5)</num>
+                                <content>
+                                    <p>
+                                        <i>jätevedellä</i>
+                                         yleensä viemärilaitteiston kautta pois johdettavaa vettä, joka on kemiallisesti, mikrobiologisesti, fysikaalisesti tai muuten likaantunut,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_6">
+                                <num>6)</num>
+                                <content>
+                                    <p>
+                                        <i>kannatuksella</i>
+                                         vesijohdon tai viemärin tuentaa kannakkeilla,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_7">
+                                <num>7)</num>
+                                <content>
+                                    <p>
+                                        <i>kertasäätöventtiilillä</i>
+                                         veden virtauksen asettamiseen tarkoitettua laitetta,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_8">
+                                <num>8)</num>
+                                <content>
+                                    <p>
+                                        <i>kiintopisteellä</i>
+                                         vesijohdon tai viemärin kiinnittämistä, joka estää putken liikkeen tukemiskohtaan nähden,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_9">
+                                <num>9)</num>
+                                <content>
+                                    <p>
+                                        <i>kokoojaviemärillä</i>
+                                         viemäriä, johon liittyy kaksi tai useampi viemäripiste,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_10">
+                                <num>10)</num>
+                                <content>
+                                    <p>
+                                        <i>kytkentäjohdolla</i>
+                                         vesijohtoa, jolla vesikaluste yhdistetään jakojohtoon,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_11">
+                                <num>11) </num>
+                                <content>
+                                    <p>
+                                        <i>kytkentäviemärillä</i>
+                                         viemäriä, jolla viemäripiste yhdistetään kokoojaviemäriin,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_12">
+                                <num>12) </num>
+                                <content>
+                                    <p>
+                                        <i>liittämiskohdalla</i>
+                                         kohtaa, jossa kiinteistön vesi- ja viemärilaitteisto liitetään vesihuoltolaitoksen vesi- tai viemäriverkostoon,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_13">
+                                <num>13) </num>
+                                <content>
+                                    <p>
+                                        <i>lämpimällä käyttövedellä</i>
+                                         talousvedestä lämmittämällä tehtyä vettä,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_14">
+                                <num>14) </num>
+                                <content>
+                                    <p>
+                                        <i>mitoitussateella</i>
+                                         suurinta esiintyvää kymmenen minuuttia kestävää sadetta,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_15">
+                                <num>15) </num>
+                                <content>
+                                    <p>
+                                        <i>mitoitusvirtaamalla</i>
+                                         vesijohtojen tai viemärien mitoitukseen käytettävää virtaaman ohjearvoa,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_16">
+                                <num>16)</num>
+                                <content>
+                                    <p>
+                                        <i>normivirtaamalla</i>
+                                         vesipisteestä saatavaa tai viemäripisteeseen johdettavan virtaaman ohjearvoa,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_17">
+                                <num>17) </num>
+                                <content>
+                                    <p>
+                                        <i>padotuskorkeudella</i>
+                                         hyväksyttyä tasoa, johon saakka vedenpinta saa viemärissä enintään nousta liittyneen kiinteistön kohdalla,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_18">
+                                <num>18) </num>
+                                <content>
+                                    <p>
+                                        <i>padotusventtiilillä</i>
+                                         venttiiliä, joka sallii viemäriveden virtauksen vain yhteen suuntaan,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_19">
+                                <num>19) </num>
+                                <content>
+                                    <p>
+                                        <i>paineviemäröinnillä</i>
+                                         viemäröintijärjestelmää, jossa jätevesi, hulevesi tai perustusten kuivatusvesi pumpataan,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_20">
+                                <num>20) </num>
+                                <content>
+                                    <p>
+                                        <i>perustusten kuivatusvedellä</i>
+                                         maahan imeytynyttä vettä, joka johdetaan viemäriin tai muuhun purkupaikkaan rakennuksen pohjan ja perustusten kuivattamiseksi,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_21">
+                                <num>21) </num>
+                                <content>
+                                    <p>
+                                        <i>pystyviemärillä</i>
+                                         viemäriä, jonka kaltevuus pystytasoon nähden on pienempi kuin 45 astetta,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_22">
+                                <num>22) </num>
+                                <content>
+                                    <p>
+                                        <i>sammutusvesilaitteistolla</i>
+                                         palonsammutukseen tarkoitettua laitteistoa,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_23">
+                                <num>23) </num>
+                                <content>
+                                    <p>
+                                        <i>sulkuventtiilillä</i>
+                                         laitetta veden virtauksen avaamista tai sulkemista varten
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_24">
+                                <num>24) </num>
+                                <content>
+                                    <p>
+                                        <i>talousvedellä</i>
+                                         kaikkea vettä, joka on tarkoitettu juomavedeksi, ruoan valmistukseen tai muihin kotitaloustarkoituksiin sekä elintarvikkeiden valmistukseen, jalostukseen, säilytykseen ja markkinoille saattamiseen noudattaen, mitä terveydensuojelulain (763/1994) 16 §:ssä säädetään talousvedestä,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_25">
+                                <num>25) </num>
+                                <content>
+                                    <p>
+                                        <i>tonttivesijohdolla</i>
+                                         vesijohtoa, joka yhdistää kiinteistön vesilaitteiston usean kiinteistön yhteiseen vesijohtoon,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_26">
+                                <num>26) </num>
+                                <content>
+                                    <p>
+                                        <i>tonttiviemärillä</i>
+                                         viemäriä, joka yhdistää kiinteistön viemärin usean kiinteistön yhteiseen viemäriin,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_27">
+                                <num>27) </num>
+                                <content>
+                                    <p>
+                                        <i>tuuletusviemärillä</i>
+                                         putkea viemärin tuulettamiseksi ja viemärin paineenvaihteluiden tasaamiseksi,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_28">
+                                <num>28) </num>
+                                <content>
+                                    <p>
+                                        <i>tyhjöventtiilillä</i>
+                                         laitetta, joka putkeen tai laitteeseen syntyvässä tietyn suuruisessa alipaineessa avaa yhteyden ympäröivään ilmaan ja estää siten takaisinimun aiheuttavan lappovaikutuksen syntymisen,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_29">
+                                <num>29) </num>
+                                <content>
+                                    <p>
+                                        <i>vaakaviemärillä</i>
+                                         viemäriä, jonka kaltevuus pystytasoon nähden on suurempi tai yhtä suuri kuin 45 astetta,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_30">
+                                <num>30) </num>
+                                <content>
+                                    <p>
+                                        <i>vaihdettavissa olevalla vesijohdolla</i>
+                                         putkea, joka ilman suurehkoja toimenpiteitä tai rakenteita rikkomatta voidaan vaihtaa ja korjata,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_31">
+                                <num>31) </num>
+                                <content>
+                                    <p>
+                                        <i>vesijohdon tai viemärin sijainnilla rakennuksessa</i>
+                                         vesijohtoa tai viemäriä asennettuna rakennuksen pohjalaattaan tai sen yläpuolelle,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_32">
+                                <num>32) </num>
+                                <content>
+                                    <p>
+                                        <i>vesijohdon tai viemärin sijainnilla maassa</i>
+                                         vesijohtoa tai viemäriä asennettuna maahan rakennuksen pohjalaatan alapuolelle tai perusmuurin ulkopuolelle,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_33">
+                                <num>33) </num>
+                                <content>
+                                    <p>
+                                        <i>vesikalusteella</i>
+                                         vedenottoon tarkoitettua laitetta, kuten hanaa, sekoitinta tai vastaavaa,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_34">
+                                <num>34) </num>
+                                <content>
+                                    <p>
+                                        <i>vesilaitteistolla</i>
+                                         laitteistoa talousveden ja lämpimän käyttöveden johtamista varten,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_35">
+                                <num>35) </num>
+                                <content>
+                                    <p>
+                                        <i>vesilukolla</i>
+                                         laitetta, joka estää viemärikaasujen pääsyn pois viemäristä,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_36">
+                                <num>36) </num>
+                                <content>
+                                    <p>
+                                        <i>vesipisteellä</i>
+                                         vesikalusteella varustettua vedenottopaikkaa,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_37">
+                                <num>37) </num>
+                                <content>
+                                    <p>
+                                        <i>viemärikalusteella</i>
+                                         viemäröintiin tarkoitettua laitetta, kuten pesuallas, lattiakaivo, WC-istuin tai muu vastaava,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_38">
+                                <num>38) </num>
+                                <content>
+                                    <p>
+                                        <i>viemärilaitteistolla</i>
+                                         laitteistoa jätevesien, hulevesien tai perustusten kuivatusvesien poisjohtamiseksi,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_39">
+                                <num>39) </num>
+                                <content>
+                                    <p>
+                                        <i>viemäripisteellä</i>
+                                         viemärikalusteella varustettua viemäröintipaikkaa,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_40">
+                                <num>40) </num>
+                                <content>
+                                    <p>
+                                        <i>viettoviemäröinnillä</i>
+                                         viemäröintijärjestelmää, jossa jätevesi, hulevesi ja perustusten kuivatusvesi johdetaan pois painovoimaisesti,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_41">
+                                <num>41) </num>
+                                <content>
+                                    <p>
+                                        <i>vähimmäiskaltevuudella</i>
+                                         viettoviemärin pienintä sallittua kaltevuutta, jossa viemäri toimii itsepuhdistuvasti,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_42">
+                                <num>42) </num>
+                                <content>
+                                    <p>
+                                        <i>yksisuuntaventtiilillä</i>
+                                         venttiiliä, joka sallii vesijohtoveden virtauksen vain yhteen suuntaan,
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_1__sec_2__subsec_1__para_43">
+                                <num>43) </num>
+                                <content>
+                                    <p>
+                                        <i>ylivuotoputkella</i>
+                                         laitteen ylitäyttymisen estävää putkea.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </subsection>
+                    </section>
+                    <section eId="chp_1__sec_3">
+                        <num>3 §</num>
+                        <heading>Rakennuksen vesi- ja viemärilaitteistojen suunnittelu</heading>
+                        <subsection eId="chp_1__sec_3__subsec_1">
+                            <content>
+                                <p>Pääsuunnittelijan, erityissuunnittelijan ja rakennussuunnittelijan on tehtävänsä mukaisesti huolehdittava rakennuksen suunnittelussa siitä, että rakennus täyttää käyttötarkoituksen mukaisesti vesi- ja viemärilaitteistojen turvallisuuteen, terveellisyyteen, käyttövarmuuteen, kestävyyteen ja energiatehokkuuteen vaikuttavat vaatimukset. Suunnitelmasta on käytävä ilmi vesi- ja viemärilaitteistoissa käytettävät osat, tuotteet ja materiaalit.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_2">
+                    <num>2 luku</num>
+                    <heading>Rakennuksen vesilaitteisto</heading>
+                    <section eId="chp_2__sec_4">
+                        <num>4 §</num>
+                        <heading>Veden laatu</heading>
+                        <subsection eId="chp_2__sec_4__subsec_1">
+                            <content>
+                                <p>Rakennuksen vesilaitteistoon johdettavaksi aiotun veden laadun on oltava erityissuunnittelijan tiedossa laitteiston teknistä suunnittelua ja korroosion välttämistä varten. Vesilaitteistoon voi johtaa vain talousvedelle asetetut laatuvaatimukset täyttävää vettä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_4__subsec_2">
+                            <content>
+                                <p>Vesilaitteistosta otettava vesi ei saa vaarantaa terveyttä eikä vedessä saa olla maku- tai hajuhaittoja.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_5">
+                        <num>5 §</num>
+                        <heading>Suojaaminen terveydellisiltä vaaroilta ja muilta haitoilta</heading>
+                        <subsection eId="chp_2__sec_5__subsec_1">
+                            <content>
+                                <p>Vesihuoltolaitoksen verkostoon liitetyllä vesilaitteistolla ei saa olla suoraa yhteyttä muusta vesilähteestä vetensä saavaan vesilaitteistoon, viemärilaitteistoon tai erityiseen vesilaitteistoon.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_5__subsec_2">
+                            <content>
+                                <p>Vesilaitteistossa käytettävien tuotteiden on oltava talousveden johtamiseen soveltuvia.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_5__subsec_3">
+                            <content>
+                                <p>Vesilaitteiston on oltava sellainen, että torjutaan veden takaisinimeytymisestä sekä nesteiden ja kaasujen sisään tunkeutumisesta johtuva pilaantumisvaara. Jos vesijohto sijaitsee pilaantuneessa maaperässä tai pilaantumisvaara on olemassa, on käytettävä diffuusiotiivistä putkimateriaalia.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_6">
+                        <num>6 §</num>
+                        <heading>Veden lämpötila</heading>
+                        <subsection eId="chp_2__sec_6__subsec_1">
+                            <content>
+                                <p>Kylmävesijohdon on oltava suunniteltu ja asennettu siten, että kylmävesilaitteistossa olevan veden lämpötila saa olla enintään 20 celsiusastetta. Vähintään kahdeksan tunnin käyttämättömän jakson jälkeen veden lämpötila saa olla enintään 24 celsiusastetta.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_6__subsec_2">
+                            <content>
+                                <p>Lämminvesilaitteistossa olevan veden lämpötilan on oltava vähintään 55 celsiusastetta ja sitä on saatava lämminvesikalusteesta 20 sekunnin kuluessa. Lämminvesilaitteistosta saatavan veden lämpötila saa olla korkeintaan 65 celsiusastetta.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_6__subsec_3">
+                            <content>
+                                <p>Vesilaitteiston on oltava sellainen, että haitallinen veden ristiinvirtaus lämminvesijohdosta kylmävesijohtoon tai päinvastoin estyy.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_7">
+                        <num>7 §</num>
+                        <heading>Vesilaitteiston mitoitus</heading>
+                        <subsection eId="chp_2__sec_7__subsec_1">
+                            <content>
+                                <p>Vesilaitteiston on kestettävä sisäistä ylipainetta vähintään 1 000 kilopascalia.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_7__subsec_2">
+                            <content>
+                                <p>Vesikalusteista on saatava käyttötarkoitukseen nähden tasainen virtaama ilman häiritsevää ääntä ja haitallisia paineiskuja.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_8">
+                        <num>8 §</num>
+                        <heading>Lämpimän käyttöveden kiertojohto</heading>
+                        <subsection eId="chp_2__sec_8__subsec_1">
+                            <content>
+                                <p>Uuden rakennuksen lämpimän käyttöveden kiertojohdossa ei saa olla lämmönluovuttimia eikä lattialämmitystä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_8__subsec_2">
+                            <content>
+                                <p>Korjaus- ja muutostyössä lämpimän käyttöveden kiertojohtoon liitetyt lämmönluovuttimet voidaan uusia siten, että asennettavien lämmönluovuttimien lämmönluovutusteho on enintään 200 wattia huonetilaa kohti. Lämmintä käyttövettä ei kuitenkaan saa käyttää lattialämmitykseen.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_9">
+                        <num>9 §</num>
+                        <heading>Vesikalusteet</heading>
+                        <subsection eId="chp_2__sec_9__subsec_1">
+                            <content>
+                                <p>Vesikalusteen on oltava käyttötarkoitukseensa sopiva. Vesimäärän ja lämpötilan säätöön tarkoitettujen käyttölaitteiden toimintojen ja liikesuuntien on oltava turvallisia. Vesikalusteen käyttölaitteen on oltava rakenteeltaan sellainen, ettei sen pintalämpötila nouse yli 40 celsiusasteen.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_10">
+                        <num>10 §</num>
+                        <heading>Vesimittarit</heading>
+                        <subsection eId="chp_2__sec_10__subsec_1">
+                            <content>
+                                <p>Kiinteistön vesimittarin on oltava paikassa, jossa se on helposti asennettavissa, luettavissa ja huollettavissa eikä se pääse jäätymään.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_10__subsec_2">
+                            <content>
+                                <p>Rakennuksessa on oltava huoneistokohtaiset vesimittarit huoneistoon tulevan kylmän ja lämpimän veden mittaamiseen siten, että mittareiden osoittamaa vedenkulutusta on mahdollista käyttää laskutuksen perusteena. Huoneistokohtaisten vesimittareiden on sijaittava paikassa, jossa ne ovat helposti asennettavissa, huollettavissa ja luettavissa.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_11">
+                        <num>11 §</num>
+                        <heading>Sammutusvesilaitteiston liittäminen rakennuksen vesilaitteistoon</heading>
+                        <subsection eId="chp_2__sec_11__subsec_1">
+                            <content>
+                                <p>Sammutusvesilaitteisto voidaan kytkeä rakennuksen vesilaitteistoon vesihuoltolaitoksen luvalla.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_11__subsec_2">
+                            <content>
+                                <p>Sammutusvesilaitteisto ei saa aiheuttaa terveydellistä tai muuta haittaa rakennuksen vesilaitteistolle ja sen toiminnalle. Sammutusvesilaitteistoa, jossa käytetään terveydelle haitallisia aineita, ei saa kytkeä vesilaitteistoon.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_11__subsec_3">
+                            <content>
+                                <p>Sammutusvesilaitteistosta ei saa aiheutua takaisinvirtausta rakennuksen vesilaitteistoon.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_12">
+                        <num>12 §</num>
+                        <heading>Erityisen vesilaitteiston asentaminen</heading>
+                        <subsection eId="chp_2__sec_12__subsec_1">
+                            <content>
+                                <p>Erityisessä vesilaitteistossa voi tekniseen käyttöön johtaa muuta kuin talousvettä vain, jos laitteisto erotetaan talousvesilaitteistosta ilmavälillä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_12__subsec_2">
+                            <content>
+                                <p>Erityisen vesilaitteiston jokaisessa vesipisteessä ja verkoston osassa on oltava selvä ja pysyvä merkintä, josta käy ilmi veden laatu ja käyttötarkoitus.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_3">
+                    <num>3 luku</num>
+                    <heading>Vesilaitteiston käyttövarmuus</heading>
+                    <section eId="chp_3__sec_13">
+                        <num>13 §</num>
+                        <heading>Vuotojen havaittavuus</heading>
+                        <subsection eId="chp_3__sec_13__subsec_1">
+                            <content>
+                                <p>Erityissuunnittelijan on suunniteltava rakennukseen asennettavat vesijohdot ja niihin liitetyt laitteet niin, että mahdollinen vesivuoto on helposti havaittavissa, ja vesijohdot ja laitteet voidaan helposti tarkastaa, korjata ja vaihtaa. Seinärakenteissa olevissa kytkentäjohdoissa ei saa olla liitoksia. Märkätilan lattiaan ei saa tehdä vesijohtojen läpivientejä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_13__subsec_2">
+                            <content>
+                                <p>Vesivuotojen havaitsemiseksi on käytettävä rakenteellisia ratkaisuja, jotka ohjaavat vuotoveden näkyville. Pystyjakojohdoissa on oltava mekaaniset tai rakenteelliset vuodonilmaisimet kerroksittain, elleivät jakojohdot ole näkyvissä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_14">
+                        <num>14 §</num>
+                        <heading>Vesilaitteiston tiiviys</heading>
+                        <subsection eId="chp_3__sec_14__subsec_1">
+                            <content>
+                                <p>Vesilaitteiston on oltava tiivis. Vesilaitteiston tiiviys on varmistettava käyttämällä tuotteita, osia ja materiaaleja, jotka ovat yhteensopivia.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_15">
+                        <num>15 §</num>
+                        <heading>Jäätymisen estäminen</heading>
+                        <subsection eId="chp_3__sec_15__subsec_1">
+                            <content>
+                                <p>Vesilaitteistossa oleva vesi ei saa jäätyä. Kylmässä tilassa sijaitsevien vesijohtojen on oltava lämmöneristettyjä. Maahan asennettavien vesijohtojen on sijaittava routasyvyyden alapuolella, ellei vesijohtojen jäätyminen esty muulla tavalla.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_16">
+                        <num>16 §</num>
+                        <heading>Kannatukset ja kiinnitykset</heading>
+                        <subsection eId="chp_3__sec_16__subsec_1">
+                            <content>
+                                <p>Vesijohtojen kannatusten ja kiinnityspisteiden on oltava sellaisia, ettei lämpölaajeneminen eivätkä veden virtauksesta syntyvät voimat aiheuta putkien siirtymistä, irtoamista, rikkoontumista tai häiritsevää ääntä. Kannatusten ja kiinnityksessä käytettävien tuotteiden on oltava käyttöympäristössään korroosionkestäviä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_17">
+                        <num>17 §</num>
+                        <heading>Vesilaitteiston sulku- ja varolaitteet</heading>
+                        <subsection eId="chp_3__sec_17__subsec_1">
+                            <content>
+                                <p>Vesilaitteistossa on oltava sulkemismahdollisuudet siten, että laitteistoa on helppo käyttää, huoltaa ja korjata.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_17__subsec_2">
+                            <intro eId="chp_3__sec_17__subsec_2__intro">
+                                <p>Sulkuventtiileiden on sijaittava:</p>
+                            </intro>
+                            <paragraph eId="chp_3__sec_17__subsec_2__para_1">
+                                <num>1) </num>
+                                <content>
+                                    <p>talokohtaisesti</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_3__sec_17__subsec_2__para_2">
+                                <num>2) </num>
+                                <content>
+                                    <p>huoneistokohtaisesti</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_3__sec_17__subsec_2__para_3">
+                                <num>3) </num>
+                                <content>
+                                    <p>pystyjakojohdoissa</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_3__sec_17__subsec_2__para_4">
+                                <num>4) </num>
+                                <content>
+                                    <p>jakojohtoihin asennettujen laitteiden molemmin puolin</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_3__sec_17__subsec_2__para_5">
+                                <num>5) </num>
+                                <content>
+                                    <p>ennen laitetta tai kalustetta, joka on liitetty kytkentäjohtoon</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_3__sec_17__subsec_2__para_6">
+                                <num>6) </num>
+                                <content>
+                                    <p>vesimittareiden molemmin puolin.</p>
+                                </content>
+                            </paragraph>
+                        </subsection>
+                        <subsection eId="chp_3__sec_17__subsec_3">
+                            <content>
+                                <p>Lämpimän käyttöveden laitteistossa on oltava varolaite ylipaineen estämiseksi.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_18">
+                        <num>18 §</num>
+                        <heading>Vesilaitteiston mittaus- ja säätölaitteet</heading>
+                        <subsection eId="chp_3__sec_18__subsec_1">
+                            <intro eId="chp_3__sec_18__subsec_1__intro">
+                                <p>Vesilaitteistossa on oltava mittaus- ja säätömahdollisuus tärkeimpien toiminta-arvojen valvontaa varten. Vesilaitteistossa on oltava:</p>
+                            </intro>
+                            <paragraph eId="chp_3__sec_18__subsec_1__para_1">
+                                <num>1) </num>
+                                <content>
+                                    <p>painemittari</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_3__sec_18__subsec_1__para_2">
+                                <num>2) </num>
+                                <content>
+                                    <p>lämpömittarit vedenlämmittimestä lähtevän sekoitetun lämpimän käyttöveden johtoon ja lämpimän käyttöveden kiertojohtoon paluuveden lämpötilan mittaamiseksi</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_3__sec_18__subsec_1__para_3">
+                                <num>3) </num>
+                                <content>
+                                    <p>kertasäätöventtiilit.</p>
+                                </content>
+                            </paragraph>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_19">
+                        <num>19 §</num>
+                        <heading>Vesijohtopaineen muuttaminen</heading>
+                        <subsection eId="chp_3__sec_19__subsec_1">
+                            <content>
+                                <p>Erityissuunnittelijan on laadittava vesilaitteiston painehäviölaskelma.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_19__subsec_2">
+                            <content>
+                                <p>Jos vedenpaine jakojohdossa on yli 500 kilopascalia, on käytettävä paineenalennusventtiiliä, jolla paine alennetaan vesilaitteiston mitoituksen edellyttämälle tasolle.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_19__subsec_3">
+                            <content>
+                                <p>Jos painetaso on niin matala, ettei vesilaitteistosta saada sen mitoituksen edellyttämää virtaamaa, on käytettävä paineenkorotuslaitteistoa. Paineenkorotuslaitteiston varustuksena on oltava säätölaitteet ulostulopaineen säätämiseksi niin, ettei synny häiritsevää paineenvaihtelua tai ääntä, sekä varolaitteet liian korkean ylipaineen estämiseksi.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_4">
+                    <num>4 luku</num>
+                    <heading>Vesilaitteiston käyttöönoton mittaukset</heading>
+                    <section eId="chp_4__sec_20">
+                        <num>20 §</num>
+                        <heading>Vesilaitteiston tiiviyden toteaminen</heading>
+                        <subsection eId="chp_4__sec_20__subsec_1">
+                            <content>
+                                <p>Erityisalan työnjohtajan on huolehdittava, että vesilaitteiston tiiviys on koestettu ennen rakennuksen käyttöönottoa. Vesilaitteiston tiiviys on varmistettava vesipainekokeella. Koe on tehtävä siten, että vesijohdot liitoksineen ovat eristämättömiä ja helposti havaittavissa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_4__sec_20__subsec_2">
+                            <content>
+                                <p>Rakennusvaiheen vastuuhenkilön on tehtävä merkintä rakennustyön tarkastusasiakirjaan vesilaitteiston tiiviyden toteamisesta.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_4__sec_21">
+                        <num>21 §</num>
+                        <heading>Vesilaitteiston huuhtelu</heading>
+                        <subsection eId="chp_4__sec_21__subsec_1">
+                            <content>
+                                <p>Erityisalan työnjohtajan on huolehdittava, että vesijohtolaitteisto on huuhdeltu ennen käyttöönottoa. Huuhtelu on tehtävä talousvedellä, jotta mahdollinen lika ja irtoaines saadaan poistettua putkistosta.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_4__sec_21__subsec_2">
+                            <content>
+                                <p>Rakennusvaiheen vastuuhenkilön on tehtävä merkintä huuhtelusta rakennustyön tarkastusasiakirjaan.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_4__sec_22">
+                        <num>22 §</num>
+                        <heading>Vesilaitteiston puhdistus ja desinfiointi</heading>
+                        <subsection eId="chp_4__sec_22__subsec_1">
+                            <content>
+                                <p>Jos on syytä epäillä, että vesilaitteisto on joutunut alttiiksi tautia aiheuttavien mikrobien tai muiden terveydelle vaarallisten tai haitallisten aineiden vaikutuksille, on erityisalan työnjohtajan huolehdittava, että laitteisto on ennen käyttöönottoa puhdistettu ja desinfioitu.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_4__sec_22__subsec_2">
+                            <content>
+                                <p>Rakennusvaiheen vastuuhenkilön on tehtävä tarvittavat merkinnät puhdistustyöstä rakennustyön tarkastusasiakirjaan.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_4__sec_23">
+                        <num>23 §</num>
+                        <heading>Vesilaitteiston paineen ja vesikalusteiden virtaamien mittaus ja säätö</heading>
+                        <subsection eId="chp_4__sec_23__subsec_1">
+                            <content>
+                                <p>Erityisalan työnjohtajan on huolehdittava, että vesilaitteiston paine ja vesikalusteiden virtaamat on mitattu, säädetty ja todettu suunnitelmien mukaisiksi ennen käyttöönottoa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_4__sec_23__subsec_2">
+                            <content>
+                                <p>Rakennusvaiheen vastuuhenkilön on tehtävä merkintä mittaus- ja säätötyön suunnitelmanmukaisuudesta rakennustyön tarkastusasiakirjaan.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_4__sec_24">
+                        <num>24 §</num>
+                        <heading>Lämpimän käyttöveden kiertojohdon virtaaman säätö</heading>
+                        <subsection eId="chp_4__sec_24__subsec_1">
+                            <content>
+                                <p>Erityisalan työnjohtajan on huolehdittava, että kiertojohdon virtaama on mitattu ja säädetty ennen käyttöönottoa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_4__sec_24__subsec_2">
+                            <content>
+                                <p>Rakennusvaiheen vastuuhenkilön on tehtävä merkintä virtaaman säädöstä rakennustyön tarkastusasiakirjaan.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_5">
+                    <num>5 luku</num>
+                    <heading>Rakennuksen jätevesilaitteisto</heading>
+                    <section eId="chp_5__sec_25">
+                        <num>25 §</num>
+                        <heading>Jätevesien poisjohtaminen</heading>
+                        <subsection eId="chp_5__sec_25__subsec_1">
+                            <content>
+                                <p>Rakennuksen jätevesilaitteistosta ei saa aiheutua terveydellistä vaaraa, hajuhaittaa, viemäritulvia, melua eikä ympäristöhaittaa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_25__subsec_2">
+                            <content>
+                                <p>Jätevesi on johdettava vesihuoltolaitoksen viemäriin tai kiinteistökohtaisesti puhdistettavaksi taikka umpisäiliöön.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_25__subsec_3">
+                            <content>
+                                <p>Viemärin putkikoko ei saa pienentyä virtaussuunnassa.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_5__sec_26">
+                        <num>26 §</num>
+                        <heading>Viemäröinnin järjestäminen</heading>
+                        <subsection eId="chp_5__sec_26__subsec_1">
+                            <content>
+                                <p>Vesipisteen yhteydessä on oltava viemäripiste, joka on liitetty viemäriin viemärikalusteen kautta. Viemäripistettä ei edellytetä kastelupostin, palopostin, hätäsuihkun, eikä yksittäisen kylmä- ja juomalaitteen yhteyteen.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_26__subsec_2">
+                            <intro eId="chp_5__sec_26__subsec_2__intro">
+                                <p>Lattiakaivoon voi liittää enintään kaksi kuivakaivoa, jotka voivat sijaita enintään kolmen metrin etäisyydellä lattiakaivosta. Lattiakaivolla varustettavia tiloja uuden rakennuksen rakentamisessa sekä uuden rakennuksen rakentamista vastaavassa korjaus- ja muutostyössä ovat:</p>
+                            </intro>
+                            <paragraph eId="chp_5__sec_26__subsec_2__para_1">
+                                <num>1. </num>
+                                <content>
+                                    <p>suihkutila ja kylpyhuone sekä saunan pesuhuone</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_5__sec_26__subsec_2__para_2">
+                                <num>2. </num>
+                                <content>
+                                    <p>pesutupa</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_5__sec_26__subsec_2__para_3">
+                                <num>3. </num>
+                                <content>
+                                    <p>lämmönjakohuone</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_5__sec_26__subsec_2__para_4">
+                                <num>4. </num>
+                                <content>
+                                    <p>ilmanvaihtokonehuone</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_5__sec_26__subsec_2__para_5">
+                                <num>5. </num>
+                                <content>
+                                    <p>yleiseen käyttöön tarkoitettu WC-tila</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_5__sec_26__subsec_2__para_6">
+                                <num>6. </num>
+                                <content>
+                                    <p>tekninen tila, jossa on vesivahingon mahdollisuus</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_5__sec_26__subsec_2__para_7">
+                                <num>7. </num>
+                                <content>
+                                    <p>autonpesupaikka</p>
+                                </content>
+                            </paragraph>
+                            <paragraph eId="chp_5__sec_26__subsec_2__para_8">
+                                <num>8. </num>
+                                <content>
+                                    <p>erityistilat, jotka puhdistetaan vesihuuhtelulla.</p>
+                                </content>
+                            </paragraph>
+                        </subsection>
+                    </section>
+                    <section eId="chp_5__sec_27">
+                        <num>27 §</num>
+                        <heading>Jätevesien pumppaamo</heading>
+                        <subsection eId="chp_5__sec_27__subsec_1">
+                            <content>
+                                <p>Jos rakennuksen viemäripisteistä ei voida johtaa jätevettä pois painovoimaisesti viettoviemärillä, on jätevedet pumpattava. Pumppaamon on oltava vesitiivis, maanpaineen kestävä eikä se saa aiheuttaa hajuhaittoja. Jäteveden pumppaamon on oltava tuuletettu.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_27__subsec_2">
+                            <content>
+                                <p>Pumppaamossa on oltava käyttöhäiriöilmaisin. Pumppaamon on sijaittava sellaisessa paikassa, että se voidaan helposti tarkastaa ja huoltaa. Jätevedet eivät saa virrata takaisin pumppaamoon.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_27__subsec_3">
+                            <content>
+                                <p>Jos viemäripiste sijaitsee padotuskorkeuden alapuolella, jätevedet on pumpattava. Korjaus- ja muutostyössä padotuskorkeuden alapuolella sijaitseva yksittäinen viemäripiste voidaan pumppauksen sijasta varustaa padotusventtiilillä lukuun ottamatta WC-vesiä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_5__sec_28">
+                        <num>28 §</num>
+                        <heading>Viemärihajujen leviämisen estäminen</heading>
+                        <subsection eId="chp_5__sec_28__subsec_1">
+                            <content>
+                                <p>Viemärilaitteistosta ei saa aiheutua hajuhaittaa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_28__subsec_2">
+                            <content>
+                                <p>Viemäripisteessä on oltava puhdistettava vesilukko.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_28__subsec_3">
+                            <content>
+                                <p>Viemäreiden on oltava yhteydessä rakennuksen vesikaton yläpuolelle ulottuvaan tuuletusviemäriin. Kylmässä tilassa olevan tuuletusviemärin on oltava lämmöneristetty.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_5__sec_29">
+                        <num>29 §</num>
+                        <heading>Ylivuoto- ja tyhjennysvesien viemäröinti</heading>
+                        <subsection eId="chp_5__sec_29__subsec_1">
+                            <content>
+                                <p>Vesisäiliöiden ylivuoto- ja tyhjennysvedet sekä pesu- ja astianpesukoneiden poistovedet eivät saa virrata viemäristä takaisin laitteisiin.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_6">
+                    <num>6 luku</num>
+                    <heading>Jätevesilaitteiston käyttövarmuus</heading>
+                    <section eId="chp_6__sec_30">
+                        <num>30 §</num>
+                        <heading>Viemäreiden kannatus ja kiinnitys rakenteisiin</heading>
+                        <subsection eId="chp_6__sec_30__subsec_1">
+                            <content>
+                                <p>Viemärien on oltava kannatettuja ja kiinnitettyjä rakenteisiin niin, että mekaaniset voimat ja lämpölaajeneminen eivät aiheuta painaumia tai haitallisia muutoksia viemäreissä. Viemärin on oltava ankkuroitu, jos jäteveden virtauksesta aiheutuvat voimat ovat niin voimakkaita, että viemäri ei muuten pysy haittaa aiheuttamatta paikoillaan. Kannatusten ja kiinnityksessä käytettävien tuotteiden on oltava käyttöympäristössään korroosionkestäviä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_30__subsec_2">
+                            <content>
+                                <p>Pinnoittamalla tai sukittamalla korjatun viemärin kannakkeiden on oltava kunnoltaan sellaisia, että ne kestävät korjatun viemärin käyttämisestä aiheutuvat rasitukset.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_6__sec_31">
+                        <num>31 §</num>
+                        <heading>Olosuhteiden huomioon ottaminen viemärin sijoituksessa</heading>
+                        <subsection eId="chp_6__sec_31__subsec_1">
+                            <content>
+                                <p>Maahan asennetun viemärin on kestettävä maasta aiheutuva kuormitus, maaperän syövyttävyys sekä maaperän painuminen. Pohjavesialueella sijaitsevan paineviemärin vuodon on oltava havaittavissa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_31__subsec_2">
+                            <content>
+                                <p>Maahan asennettavien vesijohtojen ja viemärien on oltava tunnistettavissa ja niiden on sijaittava erillään toisistaan.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_31__subsec_3">
+                            <content>
+                                <p>Viemärilaitteisto ei saa jäätyä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_6__sec_32">
+                        <num>32 §</num>
+                        <heading>Jätevesilaitteiston tiiviys</heading>
+                        <subsection eId="chp_6__sec_32__subsec_1">
+                            <content>
+                                <p>Jätevesilaitteiston on oltava tiivis. Materiaalien ja liitosten on oltava yhteensopivia.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_32__subsec_2">
+                            <content>
+                                <p>Rakennusvaiheen vastuuhenkilön on tehtävä merkintä rakennustyön tarkastusasiakirjaan jätevesilaitteiston tiiviyden toteamisesta.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_6__sec_33">
+                        <num>33 §</num>
+                        <heading>Jätevesilaitteiston erottimet</heading>
+                        <subsection eId="chp_6__sec_33__subsec_1">
+                            <content>
+                                <p>Jos hiekkaa, lietettä, rasvaa, bensiiniä, öljyä tai muita haitallisia fysikaalisia tai kemiallisia aineita voi joutua jätevesivesilaitteistoon ja -verkostoon tai ympäristöön, on jätevesilaitteistossa oltava erotin- tai käsittelylaite.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_33__subsec_2">
+                            <content>
+                                <p>Erotinlaitteiden on sijaittava niin, että ne ovat helposti ja haittaa aiheuttamatta huollettavissa ja tyhjennettävissä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_33__subsec_3">
+                            <content>
+                                <p>Öljyn- ja rasvanerottimissa on oltava täyttymisen ilmaiseva hälytys. Erottimen jälkeen olevassa viemäriputkessa on oltava näytteenottomahdollisuus.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_6__sec_34">
+                        <num>34 §</num>
+                        <heading>Jätevesiviemärien puhdistusaukot</heading>
+                        <subsection eId="chp_6__sec_34__subsec_1">
+                            <content>
+                                <p>Jätevesilaitteistossa on oltava helposti käsiteltävät, suljettavat puhdistusaukot sekä vaaka- että pystyviemäreissä. Puhdistusaukkojen on sijaittava niin, että putkisto voidaan puhdistaa kokonaan.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_7">
+                    <num>7 luku</num>
+                    <heading>Hulevesilaitteisto</heading>
+                    <section eId="chp_7__sec_35">
+                        <num>35 §</num>
+                        <heading>Hulevesijärjestelmän suunnittelu</heading>
+                        <subsection eId="chp_7__sec_35__subsec_1">
+                            <content>
+                                <p>Pää- ja erityissuunnittelijan on tehtäviensä mukaisesti suunniteltava hulevesijärjestelmä niin, että ensisijainen ratkaisu hulevesien poistamiseksi on niiden viivyttäminen ja imeyttäminen kiinteistöllä. Jos hulevesien imeyttäminen ei ole maaperän ominaisuuksien vuoksi mahdollista, kiinteistöllä on oltava hulevesilaitteisto, jonka kautta hulevedet virtaavat avo-ojaan, vesistöön tai kunnan hulevesiviemäriin. Hulevesilaitteistoon ei saa johtaa jätevesiä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_7__sec_35__subsec_2">
+                            <content>
+                                <p>Hulevesilaitteiston mitoituksen on oltava sellainen, että viemäriin johdettava mitoitussadetta vastaava virtaama ei aiheuta viemärin tulvimista.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_7__sec_36">
+                        <num>36 §</num>
+                        <heading>Hulevesilaitteiston sijoittaminen</heading>
+                        <subsection eId="chp_7__sec_36__subsec_1">
+                            <content>
+                                <p>Rakennuksen sisäpuolisesta hulevesiviemäristä ei saa aiheutua melua. Maahan asennettavan hulevesiviemärin on kestettävä vahingoittumattomana ja toimivana maanpaineen, kuormituksen ja maaperän syövyttävyyden vaikutukset sekä sijaintipaikan mahdollinen painuminen. Hulevesilaitteiston on oltava puhdistettavissa kaivojen ja puhdistusputkien kautta.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_7__sec_36__subsec_2">
+                            <content>
+                                <p>Hulevesiviemäri ei saa jäätyä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_7__sec_37">
+                        <num>37 §</num>
+                        <heading>Rakennuksen sisäpuolisten hulevesiviemäreiden tiiviys ja käyttövarmuus</heading>
+                        <subsection eId="chp_7__sec_37__subsec_1">
+                            <content>
+                                <p>Erityisalan työnjohtajan on huolehdittava, että sisäpuolisten hulevesiviemäreiden tiiviys on tarkastettu. Hulevesiviemäri on kiinnitettävä rakenteisiin siten, että siihen ei pääse syntymään haitallista painumaa, ja siten, ettei mahdollinen lämpölaajeneminen aiheuta haittaa, eivätkä huleveden virtauksista syntyvät voimat pääse aiheuttamaan haitallista putkien liikkumista. Rakennuksen sisäpuolisissa hulevesiviemäreissä on oltava kondenssieristys.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_7__sec_37__subsec_2">
+                            <content>
+                                <p>Rakennusvaiheen vastuuhenkilön on tehtävä merkintä rakennustyön tarkastusasiakirjaan sisäpuolisten hulevesiviemäreiden tiiviyden toteamisesta.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_7__sec_38">
+                        <num>38 §</num>
+                        <heading>Rakennuksen perustusten kuivatusvesien poisjohtaminen</heading>
+                        <subsection eId="chp_7__sec_38__subsec_1">
+                            <content>
+                                <p>Salaojien on johdettava perustusten kuivatusvedet salaojakaivojen kautta perusvesien kokoojakaivoon. Perustusten kuivatusvesien on virrattava pois kiinteistöltä siten, ettei niistä aiheudu haittaa jäte- ja hulevesilaitteistolle. Rakennuksen perustusten kuivatusvedet voivat virrata alueen viemäröintijärjestelmästä riippuen avo-ojaan, vesistöön, kunnan hulevesiviemäriin tai ne voivat imeytyä maahan. Jäte- ja hulevesiä ei saa johtaa perustusten kuivatusvesiviemäriin.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_8">
+                    <num>8 luku</num>
+                    <heading>Voimaantulo- ja siirtymäsäännökset</heading>
+                    <section eId="chp_8__sec_39">
+                        <num>39 §</num>
+                        <heading>Voimaantulo</heading>
+                        <subsection eId="chp_8__sec_39__subsec_1">
+                            <content>
+                                <p>Tämä asetus tulee voimaan 1 päivänä tammikuuta 2018.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_8__sec_39__subsec_2">
+                            <content>
+                                <p>Tämän asetuksen voimaan tullessa vireillä olevaan hankkeeseen sovelletaan tämän asetuksen voimaan tullessa voimassa olleita säännöksiä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+            </hcontainer>
+            <hcontainer finlex:outline="Esityöt ja allekirjoitukset" name="conclusions">
+                <hcontainer finlex:outline="Esityöt" name="preliminaryWork">
+                    <content>
+                        <p>Euroopan parlamentin ja neuvoston direktiivi 2015/1535/EU (32015L1535); EUVL L 241, 17.9.2015, s. 1 </p>
+                    </content>
+                </hcontainer>
+                <hcontainer finlex:outline="Allekirjoitukset" name="signatures">
+                    <content>
+                        <p>Helsingissä 22 päivänä joulukuuta 2017</p>
+                        <p>
+                            <signature>
+                                <role refersTo="">Asunto-, energia- ja ympäristöministeri</role>
+                                <person refersTo="">Kimmo Tiilikainen</person>
+                            </signature>
+                            <signature>
+                                <role refersTo="">Yli-insinööri</role>
+                                <person refersTo="">Kaisa Kauko</person>
+                            </signature>
+                        </p>
+                    </content>
+                </hcontainer>
+            </hcontainer>
+        </body>
+    </act>
+</akomaNtoso>

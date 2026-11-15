@@ -1,0 +1,221 @@
+{
+ "thresholds": {
+  "door": 0.5,
+  "window": 0.52,
+  "toilet": 0.32,
+  "sink": 0.38,
+  "shower": 0.16,
+  "bathtub": 0.46,
+  "shower_cab": 0.62,
+  "sauna_bench": 0.42,
+  "bedroom": 0.72,
+  "kitchen": 0.4,
+  "bathroom": 0.32,
+  "wc_room": 0.54,
+  "sauna_room": 0.36,
+  "balcony": 0.26,
+  "floor": 0.38,
+  "door_open": 0.46
+ },
+ "thresholds_protocol": {
+  "door": 0.46,
+  "window": 0.52,
+  "toilet": 0.32,
+  "sink": 0.38,
+  "shower": 0.16,
+  "bathtub": 0.46,
+  "shower_cab": 0.62,
+  "sauna_bench": 0.42,
+  "bedroom": 0.72,
+  "kitchen": 0.4,
+  "bathroom": 0.32,
+  "wc_room": 0.62,
+  "sauna_room": 0.36,
+  "balcony": 0.38,
+  "floor": 0.38
+ },
+ "rows": [
+  [
+   "door",
+   0.46,
+   60.5,
+   62.0,
+   59.0
+  ],
+  [
+   "window",
+   0.52,
+   55.5,
+   54.0,
+   45.5
+  ],
+  [
+   "toilet",
+   0.32,
+   96.0,
+   94.0,
+   93.0
+  ],
+  [
+   "sink",
+   0.38,
+   88.0,
+   91.2,
+   91.0
+  ],
+  [
+   "shower",
+   0.16,
+   83.0,
+   83.5,
+   85.8
+  ],
+  [
+   "bathtub",
+   0.46,
+   95.5,
+   95.2,
+   96.0
+  ],
+  [
+   "shower_cab",
+   0.62,
+   96.5,
+   97.2,
+   97.5
+  ],
+  [
+   "sauna_bench",
+   0.42,
+   82.8,
+   80.2,
+   80.5
+  ],
+  [
+   "bedroom",
+   0.72,
+   85.5,
+   83.0,
+   83.5
+  ],
+  [
+   "kitchen",
+   0.4,
+   83.5,
+   86.8,
+   84.8
+  ],
+  [
+   "bathroom",
+   0.32,
+   85.5,
+   87.0,
+   87.8
+  ],
+  [
+   "wc_room",
+   0.62,
+   92.5,
+   92.8,
+   90.2
+  ],
+  [
+   "sauna_room",
+   0.36,
+   90.8,
+   92.0,
+   91.2
+  ],
+  [
+   "balcony",
+   0.38,
+   92.0,
+   91.5,
+   90.5
+  ],
+  [
+   "floor",
+   0.38,
+   97.5,
+   98.2,
+   97.0
+  ]
+ ],
+ "asked": {
+  "door": {
+   "thr": 0.5,
+   "n_test": 281,
+   "acc": 79.7,
+   "acc_at_protocol_thr": 80.4
+  },
+  "window": {
+   "thr": 0.52,
+   "n_test": 386,
+   "acc": 54.1,
+   "acc_at_protocol_thr": 54.1
+  },
+  "toilet": {
+   "thr": 0.32,
+   "n_test": 385,
+   "acc": 94.0,
+   "acc_at_protocol_thr": 94.0
+  },
+  "sink": {
+   "thr": 0.38,
+   "n_test": 381,
+   "acc": 91.1,
+   "acc_at_protocol_thr": 91.1
+  },
+  "bedroom": {
+   "thr": 0.72,
+   "n_test": 230,
+   "acc": 82.6,
+   "acc_at_protocol_thr": 82.6
+  },
+  "kitchen": {
+   "thr": 0.4,
+   "n_test": 253,
+   "acc": 88.5,
+   "acc_at_protocol_thr": 88.5
+  },
+  "sauna_room": {
+   "thr": 0.36,
+   "n_test": 250,
+   "acc": 97.2,
+   "acc_at_protocol_thr": 97.2
+  },
+  "bathroom": {
+   "thr": 0.32,
+   "n_test": 161,
+   "acc": 93.8,
+   "acc_at_protocol_thr": 93.8
+  },
+  "wc_room": {
+   "thr": 0.54,
+   "n_test": 163,
+   "acc": 96.3,
+   "acc_at_protocol_thr": 95.7
+  },
+  "balcony": {
+   "thr": 0.26,
+   "n_test": 136,
+   "acc": 87.5,
+   "acc_at_protocol_thr": 89.0
+  },
+  "floor": {
+   "thr": 0.38,
+   "n_test": 386,
+   "acc": 98.7,
+   "acc_at_protocol_thr": 98.7
+  },
+  "shower+bathtub": {
+   "n_test": 353,
+   "acc": 84.1
+  }
+ },
+ "n_tune": 400,
+ "n_test": 400,
+ "weights": "x1536_ds_rp + fix_m2048",
+ "inference": "YOLO26x @1536 for all classes; toilet, sink, shower, bathtub fused (WBF) with a YOLO26m fixture specialist @2048",
+ "class_note": "door_open = doorway without a leaf: do NOT add it to the door count for the hackathon question"
+}

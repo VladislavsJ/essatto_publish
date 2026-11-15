@@ -1,0 +1,2027 @@
+[
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors (door numbers) are listed in the door schedule?",
+  "reference": 38,
+  "value": 38,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in the Door Schedule table"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule are door type A1 (swing door)?",
+  "reference": 14,
+  "value": 14,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "door_type",
+     "op": "eq",
+     "value": "A1"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in the Door Schedule where door_type is A1 (SWING DOOR)."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule are door type A2 (double swing door)?",
+  "reference": 1,
+  "value": 1,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "door_type",
+     "op": "eq",
+     "value": "A2"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Count rows in the Door Schedule where door_type is A2"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule are door type B1 (aluminium door with glazing)?",
+  "reference": 9,
+  "value": 9,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "door_type",
+     "op": "eq",
+     "value": "B1"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in the Door Schedule where door_type is B1"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule are door type B2 (double aluminium door with glazing)?",
+  "reference": 10,
+  "value": 10,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "door_type",
+     "op": "eq",
+     "value": "B2"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Count rows in the Door Schedule where door_type is B2"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule are door type B3 (aluminium sliding door)?",
+  "reference": 1,
+  "value": 1,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "door_type",
+     "op": "eq",
+     "value": "B3"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in Door Schedule where door_type is B3"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule are door type C1 (roll-up insulated door)?",
+  "reference": 1,
+  "value": 1,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "door_type",
+     "op": "eq",
+     "value": "C1"
+    },
+    {
+     "field": "door_type_description",
+     "op": "eq",
+     "value": "ROLL-UP INSULATED DOOR"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Count rows in the Door Schedule (having door_type_description populated, excluding the DOOR TYPES legend) with door_type = C1."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule have a wood solid core door (material WD-1)?",
+  "reference": 13,
+  "value": 13,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "door_matl",
+     "op": "eq",
+     "value": "WD-1"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in Door Schedule where door_matl is WD-1"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule have an interior-grade hollow metal frame (STL-1)?",
+  "reference": 13,
+  "value": 13,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "frame_matl",
+     "op": "eq",
+     "value": "STL-1"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in Door Schedule where frame_matl is STL-1"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule have aluminium storefront frames (AL-1 or AL-2)?",
+  "reference": 17,
+  "value": 17,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "frame_matl",
+     "op": "in",
+     "value": [
+      "AL-1",
+      "AL-2"
+     ]
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in Door Schedule where frame_matl is AL-1 or AL-2"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule carry note A (wide stile)?",
+  "reference": 10,
+  "value": 10,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "notes",
+     "op": "in",
+     "value": [
+      "A",
+      "A, B"
+     ]
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Count rows in Door Schedule where notes is 'A' or 'A, B' (avoiding 'SEE A-620 FOR DETAILS')."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule carry note B (opens 180°)?",
+  "reference": 4,
+  "value": 4,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "notes",
+     "op": "regex",
+     "value": "\\bB\\b"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in Door Schedule where notes contain note B (e.g., 'A, B')."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule carry note C (card reader)?",
+  "reference": 5,
+  "value": 5,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "notes",
+     "op": "regex",
+     "value": "\\bC\\b"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Count rows in the Door Schedule where the notes column contains note C (using word-boundary regex so multi-note entries like 'A, C' would also match without matching words like 'SEE')."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule are 3'-0\" wide?",
+  "reference": 8,
+  "value": 8,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "width",
+     "op": "regex",
+     "value": "^3'\\s*-?\\s*0\""
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in Door Schedule where width matches 3'-0\" (with optional spaces around the hyphen, e.g. 3' - 0\")"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors in the door schedule are 7'-0\" high?",
+  "reference": 13,
+  "value": 13,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "height",
+     "op": "regex",
+     "value": "^\\s*7'\\s*-\\s*0\"\\s*$"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Count rows in the Door Schedule where height is 7'-0\""
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors does the door schedule list for room 118 (Fitness Center)?",
+  "reference": 5,
+  "value": 5,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "118"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Count rows in Door Schedule where room_number is 118"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many doors does the door schedule list for room 128 (Fieldhouse)?",
+  "reference": 5,
+  "value": 5,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "128"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in the Door Schedule where room_number is 128"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the width of door 121.A?",
+  "reference": "5'-10 3/8\"",
+  "value": "5' - 10 3/8\"",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "width",
+   "filters": [
+    {
+     "field": "door_number",
+     "op": "eq",
+     "value": "121.A"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Read the width of door 121.A from the Door Schedule"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what door type is door 121.A, and what kind of door is that?",
+  "reference": "B3 (aluminium sliding door)",
+  "value": "B3 (Door type of .A), ALUMINIUM SLIDING (Kind of door (description)",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "parts": [
+    {
+     "label": "Door type of 121.A",
+     "op": "get",
+     "kind": "schedule_row",
+     "attr": "door_type",
+     "filters": [
+      {
+       "field": "door_number",
+       "op": "eq",
+       "value": "121.A"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    },
+    {
+     "label": "Kind of door (description)",
+     "op": "get",
+     "kind": "schedule_row",
+     "attr": "door_type_description",
+     "filters": [
+      {
+       "field": "door_number",
+       "op": "eq",
+       "value": "121.A"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    }
+   ],
+   "notes": [
+    "Looked up door_type and door_type_description for door 121.A in the Door Schedule"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what are the width and height of door 128.B?",
+  "reference": "12'-0\" wide x 14'-0\" high",
+  "value": "12' - 0\" (width), 14' - 0\" (height)",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "parts": [
+    {
+     "label": "width",
+     "op": "get",
+     "kind": "schedule_row",
+     "attr": "width",
+     "filters": [
+      {
+       "field": "door_number",
+       "op": "eq",
+       "value": "128.B"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    },
+    {
+     "label": "height",
+     "op": "get",
+     "kind": "schedule_row",
+     "attr": "height",
+     "filters": [
+      {
+       "field": "door_number",
+       "op": "eq",
+       "value": "128.B"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    }
+   ],
+   "notes": [
+    "Looked up width and height for door_number 128.B in the Door Schedule."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, which hardware group is specified for door 107.A?",
+  "reference": "19",
+  "value": "19",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "hardware_group_see_specs",
+   "filters": [
+    {
+     "field": "door_number",
+     "op": "eq",
+     "value": "107.A"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Looking up hardware group in Door Schedule for door 107.A"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what door material is specified for door 115.A?",
+  "reference": "AL-2/GL-2",
+  "value": "AL-2/GL-2",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "door_matl",
+   "filters": [
+    {
+     "field": "door_number",
+     "op": "eq",
+     "value": "115.A"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Read door_matl from Door Schedule for door_number 115.A"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the height of the four doors of type B2 that serve the Fitness Center (118.A1-118.B2)?",
+  "reference": "7'-10 1/4\"",
+  "value": "7' - 10 1/4\"",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "list",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "Door Schedule"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "118"
+    },
+    {
+     "field": "door_type",
+     "op": "eq",
+     "value": "B2"
+    }
+   ],
+   "fields": [
+    "door_number",
+    "room_name",
+    "door_type",
+    "height"
+   ],
+   "distinct": false,
+   "group_by": null,
+   "notes": [
+    "Get height of doors of type B2 serving room 118 (Fitness Center) from Door Schedule"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many rooms are listed in the finish room schedule?",
+  "reference": 29,
+  "value": 29,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in the FINISH ROOM SCHEDULE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the area of room 128 (Fieldhouse) in the finish room schedule?",
+  "reference": 29690,
+  "value": "29690 SF",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "128"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Get area of room 128 from the FINISH ROOM SCHEDULE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the area of room 118 (Fitness Center) in the finish room schedule?",
+  "reference": 5183,
+  "value": "5183 SF",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "118"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Reading the area column for room 118 in the FINISH ROOM SCHEDULE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the area of room 122 (Wrestling) in the finish room schedule?",
+  "reference": 3814,
+  "value": "3814 SF",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "122"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Get area of room 122 from FINISH ROOM SCHEDULE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the area of room 121 (Clinic) in the finish room schedule?",
+  "reference": 2470,
+  "value": "2470 SF",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "121"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Get the area of room 121 (Clinic) from the FINISH ROOM SCHEDULE."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the total area of all rooms that have an area listed in the finish room schedule?",
+  "reference": 49560,
+  "value": 49560.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Sum of the area column in FINISH ROOM SCHEDULE (already in SF)"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the total area of the rooms named OFFICE in the finish room schedule?",
+  "reference": 816,
+  "value": 816.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_name",
+     "op": "eq",
+     "value": "OFFICE"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Sum of area for rows in FINISH ROOM SCHEDULE where room_name is OFFICE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the total area of the rooms named RESTROOM in the finish room schedule?",
+  "reference": 193,
+  "value": 193.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_name",
+     "op": "eq",
+     "value": "RESTROOM"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Sum of area column in FINISH ROOM SCHEDULE where room_name is RESTROOM"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the combined area of the women's and men's locker rooms?",
+  "reference": 1181,
+  "value": 1181.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_name",
+     "op": "regex",
+     "value": "LOCKER"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summed the area from the FINISH ROOM SCHEDULE for rooms matching 'LOCKER' (women's and men's locker rooms)."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many rooms have floor finish F0 (unfinished concrete slab), and what is their total area?",
+  "reference": "3 rooms, 4541 SF",
+  "value": "3 (Rooms with floor finish), 4541 (Total area of rooms with floor finish (SF)",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "parts": [
+    {
+     "label": "Rooms with floor finish F0",
+     "op": "count",
+     "kind": "schedule_row",
+     "attr": null,
+     "filters": [
+      {
+       "field": "table",
+       "op": "eq",
+       "value": "FINISH ROOM SCHEDULE"
+      },
+      {
+       "field": "floor_finish",
+       "op": "eq",
+       "value": "F0"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    },
+    {
+     "label": "Total area of rooms with floor finish F0 (SF)",
+     "op": "sum",
+     "kind": "schedule_row",
+     "attr": "area",
+     "filters": [
+      {
+       "field": "table",
+       "op": "eq",
+       "value": "FINISH ROOM SCHEDULE"
+      },
+      {
+       "field": "floor_finish",
+       "op": "eq",
+       "value": "F0"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    }
+   ],
+   "notes": [
+    "Filtered FINISH ROOM SCHEDULE rows where floor_finish is F0; area is already in SF."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the total area of rooms with floor finish F4 (resilient flooring)?",
+  "reference": 4769,
+  "value": 4769.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "floor_finish",
+     "op": "eq",
+     "value": "F4"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Sum area of rows in FINISH ROOM SCHEDULE where floor_finish is F4"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many rooms have a ceramic tile base (B2)?",
+  "reference": 5,
+  "value": 5,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "base_finish",
+     "op": "contains",
+     "value": "B2"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Counting rows in the Finish Room Schedule where base_finish includes B2 (ceramic tile base)."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, how many rooms have all four walls finished with W1 (painted gypsum board)?",
+  "reference": 6,
+  "value": 6,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "north_wall",
+     "op": "eq",
+     "value": "W1"
+    },
+    {
+     "field": "south_wall",
+     "op": "eq",
+     "value": "W1"
+    },
+    {
+     "field": "east_wall",
+     "op": "eq",
+     "value": "W1"
+    },
+    {
+     "field": "west_wall",
+     "op": "eq",
+     "value": "W1"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Count rows in FINISH ROOM SCHEDULE where north_wall, south_wall, east_wall, and west_wall are all exactly 'W1'."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the floor finish of room 113 (Aerobics & Yoga), and what does it mean?",
+  "reference": "F4 - resilient flooring (T.B.D.)",
+  "value": "F4",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "list",
+   "kind": "schedule_row",
+   "attr": null,
+   "fields": [
+    "room_number",
+    "room_name",
+    "floor_finish",
+    "comments"
+   ],
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "113"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Retrieve floor_finish and comments for room 113 from FINISH ROOM SCHEDULE; finish legend definitions are not extracted as a separate table"
+   ]
+  },
+  "src": "llm:gemini-4-carbon+repair",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what floor finishes are scheduled for the Fieldhouse (room 128)?",
+  "reference": "F2 & F3 - artificial turf and resilient basketball flooring (T.B.D.)",
+  "value": "F2 & F3",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "floor_finish",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "128"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Get floor_finish for room 128 (Fieldhouse) from FINISH ROOM SCHEDULE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the ceiling finish of the Fieldhouse (room 128)?",
+  "reference": "C2 - simple saver insulation with liner, color white",
+  "value": "C2",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "ceiling_finish",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "128"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Get ceiling_finish for room 128 from FINISH ROOM SCHEDULE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, what is the north wall finish of the Fitness Center (room 118)?",
+  "reference": "W2 - 3/4\" prefinished stained/sealed plywood",
+  "value": "W2",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "north_wall",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    },
+    {
+     "field": "room_number",
+     "op": "eq",
+     "value": "118"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Read north_wall from FINISH ROOM SCHEDULE for room 118 (Fitness Center)"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-801 of the Xcel Sports Complex drawings, which room in the finish room schedule has the largest area?",
+  "reference": "Room 128 Fieldhouse (29690 SF)",
+  "value": "Room 128 FIELDHOUSE (29690)",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "max",
+   "kind": "schedule_row",
+   "attr": "area",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "FINISH ROOM SCHEDULE"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Find the row with the maximum area in the FINISH ROOM SCHEDULE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-701 (Restrooms) of the Xcel Sports Complex drawings, how many water closets are drawn in enlarged plan 6A 'Restrooms'?",
+  "reference": 2,
+  "value": 2,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "toilet",
+   "attr": null,
+   "filters": [
+    {
+     "field": "level",
+     "op": "eq",
+     "value": "6A RESTROOMS"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "water closets = toilet entities",
+    "enlarged plan 6A 'Restrooms' = level '6A RESTROOMS'"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-701 (Restrooms) of the Xcel Sports Complex drawings, how many lavatories are drawn inside the two restrooms of enlarged plan 6A?",
+  "reference": 2,
+  "value": 2,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "count",
+   "kind": "washbasin",
+   "attr": null,
+   "filters": [
+    {
+     "field": "level",
+     "op": "eq",
+     "value": "6A RESTROOMS"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "lavatories = washbasin entities",
+    "enlarged plan 6A = level '6A RESTROOMS'"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A-701 (Restrooms) of the Xcel Sports Complex drawings, how many water closets, lavatories and showers are drawn in enlarged plan 6B 'Restroom with Shower'?",
+  "reference": "1 water closet, 1 lavatory, 1 shower",
+  "value": "1 (water closets), 1 (lavatories), 1 (showers)",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "parts": [
+    {
+     "label": "water closets",
+     "op": "count",
+     "kind": "toilet",
+     "attr": null,
+     "filters": [
+      {
+       "field": "level",
+       "op": "eq",
+       "value": "6B RESTROOM WITH SHOWER"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    },
+    {
+     "label": "lavatories",
+     "op": "count",
+     "kind": "washbasin",
+     "attr": null,
+     "filters": [
+      {
+       "field": "level",
+       "op": "eq",
+       "value": "6B RESTROOM WITH SHOWER"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    },
+    {
+     "label": "showers",
+     "op": "count",
+     "kind": "shower",
+     "attr": null,
+     "filters": [
+      {
+       "field": "level",
+       "op": "eq",
+       "value": "6B RESTROOM WITH SHOWER"
+      }
+     ],
+     "group_by": null,
+     "notes": []
+    }
+   ],
+   "notes": [
+    "Mapped water closets to kind 'toilet', lavatories to kind 'washbasin', and showers to kind 'shower'.",
+    "Filtered by level '6B RESTROOM WITH SHOWER' representing enlarged plan 6B."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many unit entry doors (type U01) are scheduled?",
+  "reference": 71,
+  "value": "71",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "U01"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Reading 'count' for type_mark 'U01' (UNIT DOOR) from DOOR SCHEDULE - TYPE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many 2'-10\" x 6'-8\" privacy swing doors (type U02) are scheduled?",
+  "reference": 256,
+  "value": "256",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "U02"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Reading 'count' for type_mark 'U02' in 'DOOR SCHEDULE - TYPE'"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many Marvin Essential sliding patio doors are scheduled in total?",
+  "reference": 27,
+  "value": 27.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type",
+     "op": "contains",
+     "value": "MARVIN ESSENTIAL SLIDING"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summed the 'count' column in DOOR SCHEDULE - TYPE for all door types containing 'MARVIN ESSENTIAL SLIDING'."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many Marvin Essential sliding patio doors are scheduled on the 3rd floor?",
+  "reference": 15,
+  "value": 15.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type",
+     "op": "contains",
+     "value": "MARVIN ESSENTIAL SLIDING"
+    },
+    {
+     "field": "type",
+     "op": "contains",
+     "value": "3RD FLO"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summing the 'count' column in 'DOOR SCHEDULE - TYPE' for rows whose 'type' description includes 'MARVIN ESSENTIAL SLIDING' and '3RD FLO' (3rd floor)."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many Vistagrande fiberglass entry doors are scheduled on the 1st floor?",
+  "reference": 19,
+  "value": 19.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type",
+     "op": "contains",
+     "value": "VISTAGRANDE"
+    },
+    {
+     "field": "type",
+     "op": "contains",
+     "value": "1ST"
+    },
+    {
+     "field": "door_material",
+     "op": "eq",
+     "value": "FG"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summed the count column in DOOR SCHEDULE - TYPE for rows with VISTAGRANDE and 1ST in the type description and FG (fiberglass) door material."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many doors with an acoustical seal (type U41) are scheduled?",
+  "reference": 52,
+  "value": "52",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "U41"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Read the 'count' column from DOOR SCHEDULE - TYPE for type_mark U41 (acoustical seal door)"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many items in total are counted in the door type schedule (all type marks, including gates, access panels and clear openings)?",
+  "reference": 657,
+  "value": 657.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summing the 'count' column across all rows in the DOOR SCHEDULE - TYPE table."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many door leaves of the types whose description starts with 'SWING' are scheduled?",
+  "reference": 418,
+  "value": "256; 1; 21; 22; 17; 52; 34; 14",
+  "status": "ok",
+  "ok": false,
+  "plan": {
+   "op": "list",
+   "kind": "schedule_row",
+   "attr": null,
+   "fields": [
+    "type_mark",
+    "type",
+    "count",
+    "door_type",
+    "width"
+   ],
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type",
+     "op": "regex",
+     "value": "^SWING"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "List all door types starting with 'SWING' from DOOR SCHEDULE - TYPE along with their count, type description (single/double), and door_type so leaf quantities can be determined directly from the schedule values."
+   ]
+  },
+  "src": "llm:gemini-4-carbon+repair",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many sliding flush wood doors (types U06 and U44) are scheduled?",
+  "reference": 65,
+  "value": 65.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type_mark",
+     "op": "in",
+     "value": [
+      "U06",
+      "U44"
+     ]
+    },
+    {
+     "field": "door_material",
+     "op": "eq",
+     "value": "WD"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summed the count column in DOOR SCHEDULE - TYPE for sliding flush wood door types U06 and U44."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), what fire rating is scheduled for the unit doors (type U01)?",
+  "reference": "20 MIN.",
+  "value": "20 MIN.",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "fire_rating",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "U01"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Get fire_rating for type_mark U01 in DOOR SCHEDULE - TYPE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), what frame material is scheduled for the unit doors (type U01)?",
+  "reference": "HM (hollow metal)",
+  "value": "HM",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "frame_material",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "U01"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Read frame_material from DOOR SCHEDULE - TYPE for type_mark U01 (UNIT DOOR)"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many chain-link gates (type U22) are scheduled?",
+  "reference": 15,
+  "value": "15",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "DOOR SCHEDULE - TYPE"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "U22"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Reading 'count' for type_mark 'U22' (CHAINLINK GATE) in DOOR SCHEDULE - TYPE"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many windows (window assemblies) are listed in the window schedule in total?",
+  "reference": 235,
+  "value": 235.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "WINDOW SCHEDULE - SIMPLIFIED"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summing the 'count' column in WINDOW SCHEDULE - SIMPLIFIED to get the total number of window assemblies (as opposed to n_wide_units which counts individual wide units)."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many windows of type SS (2-WIDE (TEMP ALL LOW) ESDH3066) are scheduled?",
+  "reference": 118,
+  "value": "118",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "WINDOW SCHEDULE - SIMPLIFIED"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "SS"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Retrieve the count of window type SS from WINDOW SCHEDULE - SIMPLIFIED"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many windows of type RR (1-WIDE (TEMP LOWER) ESDH3066) are scheduled?",
+  "reference": 84,
+  "value": "84",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "WINDOW SCHEDULE - SIMPLIFIED"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "RR"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Reading the scheduled count for window type mark RR (1-WIDE (TEMP LOWER) ESDH3066) from WINDOW SCHEDULE - SIMPLIFIED"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many windows of type QQ (1-WIDE (TEMP ALL) ESDH3066) are scheduled?",
+  "reference": 16,
+  "value": "16",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "WINDOW SCHEDULE - SIMPLIFIED"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "QQ"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Reading 'count' for window type_mark QQ in WINDOW SCHEDULE - SIMPLIFIED"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many windows of type VV (3-WIDE (TEMP ALL LOW) ESDH3066) are scheduled?",
+  "reference": 9,
+  "value": "9",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "get",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "WINDOW SCHEDULE - SIMPLIFIED"
+    },
+    {
+     "field": "type_mark",
+     "op": "eq",
+     "value": "VV"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Reading 'count' for window type_mark 'VV' (3-WIDE (TEMP ALL LOW) ESDH3066) from WINDOW SCHEDULE - SIMPLIFIED"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), how many 2-wide window assemblies (types SS, TT and UU) are scheduled?",
+  "reference": 126,
+  "value": 126.0,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "count",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "WINDOW SCHEDULE - SIMPLIFIED"
+    },
+    {
+     "field": "type_mark",
+     "op": "in",
+     "value": [
+      "SS",
+      "TT",
+      "UU"
+     ]
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summed the count column in WINDOW SCHEDULE - SIMPLIFIED for 2-wide window assembly types SS, TT, and UU."
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), if every N-wide window assembly consists of N ESDH3066 window units, how many ESDH3066 units are needed in total?",
+  "reference": 379,
+  "value": 379,
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "sum",
+   "kind": "schedule_row",
+   "attr": "n_wide_units",
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "WINDOW SCHEDULE - SIMPLIFIED"
+    },
+    {
+     "field": "type",
+     "op": "contains",
+     "value": "ESDH3066"
+    }
+   ],
+   "group_by": null,
+   "notes": [
+    "Summed n_wide_units (count × N for N-wide assemblies) across all ESDH3066 window types in WINDOW SCHEDULE - SIMPLIFIED"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ },
+ {
+  "question": "On sheet A700 of the Cannery Trail Residences drawings (1750 N Oxford Ave, Eau Claire, WI), what are the width and height of a window unit in the window schedule?",
+  "reference": "35 1/2\" wide x 77 1/2\" high",
+  "value": "35 1/2\", 77 1/2\"",
+  "status": "ok",
+  "ok": true,
+  "plan": {
+   "op": "list",
+   "kind": "schedule_row",
+   "attr": null,
+   "filters": [
+    {
+     "field": "table",
+     "op": "eq",
+     "value": "WINDOW SCHEDULE - SIMPLIFIED"
+    }
+   ],
+   "fields": [
+    "width",
+    "height"
+   ],
+   "distinct": true,
+   "group_by": null,
+   "notes": [
+    "Reading distinct width and height values from WINDOW SCHEDULE - SIMPLIFIED"
+   ]
+  },
+  "src": "llm:gemini-4-carbon",
+  "reason": null
+ }
+]

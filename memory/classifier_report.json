@@ -1,0 +1,79 @@
+{
+ "train_questions": 600,
+ "test_questions": 225,
+ "classes": 15,
+ "test_accuracy": 0.8933,
+ "nearest_neighbour_baseline": 0.7467,
+ "by_language": {
+  "English": 0.867,
+  "Finnish": 0.822,
+  "German": 0.867,
+  "Norwegian": 0.933,
+  "Swedish": 0.978
+ },
+ "confident_share": 0.658,
+ "accuracy_when_confident": 1.0,
+ "replay_threshold": 0.7,
+ "confusions": [
+  [
+   "other",
+   "regulation_check",
+   5
+  ],
+  [
+   "area_total",
+   "baseboard_all",
+   2
+  ],
+  [
+   "count_toilets",
+   "count_rooms",
+   2
+  ],
+  [
+   "baseboard_room",
+   "perimeter_room",
+   1
+  ],
+  [
+   "baseboard_all",
+   "baseboard_room",
+   1
+  ],
+  [
+   "area_room",
+   "count_rooms",
+   1
+  ],
+  [
+   "area_total",
+   "area_room",
+   1
+  ],
+  [
+   "perimeter_room",
+   "baseboard_room",
+   1
+  ],
+  [
+   "perimeter_room",
+   "area_room",
+   1
+  ],
+  [
+   "perimeter_room",
+   "wall_area_room",
+   1
+  ],
+  [
+   "count_doors",
+   "perimeter_room",
+   1
+  ],
+  [
+   "count_doors",
+   "other",
+   1
+  ]
+ ]
+}

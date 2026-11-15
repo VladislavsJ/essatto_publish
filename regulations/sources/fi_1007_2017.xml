@@ -1,0 +1,705 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:finlex="http://data.finlex.fi/schema/finlex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <act contains="originalVersion" name="main">
+        <meta>
+            <identification source="#organization_fi.finlex">
+                <FRBRWork>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1007/!main"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1007"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1007/alkup"/>
+                    <FRBRdate date="2017-12-20" name="dateIssued"/>
+                    <FRBRdate date="2017-12-27" name="datePublished"/>
+                    <FRBRauthor as="#role_author" href="#organization_fi.parliament"/>
+                    <FRBRcountry value="fi"/>
+                    <FRBRsubtype value="statute"/>
+                    <FRBRnumber value="1007"/>
+                    <FRBRprescriptive value="true"/>
+                    <FRBRauthoritative value="true"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1007/fin@/!main"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1007/fin@"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1007/alkup/fin"/>
+                    <FRBRdate date="2017-12-20" name="dateIssued"/>
+                    <FRBRdate date="2017-12-27" name="datePublished"/>
+                    <FRBRauthor as="#role_author" href="#organization_fi.parliament"/>
+                    <FRBRlanguage language="fin"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1007/fin@/!main.xml"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1007/fin@.akn"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1007/alkup/fin/xml"/>
+                    <FRBRdate date="2025-09-29" name="dateProduced"/>
+                    <FRBRdate date="2017-12-27" name="datePublished"/>
+                    <FRBRauthor as="#role_editor" href="#organization_fi.finlex"/>
+                    <FRBRformat value="xml"/>
+                </FRBRManifestation>
+            </identification>
+            <references source="#organization_fi.finlex">
+                <TLCOrganization eId="organization_fi.finlex" href="/akn/ontology/organization/fi.finlex" showAs="Finlex"/>
+                <TLCRole eId="role_author" href="/akn/ontology/role/author" showAs="Tekijä"/>
+                <TLCRole eId="role_editor" href="/akn/ontology/role/editor" showAs="Toimittaja"/>
+                <TLCConcept eId="decree" href="/akn/ontology/concept/statute/type-statute.decree" showAs="Asetus"/>
+                <TLCConcept eId="new-statute" href="/akn/ontology/concept/statute/category-statute.new-statute" showAs="Uusi säädös"/>
+            </references>
+            <proprietary source="#organization_fi.finlex">
+                <finlex:typeStatute refersTo="#decree"/>
+                <finlex:categoryStatute refersTo="#new-statute"/>
+                <finlex:documentYear>2017</finlex:documentYear>
+            </proprietary>
+        </meta>
+        <preface>
+            <p>
+                <docNumber>1007/2017</docNumber>
+                <docTitle>Ympäristöministeriön asetus rakennuksen käyttöturvallisuudesta</docTitle>
+            </p>
+        </preface>
+        <preamble>
+            <formula name="enactingClause">
+                <p>Ympäristöministeriön päätöksen mukaisesti säädetään maankäyttö- ja rakennuslain (132/1999) 117 d §:n 2 momentin ja 117 k §:n 3 momentin nojalla sellaisena kuin niistä on 117 d §:n 2 momentti laissa 958/2012 ja 117 k §:n 3 momentti laissa 812/2017:</p>
+            </formula>
+        </preamble>
+        <body>
+            <hcontainer finlex:outline="Säädöksen teksti" name="statuteProvisionsWrapper">
+                <chapter eId="chp_1">
+                    <num>1 Luku</num>
+                    <heading>Yleistä</heading>
+                    <section eId="chp_1__sec_1">
+                        <num>1 §</num>
+                        <heading>Soveltamisala</heading>
+                        <subsection eId="chp_1__sec_1__subsec_1">
+                            <content>
+                                <p>Tämä asetus koskee uutta rakennusta, rakennuksen laajennusta ja rakennuksen kerrosalaa lisäävää tilaa sekä rakennuspaikan välitöntä ympäristöä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_1__sec_1__subsec_2">
+                            <content>
+                                <p>Rakennuksen korjaus- ja muutostyössä tätä asetusta on sovellettava, jos alkuperäinen ratkaisu on turvallisuuden tai terveydellisyyden kannalta ilmeisen haitallinen. Rakennuksen korjaus- ja muutostyöt voidaan muutoin tehdä alkuperäistä ratkaisua noudattaen. Muutokset eivät saa heikentää käyttöturvallisuutta.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_1__sec_1__subsec_3">
+                            <content>
+                                <p>Tätä asetusta on sovellettava rakennuksen käyttötarkoituksen muutokseen, jos rakennuksen tai sen osan käyttötarkoitus muuttuu riskillisemmäksi.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_1__sec_2">
+                        <num>2 §</num>
+                        <heading>Rakennuksen käyttöturvallisuus</heading>
+                        <subsection eId="chp_1__sec_2__subsec_1">
+                            <content>
+                                <p>Pääsuunnittelijan, rakennussuunnittelijan ja erityissuunnittelijan on tehtävänsä mukaisesti huolehdittava rakennuksen suunnittelusta siten, että rakennus käyttötarkoituksensa mukaisesti täyttää käyttöturvallisuudelle asetetut olennaiset tekniset vaatimukset.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_2">
+                    <num>2 Luku</num>
+                    <heading>Putoamisen ja harhaan astumisen estäminen</heading>
+                    <section eId="chp_2__sec_3">
+                        <num>3§</num>
+                        <heading>Porras</heading>
+                        <subsection eId="chp_2__sec_3__subsec_1">
+                            <content>
+                                <p>Portaan on oltava turvallinen ja tarkoitukseensa soveltuva. Portaan pinta ei saa olla liukas.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_3__subsec_2">
+                            <content>
+                                <p>Poistumisalueen sisäisen portaan vähimmäisleveys on 0,85 metriä. Tämän mitan sisäpuolelle voivat kuitenkin ulottua käsijohteet ja jalkalistat.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_3__subsec_3">
+                            <content>
+                                <p>Jokaiselta poistumisalueelta on oltava mahdollista kuljettaa uloskäytävän kautta liikkumiskyvytön henkilö paareilla. Jos poistumisalueen sisäinen kulkureitti uloskäytävään muissa kuin asuinrakennuksissa kulkee alueen sisäisen portaan kautta, on portaan oltava niin väljä, että liikkumiskyvyttömän henkilön kuljettaminen paareilla on mahdollista.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_3__subsec_4">
+                            <content>
+                                <p>Kerrostasojen välisen portaan on oltava katettu. Asuinkerrostalossa, jossa ei ole hissiä, kerrostasojen välisen portaan on lisäksi saatava luonnonvaloa ja siinä on oltava vähintään yksi välitasanne.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_4">
+                        <num>4 §</num>
+                        <heading>Sisäportaiden mitoitus</heading>
+                        <subsection eId="chp_2__sec_4__subsec_1">
+                            <content>
+                                <p>Portaan askelman nousun ja etenemän suhteen on oltava portaan käyttötarkoitukseen nähden helppokulkuinen.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_4__subsec_2">
+                            <content>
+                                <p>Hallinto-, palvelu- ja liiketiloja sisältävien rakennusten auloissa ja muissa sisätiloissa sekä kokoontumistiloissa porrasaskelman nousu voi olla enintään 160 millimetriä ja etenemän on oltava vähintään 300 millimetriä. Asuinhuoneiston ja majoitustilan sisäisen portaan nousu voi olla enintään 190 millimetriä ja etenemän on oltava vähintään 250 millimetriä. Muiden varsinaisten käyttötilojen sisäportaiden nousu voi olla enintään 180 millimetriä ja etenemän on oltava vähintään 270 millimetriä. Yksinomaan varatienä käytettävän ja asunnossa tai majoitustilassa muihin kuin asumista palveleviin välttämättömiin tiloihin johtavan portaan nousu voi olla enintään 220 millimetriä ja etenemän on oltava vähintään 220 millimetriä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_4__subsec_3">
+                            <content>
+                                <p>Uloskäytävässä portaan askelman nousu voi olla enintään 180 millimetriä. Etenemän on oltava vähintään 270 millimetriä. Uloskäytävässä, jota ei samalla käytetä rakennuksen tavanomaiseen sisäiseen liikenteeseen, portaan nousu voi olla enintään 200 millimetriä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_5">
+                        <num>5 §</num>
+                        <heading>Ulkoportaiden mitoitus</heading>
+                        <subsection eId="chp_2__sec_5__subsec_1">
+                            <content>
+                                <p>Katettujen tai lämmitettyjen ulkoportaiden etenemän on oltava vähintään 300 millimetriä, ja nousu voi olla enintään 160 millimetriä. Kattamattomien ja lämmittämättömien ulkoportaiden etenemän on oltava vähintään 390 millimetriä, ja nousu voi olla enintään 130 millimetriä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_6">
+                        <num>6 §</num>
+                        <heading>Tasanne</heading>
+                        <subsection eId="chp_2__sec_6__subsec_1">
+                            <content>
+                                <p>Rakennuksen ja sen ulkotilojen tasanteen on oltava turvallinen, riittävän väljä ja tarkoitukseensa soveltuva. Portaan ja tasanteen sivureunat on varustettava korotuksella, joka estää luistamisen reunan yli, jos tason ja kaiteen tai seinän välisestä raosta mahtuu leveydeltään yli 50 millimetrin kokoinen kuutio. Portaan tasanteelle aukeavan oven etäisyyden luiskan tai porrassyöksyn yläreunasta on syöksyn sivuseinällä oltava vähintään 400 millimetriä ja päätyseinällä vähintään 1 500 millimetriä. Uloskäytävän kulkureitillä olevan oven eteen ja taakse on varattava vähintään 800 millimetrin pituinen tasanne.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_6__subsec_2">
+                            <content>
+                                <p>Oleskeluun ja kulkuun tarkoitetuilla rakennuksen tasanteilla sijaitsevien ikkunoiden, luukkujen ja muiden vastaavien aukkoja peittävien rakenteiden on kestettävä henkilökuorma, jos putoamisvaara on olemassa.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_7">
+                        <num>7 §</num>
+                        <heading>Kaide</heading>
+                        <subsection eId="chp_2__sec_7__subsec_1">
+                            <content>
+                                <p>Rakennuksessa tai sen lähiympäristössä on oltava kaide, kun putoamiskorkeus ylittää puoli metriä ja putoamisen tai harhaan astumisen vaara on olemassa, eikä toiminnan luonne edellytä kaiteettomuutta. Kaiteen on oltava turvallinen ja kestettävä siihen kohdistuvat kuormat. Kaide voi olla suojakaide tai avokaide.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_7__subsec_2">
+                            <content>
+                                <p>Suojakaidetta on käytettävä yli 0,7 metrin tasoeroissa kohteissa, joihin lapsilla on pääsy. Kaiteen suojaavan osan on ulotuttava vähintään 0,7 metrin korkeudelle tasanteen tai askelman pinnasta. Siinä ei saa olla vaakasuoria rakenteita tai kuvioita, jotka tekevät kiipeilyn mahdolliseksi. Avokaidetta voidaan käyttää kohteissa, joihin lapsilla ei ole pääsyä tai joissa ei ole putoamisvaaraa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_7__subsec_3">
+                            <content>
+                                <p>Kaiteen sijasta voidaan käyttää muuta järjestelyä, jolla putoaminen voidaan estää tai saavuttaa muuten vaadittava turvallisuustaso, kun korkeusero on enintään yhden metrin.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_7__subsec_4">
+                            <content>
+                                <p>Kaiteen kokonaiskorkeuden on oltava yksi metri, kun putoamiskorkeus on enintään kuusi metriä. Tätä korkeammalla kaiteen kokonaiskorkeuden on oltava 1,2 metriä. Enintään yhtä asuntoa palvelevalla parvekkeella riittää yhden metrin korkuinen kaide riippumatta putoamiskorkeudesta.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_7__subsec_5">
+                            <content>
+                                <p>Asunnon sisätiloissa kaiteen korkeus voi kuitenkin olla vähintään 0,9 metriä, kun putoamiskorkeus on alle kolme metriä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_8">
+                        <num>8 §</num>
+                        <heading>Kaiteen ja portaan rakenne</heading>
+                        <subsection eId="chp_2__sec_8__subsec_1">
+                            <content>
+                                <p>Kaiteen ja portaan on kestettävä tilan käyttötarkoituksen mukaiset kuormat koko rakenteen käyttöiän ajan.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_8__subsec_2">
+                            <content>
+                                <p>Jos kaiteen suojaavassa osassa on ainoastaan pystyrakenteita, sen aukoista saa mahtua läpi särmältään enintään 100 millimetrin mittainen kuutio. Muunlaisen suojaavan osan aukoista saa mahtua läpi särmältään enintään 30 millimetrin mittainen kuutio. Kuitenkaan suojaavan osan vaakasuora rako ei saa olla kymmentä millimetriä korkeampi.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_8__subsec_3">
+                            <content>
+                                <p>Kaiteen yläreunan ja suojaavan osan välistä saa mahtua läpi särmältään enintään 200 millimetrin mittainen kuutio. Kaiteen suojaavan osan alareunan ja tasanteen tai askelman yläpinnan tai reunan välistä saa mahtua läpi särmältään enintään 50 millimetrin mittainen kuutio.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_8__subsec_4">
+                            <content>
+                                <p>Porrasaskelmien välistä saa mahtua enintään 100 millimetrin mittainen kuutio.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_2__sec_9">
+                        <num>9 §</num>
+                        <heading>Käsijohde</heading>
+                        <subsection eId="chp_2__sec_9__subsec_1">
+                            <content>
+                                <p>Portaassa ja luiskassa on oltava käsijohde koko pituudella ja molemmilla puolilla syöksyä. Tarvittaessa on oltava kaksi käsijohdetta päällekkäin lasten ja pyörätuolilla liikkuvien huomioon ottamiseksi. Käsijohteesta on saatava tukeva ote. Käsijohteen ja sen päätteen on oltava turvallinen ja sen on jatkuttava syöksyn alkamis- ja loppumiskohdan ohi. Johteen on jatkuttava yhtenäisenä välitasanteella.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_2__sec_9__subsec_2">
+                            <content>
+                                <p>Julkisissa ulko- ja sisätiloissa sekä liike- ja palvelutiloissa käsijohteen on jatkuttava vähintään 300 millimetriä syöksyn alkamis- ja loppumiskohdan ohi ja kokoontumistilojen yli 2,4 metrin levyisissä portaissa tai luiskissa käsijohteen on sijoituttava myös jakamaan väylä enintään mainitun mitan levyisiin osiin.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_3">
+                    <num>3 Luku</num>
+                    <heading>Rakennusosien ja varusteiden turvallisuus</heading>
+                    <section eId="chp_3__sec_10">
+                        <num>10 §</num>
+                        <heading>Valoisuus ja valaistus</heading>
+                        <subsection eId="chp_3__sec_10__subsec_1">
+                            <content>
+                                <p>Rakennuksen ja sen ympäristön on oltava käytön ja huollon turvallisuuden mahdollistavalla tavalla valaistu. Valaistus ei saa aiheuttaa turvallisuutta vaarantavaa häikäisyä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_10__subsec_2">
+                            <content>
+                                <p>Rakennuksen pintojen ja valaistuksen on oltava sellaiset, että havaitsemisen kannalta tarvittavat valoisuuserot saavutetaan.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_10__subsec_3">
+                            <content>
+                                <p>Kulkureitillä olevat luiskat, askelmat, kynnykset ja tasoerot on osoitettava selvästi valaistuksen ja pintojen tummuuserojen tai huomiomerkintöjen avulla.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_11">
+                        <num>11 §</num>
+                        <heading>Lasirakenteet</heading>
+                        <subsection eId="chp_3__sec_11__subsec_1">
+                            <content>
+                                <p>Rakennuksen lasirakenteen ja muun valoa läpäisevän rakenteen rikkoutuminen ei saa aiheuttaa putoamisvaaraa eikä sirpaleiden putoaminen alle jäävän haavoittumisvaaraa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_11__subsec_2">
+                            <content>
+                                <p>Lasirakenteen ja muun valoa läpäisevän rakenteen on kiinnikkeineen kestettävä siihen tavanomaisesti kohdistuva kuormitus, jollei rakennetta ole suojattu kiinteällä törmäysesteellä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_11__subsec_3">
+                            <content>
+                                <p>Ikkunat, lasiseinät ja lasiovet, joihin on vaara törmätä, on merkittävä siten, että ne havaitaan helposti. Niiden lasitukset on tehtävä turvalasista.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_12">
+                        <num>12 §</num>
+                        <heading>Lattiapinnat</heading>
+                        <subsection eId="chp_3__sec_12__subsec_1">
+                            <content>
+                                <p>Lattiapinnan on oltava tasainen ja valmistettu tilan käyttötarkoitus huomioiden soveltuvasta materiaalista siten, että kompastumis- ja liukastumisriski on pieni.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_13">
+                        <num>13 §</num>
+                        <heading>Ovet ja portit</heading>
+                        <subsection eId="chp_3__sec_13__subsec_1">
+                            <content>
+                                <p>Rakennuksen oven ja portin on oltava helposti avattavissa myös olosuhteiden muuttuessa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_13__subsec_2">
+                            <content>
+                                <p>Oven, portin ja puomin on toimittava turvallisesti siten, etteivät ne aiheuta tapaturman vaaraa. Ne on varustettava tarkoituksenmukaisin turvavarustein.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_13__subsec_3">
+                            <content>
+                                <p>Oven muihin ominaisuuksiin sovelletaan valtioneuvoston asetusta rakennuksen esteettömyydestä (241/2017) ja ympäristöministeriön asetusta rakennusten paloturvallisuudesta (848/2017).</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_14">
+                        <num>14 §</num>
+                        <heading>Kulkukorkeus</heading>
+                        <subsection eId="chp_3__sec_14__subsec_1">
+                            <content>
+                                <p>Huonetilan kulkuväylän vähimmäiskorkeus on 2 100 millimetriä Oviaukon kohdalla korkeus voi olla välttämättömien karmien ja kynnysten verran pienempi.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_14__subsec_2">
+                            <content>
+                                <p>Muun kuin uloskäytävässä olevan ja siihen johtavan portaan, sekä asunnon sisäisen portaan kulkukorkeus voi olla 1 950 millimetriä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_3__sec_15">
+                        <num>15 §</num>
+                        <heading>Turvavarusteet</heading>
+                        <subsection eId="chp_3__sec_15__subsec_1">
+                            <content>
+                                <p>Rakennus on varustettava sen käyttöön soveltuvilla tarkoituksenmukaisilla ja kestävillä turvaratkaisuilla ja -varusteilla.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_15__subsec_2">
+                            <content>
+                                <p>Asunnoissa ja muissa lasten käyttämissä tiloissa ikkunoihin ja muihin aukkoihin, joissa voi olla putoamisen vaara, on oltava rajoittimet, jotka sallivat enintään 100 millimetrin helppokäyttöisen avautuman. Varatienä käytettävän ikkunan rajoittimen on kuitenkin oltava aikuisen helposti vapautettavissa.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_15__subsec_3">
+                            <content>
+                                <p>Varateiden ja huoltoreittien tikkaiden sekä muiden rakenneosien on oltava myös hätätilanteessa käyttökelpoisia.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_3__sec_15__subsec_4">
+                            <content>
+                                <p>Varatien pystysuuntaisen luukun tai ikkunan vapaan aukon on oltava korkeudeltaan vähintään 600 millimetriä ja leveydeltään 500 millimetriä, kuitenkin näiden summan on oltava vähintään 1 500 millimetriä. Vaakasuuntaisen luukun aukon on oltava vähintään 600 x 600 millimetriä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_4">
+                    <num>4 Luku</num>
+                    <heading>Ulkotilojen turvallisuus</heading>
+                    <section eId="chp_4__sec_16">
+                        <num>16 §</num>
+                        <heading>Ajoväylä ja pysäköintialue</heading>
+                        <subsection eId="chp_4__sec_16__subsec_1">
+                            <content>
+                                <p>Tontin ja rakennuspaikan ajoväylä ja pysäköintialue on erotettava jalankulku-, leikki-, ja oleskelualueesta. Ajoväylä ei saa kulkea ristiin leikkialueelle johtavan kulkutien kanssa. Jos risteämistä ei voida välttää, risteyspaikat on merkittävä rakenteellisin ratkaisuin.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_4__sec_16__subsec_2">
+                            <content>
+                                <p>Ajoneuvoliikenteelle tarkoitetut reitit on sijoitettava niin, ettei oven ja portin avautumisen vaatimaa tilaa tai jalankulun reittiä rajoiteta.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_4__sec_17">
+                        <num>17 §</num>
+                        <heading>Leikki- ja oleskelualue</heading>
+                        <subsection eId="chp_4__sec_17__subsec_1">
+                            <content>
+                                <p>Piha-alueiden jyrkät, yli 0,7 -metrin tasoerot ja jyrkänteet muiden kuin enintään kaksiasuntoisten asuinrakennusten yhteisten leikki- ja oleskelualueiden läheisyydessä on osoitettava tarkoituksenmukaisin kaitein tai sopivin istutuksin tai varustettava putoamista vaimentavalla alustalla.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_4__sec_17__subsec_2">
+                            <content>
+                                <p>Pihan kulkuteiden portaineen ja luiskineen on oltava turvallisia sekä varustettu tarkoituksenmukaisin kaitein ja käsijohtein.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_4__sec_17__subsec_3">
+                            <content>
+                                <p>Leikkivälineiden on oltava turvallisia ja niiden alustan rakenteen tarkoitukseen sopiva ja iskua vaimentava.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_4__sec_18">
+                        <num>18 §</num>
+                        <heading>Kulkutien ja oleskelualueen suojaaminen</heading>
+                        <subsection eId="chp_4__sec_18__subsec_1">
+                            <content>
+                                <p>Sisäänkäynnin ja kulkuväylän kohdan ja talvella käytettävän leikki- ja oleskelualueen sekä rakennusta ympäröivän katualueen ja muun yleisen alueen on oltava suojattu rakennuksen katolta putoavalta lumelta ja jäältä lumiestein katemateriaali ja katon kallistus huomioon ottaen. Sisäänkäynnin on lisäksi oltava suojattu kinostumiselta katoksella.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_4__sec_19">
+                        <num>19 §</num>
+                        <heading>Ulkonevien rakennusosien korkeusasema</heading>
+                        <subsection eId="chp_4__sec_19__subsec_1">
+                            <content>
+                                <p>Rakennuksesta ulkonevan rakennusosan, laitteen tai varusteen kuten parvekkeen, erkkerin, katoksen, opasteen, valaisinlaitteen ja markiisin alareunan vapaa korkeus maasta tai ajo- ja kulkuväylän pinnasta on oltava vähintään 2,2 metriä, jollei kohta ole suojattu törmäysvaaran estämiseksi.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_5">
+                    <num>5 Luku</num>
+                    <heading>Kokoontumistilan turvallisuus</heading>
+                    <section eId="chp_5__sec_20">
+                        <num>20 §</num>
+                        <heading>Kokoontumistila</heading>
+                        <subsection eId="chp_5__sec_20__subsec_1">
+                            <content>
+                                <p>Kokoontumistilan on oltava sen käyttötapa huomioonottaen tarkoituksenmukaisesti suunniteltu ja rakennettu.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_5__sec_21">
+                        <num>21 §</num>
+                        <heading>Kokoontumistilan henkilömäärä</heading>
+                        <subsection eId="chp_5__sec_21__subsec_1">
+                            <content>
+                                <p>Kokoontumistilassa samanaikaisesti oleskelevien henkilöiden aiottu enimmäismäärä muodostuu kokoontumishuoneiden yhteenlasketusta henkilömäärästä. Tilan ominaisuuksille rakennusluvassa asetettavat vaatimukset määräytyvät aiotun henkilömäärän mukaan.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_21__subsec_2">
+                            <content>
+                                <p>Kokoontumistilan enimmäishenkilömäärä on laskettava tilan eri huonetilojen ominaisuuksien mukaan siten, että kiintein istuimin varustetun huonetilan henkilömäärä määräytyy istuinpaikkojen lukumäärän perusteella. Myös huonetilan, jossa ei ole kiinteitä istuimia, mutta tilan kalustus on esitetty hyväksyttävissä suunnitelmissa, enimmäismäärä määräytyy istuinpaikkojen määrän mukaisesti. Huonetilojen, joissa ei ole kiinteitä istuimia eikä ole esitetty kalustusta, henkilömääräksi on laskettava kaksi henkilöä neliömetriä kohden.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_21__subsec_3">
+                            <content>
+                                <p>Laskettaessa henkilömäärää huonealan neliömetriä kohti ei mukaan lueta näyttämö-, puhujakoroke- tai muuta sellaista tilaa eikä vaatesäilytys-, keittiö-, peseytymis-, wc- ja varastotilaa.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_5__sec_22">
+                        <num>22 §</num>
+                        <heading>Kokoontumistilan istuimet</heading>
+                        <subsection eId="chp_5__sec_22__subsec_1">
+                            <content>
+                                <p>Istuinten on oltava alustaan kiinnitettyjä, jos istuinalueen lattia on kalteva tai istuinrivien lattioiden välillä on tasoeroja.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_22__subsec_2">
+                            <content>
+                                <p>Vaakasuoralla lattialla istuimet voivat olla irrallisia. Jos tilassa on yli 60 tuolia, ne on kytkettävä toisiinsa vähintään neljän ryhmissä, jollei tuoleja ole sijoitettu pöytien ympärille.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_22__subsec_3">
+                            <content>
+                                <p>Kiinteät ja toisiinsa kytketyt istuimet on järjestettävä istuinriveinä istuinalueiksi, joiden sivulla on kulkureitti.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_5__sec_23">
+                        <num>23 §</num>
+                        <heading>Katsomo</heading>
+                        <subsection eId="chp_5__sec_23__subsec_1">
+                            <content>
+                                <p>Yli puolen metrin tasoerojen kohdalla on oltava tarkoitukseen soveltuva suoja- tai avokaide tai käsijohde. Nousevan katsomoparven alimman penkkirivin edessä oleva kaide voi olla 0,7 metriä korkea suojakaide ja putoamiselta suojaava levitys, kun penkkirivin ja kaiteen välistä on kulku vain kyseiselle penkkiriville.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_23__subsec_2">
+                            <content>
+                                <p>Seisomakatsomon on oltava porrastettu siten, että rivillä liikkuminen on turvallista. Katsomon seisomarivin syvyyden on oltava vähintään puoli metriä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_23__subsec_3">
+                            <content>
+                                <p>Koneellisesti liikuteltavien katsomon osien hallintalaitteille pääsyn on oltava estetty asiattomilta.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                    <section eId="chp_5__sec_24">
+                        <num>24 §</num>
+                        <heading>Kulkureitti</heading>
+                        <subsection eId="chp_5__sec_24__subsec_1">
+                            <content>
+                                <p>Istuinalueen tai seisomakatsomon kulkureitille on oltava pääsy suoraan kunkin rivin päästä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_24__subsec_2">
+                            <content>
+                                <p>Enintään 60 henkilön kokoontumistilan kulkureitin leveyden on oltava vähintään 900 millimetriä. Yli 60 henkilölle tarkoitetussa tilassa kulkureitin leveyden on oltava vähintään 1 200 millimetriä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_24__subsec_3">
+                            <content>
+                                <p>Istuinrivien kulkuvälin vapaan leveyden on oltava taulukon 1 mukaisessa suhteessa kulkuväliä käyttävien henkilöiden määrään ja istuimien laatuun sekä siihen, onko kulkureitti kulkuvälin molemmissa vai vain toisessa päässä.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_24__subsec_4">
+                            <content>
+                                <p>Taulukko 1</p>
+                                <table>
+                                    <tr>
+                                        <td class="align-center colsep-1 rowsep-1" colspan="5">
+                                            <p>Istuinrivin kulkuvälin vapaa leveys suhteessa paikkalukuun</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>Kulkuvälin vapaa vähimmäisleveys</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>400 mm</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>500 mm</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>600 mm</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>900 mm</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>Kiinteät istuimet,</p>
+                                        </td>
+                                        <td class="align-center colsep-1 rowsep-1" colspan="4">
+                                            <p>paikkaluku rivillä</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>Kulkureitit molemmissa päissä</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 40</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 50</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 60</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&gt; 60</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>Kulkureitti vain toisessa päässä</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 10</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 10</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 15</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 30</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>Kytketyt istuimet,</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p/>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p/>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p/>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>Kulkureitit molemmissa päissä</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 16</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 28</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 40</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&gt; 40</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>Kulkureitti vain toisessa päässä</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 8</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 8</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 12</p>
+                                        </td>
+                                        <td class="colsep-1 rowsep-1">
+                                            <p>&lt; 24</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_5__sec_24__subsec_5">
+                            <content>
+                                <p>Lattiapinnan kaltevuus istuinalueella ja kulkureitillä voi olla enintään 8 prosenttia (l:12,5). Esteettömille katsomopaikoille johtavan kulkuväylän mitoitukseen sovelletaan rakennuksen esteettömyydestä annetun valtioneuvoston asetuksen (241/2017) 5 §:ää.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_6">
+                    <num>6 Luku</num>
+                    <heading>Huollon turvallisuus</heading>
+                    <section eId="chp_6__sec_25">
+                        <num>25 §</num>
+                        <heading>Huoltomahdollisuudet</heading>
+                        <subsection eId="chp_6__sec_25__subsec_1">
+                            <content>
+                                <p>Kaikkiin rakennuksen osiin, joissa on säännöllisesti siivottavia, nuohottavia, huollettavia tai tarkastettavia rakennusosia, varusteita taikka laitteita, on oltava pääsy ja työskentelymahdollisuus vaarantamatta työntekijöiden ja sivullisten turvallisuutta.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_25__subsec_2">
+                            <content>
+                                <p>Katolla sijaitseville savupiipuille, ilmanvaihtolaitteille sekä muille säännöllistä käyntiä edellyttäville rakennusosille ja laitteille on oltava turvallinen ja helppokulkuinen katkeamaton kulkutie. Yli 1:8 kaltevalla katolla on käytettävä kattosiltaa, lapetikasta, kattoporrasta, askeltasoja tai jalkatukia.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_25__subsec_3">
+                            <content>
+                                <p>Yli 9 metriä ja enintään 28 metriä korkeissa rakennuksissa ullakolle ja katolle on päästävä sekä sisä- että ulkokautta ja yli 28 metriä korkeissa rakennuksissa sisäkautta.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_6__sec_25__subsec_4">
+                            <content>
+                                <p>Rakennuksessa, jonka korkeus ylittää 9 metriä, on oltava kiinnitysrakenteet turvaköysiä varten.. Rakennuksessa on oltava myös riipputelineiden kiinnitysrakenteet ja -varusteet, jos julkisivun huoltoon ei ole suunniteltu muuta toimivaa ratkaisua.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_7">
+                    <num>7 Luku</num>
+                    <heading>Ajoneuvo- ja tavaraliikenteen turvallisuus</heading>
+                    <section eId="chp_7__sec_26">
+                        <num>26 §</num>
+                        <heading>Tavarankuljetus ja huoltoliikenne rakennuspaikalla</heading>
+                        <subsection eId="chp_7__sec_26__subsec_1">
+                            <content>
+                                <p>Rakennuksen ja sen pihan ajoneuvoliikennealueen on oltava turvallinen.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_7__sec_26__subsec_2">
+                            <content>
+                                <p>Muiden kuin pientalojen pihamaan ajoneuvo- ja tavaraliikenteen reittien, ovien ja porttien yhteyteen on varattava jalankulkijaa varten turvallinen ja merkitty kulkutie, jos jalankulku näiden kautta on tarpeen.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_7__sec_26__subsec_3">
+                            <content>
+                                <p>Rakennuksen tavarahuollon rakenteiden ja järjestelyjen on oltava turvallisia. Kuormauslaiturin ja -luiskan on oltava suhteessa kuormien kokoon ja tavaraliikenteen määrään. Kuormauspaikan on oltava turvallinen. Kuormauslaitureiden kaiteet eivät saa haitata kuormausta ja purkua.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+                <chapter eId="chp_8">
+                    <num>8 luku</num>
+                    <heading>Voimaantulo- ja siirtymäsäännökset</heading>
+                    <section eId="chp_8__sec_27">
+                        <num>27 §</num>
+                        <heading>Voimaantulo</heading>
+                        <subsection eId="chp_8__sec_27__subsec_1">
+                            <content>
+                                <p>Tämä asetus tulee voimaan 1 päivänä tammikuuta 2018.</p>
+                            </content>
+                        </subsection>
+                        <subsection eId="chp_8__sec_27__subsec_2">
+                            <content>
+                                <p>Tämän asetuksen voimaan tullessa vireillä olevaan hankkeeseen sovelletaan tämän asetuksen voimaan tullessa voimassa olleita säännöksiä.</p>
+                            </content>
+                        </subsection>
+                    </section>
+                </chapter>
+            </hcontainer>
+            <hcontainer finlex:outline="Esityöt ja allekirjoitukset" name="conclusions">
+                <hcontainer finlex:outline="Esityöt" name="preliminaryWork">
+                    <content>
+                        <p>Euroopan parlamentin ja neuvoston direktiivi 2015/1535/EU (32015L1535); EUVL L 241, 17.9.2015, s. 1 </p>
+                    </content>
+                </hcontainer>
+                <hcontainer finlex:outline="Allekirjoitukset" name="signatures">
+                    <content>
+                        <p>Helsingissä 20 päivänä joulukuuta 2017</p>
+                        <p>
+                            <signature>
+                                <role refersTo="">Asunto-, energia- ja ympäristöministeri</role>
+                                <person refersTo="">Kimmo Tiilikainen</person>
+                            </signature>
+                            <signature>
+                                <role refersTo="">Yliarkkitehti</role>
+                                <person refersTo="">Pekka Lukkarinen</person>
+                            </signature>
+                        </p>
+                    </content>
+                </hcontainer>
+            </hcontainer>
+        </body>
+    </act>
+</akomaNtoso>

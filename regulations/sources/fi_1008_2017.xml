@@ -1,0 +1,326 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:finlex="http://data.finlex.fi/schema/finlex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <act contains="originalVersion" name="main">
+        <meta>
+            <identification source="#organization_fi.finlex">
+                <FRBRWork>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1008/!main"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1008"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1008/alkup"/>
+                    <FRBRdate date="2017-12-20" name="dateIssued"/>
+                    <FRBRdate date="2017-12-27" name="datePublished"/>
+                    <FRBRauthor as="#role_author" href="#organization_fi.parliament"/>
+                    <FRBRcountry value="fi"/>
+                    <FRBRsubtype value="statute"/>
+                    <FRBRnumber value="1008"/>
+                    <FRBRprescriptive value="true"/>
+                    <FRBRauthoritative value="true"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1008/fin@/!main"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1008/fin@"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1008/alkup/fin"/>
+                    <FRBRdate date="2017-12-20" name="dateIssued"/>
+                    <FRBRdate date="2017-12-27" name="datePublished"/>
+                    <FRBRauthor as="#role_author" href="#organization_fi.parliament"/>
+                    <FRBRlanguage language="fin"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/akn/fi/act/statute/2017/1008/fin@/!main.xml"/>
+                    <FRBRuri value="/akn/fi/act/statute/2017/1008/fin@.akn"/>
+                    <FRBRalias name="eli" value="http://data.finlex.fi/eli/sd/2017/1008/alkup/fin/xml"/>
+                    <FRBRdate date="2025-02-21" name="dateProduced"/>
+                    <FRBRdate date="2017-12-27" name="datePublished"/>
+                    <FRBRauthor as="#role_editor" href="#organization_fi.finlex"/>
+                    <FRBRformat value="xml"/>
+                </FRBRManifestation>
+            </identification>
+            <references source="#organization_fi.finlex">
+                <TLCOrganization eId="organization_fi.finlex" href="/akn/ontology/organization/fi.finlex" showAs="Finlex"/>
+                <TLCRole eId="role_author" href="/akn/ontology/role/author" showAs="Tekijä"/>
+                <TLCRole eId="role_editor" href="/akn/ontology/role/editor" showAs="Toimittaja"/>
+                <TLCConcept eId="decree" href="/akn/ontology/concept/statute/type-statute.decree" showAs="Asetus"/>
+                <TLCConcept eId="new-statute" href="/akn/ontology/concept/statute/category-statute.new-statute" showAs="Uusi säädös"/>
+            </references>
+            <proprietary source="#organization_fi.finlex">
+                <finlex:typeStatute refersTo="#decree"/>
+                <finlex:categoryStatute refersTo="#new-statute"/>
+                <finlex:documentYear>2017</finlex:documentYear>
+            </proprietary>
+        </meta>
+        <preface>
+            <p>
+                <docNumber>1008/2017</docNumber>
+                <docTitle>Ympäristöministeriön asetus asuin-, majoitus- ja työtiloista</docTitle>
+            </p>
+        </preface>
+        <preamble>
+            <formula name="enactingClause">
+                <p>Ympäristöministeriön päätöksen mukaisesti säädetään maankäyttö- ja rakennuslain (132/1999) 117 j §:n nojalla, sellaisena kuin se on laissa 812/2017:</p>
+            </formula>
+        </preamble>
+        <body>
+            <hcontainer finlex:outline="Säädöksen teksti" name="statuteProvisionsWrapper">
+                <section eId="sec_1">
+                    <num>1 §</num>
+                    <heading>Soveltamisala</heading>
+                    <subsection eId="sec_1__subsec_1">
+                        <content>
+                            <p>Tämä asetus koskee uuteen rakennukseen tai rakennuksen laajennukseen sijoitettavia tai rakennuksen tai sen osan käyttötarkoitusta olennaisesti muutettaessa muodostettavia asuin-, majoitus- ja työtiloja.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_1__subsec_2">
+                        <content>
+                            <p>Rakennuksen korjaus- ja muutostyössä tätä asetusta on sovellettava vain, jos alkuperäinen ratkaisu on ilmeisen kelvoton. Rakennuksen korjaus- ja muutostyöt voidaan muutoin tehdä alkuperäistä ratkaisua noudattaen.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_1__subsec_3">
+                        <content>
+                            <p>Muutostöiden johdosta asumisolosuhteet eivät saa heikentyä.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_2">
+                    <num>2 §</num>
+                    <heading>Määritelmiä</heading>
+                    <subsection eId="sec_2__subsec_1">
+                        <intro eId="sec_2__subsec_1__intro">
+                            <p>Tässä asetuksessa tarkoitetaan:</p>
+                        </intro>
+                        <paragraph eId="sec_2__subsec_1__para_1">
+                            <num>1) </num>
+                            <content>
+                                <p>
+                                    <i>asuinhuoneella</i>
+                                     huonetilaa, joka on ensisijaisesti tarkoitettu jatkuvaan asumiskäyttöön. Asuinhuoneena ei pidetä eteistä, käytävää tai kylpyhuonetta tai näihin verrattavaa huonetilaa. Keittiö on asuinhuone, joka on ensisijaisesti ruoanvalmistusta ja ruokailua varten,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_2">
+                            <num>2) </num>
+                            <content>
+                                <p>
+                                    <i>asuinhuoneistolla</i>
+                                     eli asunnolla keittiöllä, keittokomerolla tai keittotilalla varustettua yhden asuinhuoneen tai useampia asuinhuoneita käsittävää, ympärivuotiseen asumiseen tarkoitettua kokonaisuutta, jolla on oma välitön sisäänkäyntinsä,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_3">
+                            <num>3) </num>
+                            <content>
+                                <p>
+                                    <i>asuinkerrostalolla</i>
+                                     vähintään kaksikerroksista, useita asuinhuoneistoja käsittävää asuinrakennusta, jossa eri asuinhuoneistoihin kuuluvia tiloja on päällekkäin,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_4">
+                            <num>4) </num>
+                            <content>
+                                <p>
+                                    <i>huonealalla</i>
+                                     huoneen alaa, jonka rajoina ovat huonetta ympäröivien seinien pinnat tai niiden ajateltu jatke, huonealaan ei kuitenkaan lueta 1,6 metriä matalampaa tilaa,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_5">
+                            <num>5) </num>
+                            <content>
+                                <p>
+                                    <i>huoneistoalalla</i>
+                                     alaa, jota rajaavat toisaalta huoneistoa ympäröivien seinien, toisaalta huoneiston sisällä olevien kantavien seinien ja muiden rakennukselle välttämättömien rakennusosien huoneiston puoleiset pinnat, huoneistoalaan ei kuitenkaan lueta 1,6 metriä matalampaa tilaa,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_6">
+                            <num>6) </num>
+                            <content>
+                                <p>
+                                    <i>huonekorkeudella</i>
+                                     kohtisuoraa mittaa huoneen lattiapinnasta sen kattopintaan,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_7">
+                            <num>7) </num>
+                            <content>
+                                <p>
+                                    <i>kerroskorkeudella</i>
+                                     kahden päällekkäisen lattiapinnan kohtisuoraa etäisyyttä,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_8">
+                            <num>8) </num>
+                            <content>
+                                <p>
+                                    <i>majoitustilalla</i>
+                                     kalustettua huonetilaa, joka on ensisijaisesti tarkoitettu tarjottavaksi ammattimaisesti tilapäistä majoitusta tarvitseville asiakkaille,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_9">
+                            <num>9) </num>
+                            <content>
+                                <p>
+                                    <i>pientaloilla</i>
+                                     erillispientaloja sekä kytkettyjä pientaloja,
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="sec_2__subsec_1__para_10">
+                            <num>10) </num>
+                            <content>
+                                <p>
+                                    <i>työtilalla</i>
+                                     tilaa, joka on ensisijaisesti tarkoitettu työskentelyyn.
+                                </p>
+                            </content>
+                        </paragraph>
+                    </subsection>
+                </section>
+                <section eId="sec_3">
+                    <num>3 §</num>
+                    <heading>Asuin-, majoitus- tai työtilan suunnittelu</heading>
+                    <subsection eId="sec_3__subsec_1">
+                        <content>
+                            <p>Pääsuunnittelijan, rakennussuunnittelijan ja erityissuunnittelijan on tehtävänsä mukaisesti huolehdittava rakennuksen suunnittelussa siitä, että rakennus täyttää käyttötarkoituksen mukaisesti asuin-, majoitus- tai työtiloja koskevat olennaiset tekniset, toiminnalliset ja arkkitehtoniset vaatimukset.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_4">
+                    <num>4 §</num>
+                    <heading>Asuin-, majoitus- ja työtila</heading>
+                    <subsection eId="sec_4__subsec_1">
+                        <content>
+                            <p>Asuin-, majoitus- ja työtilan koon ja muodon on huoneen aiottu käyttö ja kalustettavuus huomioon ottaen oltava tarkoitukseensa soveltuvia.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_4__subsec_2">
+                        <content>
+                            <p>Asuin-, majoitus- ja työtilan huonealan on kuitenkin aina oltava vähintään 7 neliömetriä. Asuin-, majoitus- ja työtilan huonekorkeuden on oltava vähintään 2,5 metriä. Pientalossa mainittu vähimmäiskorkeus on 2,4 metriä. Asuin-, majoitus- ja työtilan vähäisen osan huonekorkeus voi olla edellä sanottua pienempikin, ei kuitenkaan alle 2,2 metriä. Jos huoneen sisäkatto poikkeaa vaakasuorasta, huonekorkeus on määritettävä huonealan keskikorkeutena.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_4__subsec_3">
+                        <content>
+                            <p>Asuinhuoneen suunnittelussa on otettava huomioon ilmansuuntien ja ympäristön häiriötekijöiden vaikutus, valoisuus sekä ikkunanäkymät.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_5">
+                    <num>5 §</num>
+                    <heading>Asuin-, majoitus- ja työtilan ikkuna</heading>
+                    <subsection eId="sec_5__subsec_1">
+                        <content>
+                            <p>Asuin- ja, majoitustilan ikkunan valoaukon on oltava vähintään 1/10 huonealasta. Ikkunan sijoituksen ja muun järjestelyn on varmistettava huoneen valoisuus, näkymä ulos huoneesta sekä huoneen kalustettavuus. Asuinhuoneen ja majoitustilan ikkunan tai sen osan on oltava avattavissa. Jos työtilassa on oltava ikkuna, valoaukon on oltava vähintään 1/10 työtilan huonealasta.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_5__subsec_2">
+                        <content>
+                            <p>Etäisyyden asuinhuoneen pääikkunan edessä samassa tai naapurikiinteistössä olevaan vastapäiseen rakennukseen on oltava vähintään yhtä suuri kuin vastapäisen rakennuksen korkeus huoneen lattiatasolta mitattuna. Pääikkunan edessä on kuitenkin oltava vähintään 8 metrin etäisyyteen asti rakentamatonta tilaa. Pientalossa voi mainittu etäisyys tontilla tai rakennuspaikalla olla viihtyisyyden vaatimukset huomioon ottaen pienempikin, kuitenkin siten, että 45 asteen valokulma huoneen lattiatasoon nähden täyttyy.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_6">
+                    <num>6 §</num>
+                    <heading>Asuin- ja majoitustilan lattian suhde maanpintaan</heading>
+                    <subsection eId="sec_6__subsec_1">
+                        <content>
+                            <p>Asuin- ja majoitustilan lattian on oltava pääikkunaseinän kohdalla olevan maanpinnan yläpuolella. Osassa huoneiston asuinhuoneista lattia voi kuitenkin sijaita enintään metrin maanpinnan alapuolella. Asuin- ja majoitustilan sisäänkäynnin korkeusaseman on sijaittava maanpinnan suhteen luontevasti.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_7">
+                    <num>7 §</num>
+                    <heading>Asuinhuoneiston koko</heading>
+                    <subsection eId="sec_7__subsec_1">
+                        <content>
+                            <p>Asuinhuoneiston huoneistoalan on oltava vähintään 20 neliömetriä. Opiskelija-asunnon ala voi kuitenkin olla vähintään 16 neliömetriä, jos yhteisissä tiloissa on samassa rakennuksessa riittävät oleskelu- tai muiden toimintojen tilat.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_8">
+                    <num>8 §</num>
+                    <heading>Asuinhuoneiston tilat ja varustus</heading>
+                    <subsection eId="sec_8__subsec_1">
+                        <content>
+                            <p>Asuinhuoneiston tilojen ja pohjaratkaisun on oltava aiottu käyttäjämäärä, asuntojen yhteiset tilat ja käyttötarpeiden muutokset huomioon ottaen asumisen kannalta tarkoituksenmukaisia. Asuinhuoneistossa on oltava toiminnan kannalta tarkoituksenmukaiset tilat lepoa, oleskelua ja vapaa-ajan viettoa, ruokailua ja ruoanvalmistusta, hygienian hoitoa sekä asumiseen liittyvää välttämätöntä huoltoa ja säilytystä varten.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_8__subsec_2">
+                        <content>
+                            <p>Asuinhuoneistossa tai sen käytössä on oltava asianmukaiset tilat vaatehuoltoa ja irtaimiston säilytystä sekä polkupyörien, lastenvaunujen ja ulkoiluvälineiden säilytystä varten.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_8__subsec_3">
+                        <content>
+                            <p>Tilat on varustettava niiden käytön edellyttämillä kalusteilla, varusteilla sekä teknisillä asennuksilla. Asuinhuoneistossa on kuitenkin aina oltava käymälä sekä riittävä perusvarustus henkilökohtaisen hygienian hoitoa ja ruoanvalmistusta varten.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_9">
+                    <num>9 §</num>
+                    <heading>Leikkipaikat ja oleskeluun tarkoitetut tilat</heading>
+                    <subsection eId="sec_9__subsec_1">
+                        <content>
+                            <p>Leikkipaikoille ja oleskeluun tarkoitettuihin tiloihin ja tällaisille alueille on asunnoista päästävä vaivattomasti ja turvallisesti. Autopaikat, ajo autopaikoille, jätehuoltotilojen sijoitus ja huoltoajo piha-alueella on järjestettävä siten, etteivät ne aiheuta häiriötä tai vaaraa asumiselle ja piha-alueen muulle käytölle.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_10">
+                    <num>10 §</num>
+                    <heading>Kulkuteiden mitoitus rakennuksessa</heading>
+                    <subsection eId="sec_10__subsec_1">
+                        <content>
+                            <p>Porraskäytävät, kerrostasanteet ja eteiset on mitoitettava siten, että henkilöiden kulkeminen ja tavaroiden kuljettaminen on sujuvaa. Tavarankuljetus voidaan järjestää myös hissillä.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_11">
+                    <num>11 §</num>
+                    <heading>Kerroskorkeus</heading>
+                    <subsection eId="sec_11__subsec_1">
+                        <content>
+                            <p>Asuinkerrostalon kerroskorkeuden on oltava vähintään kolme metriä.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="sec_12">
+                    <num>12 §</num>
+                    <heading>Voimaantulo</heading>
+                    <subsection eId="sec_12__subsec_1">
+                        <content>
+                            <p>Tämä asetus tulee voimaan 1 päivänä tammikuuta 2018.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="sec_12__subsec_2">
+                        <content>
+                            <p>Tämän asetuksen voimaan tullessa vireillä olevaan hankkeeseen sovelletaan tämän asetuksen voimaan tullessa voimassa olleita säännöksiä.</p>
+                        </content>
+                    </subsection>
+                </section>
+            </hcontainer>
+            <hcontainer finlex:outline="Esityöt ja allekirjoitukset" name="conclusions">
+                <hcontainer finlex:outline="Esityöt" name="preliminaryWork">
+                    <content>
+                        <p>Euroopan parlamentin ja neuvoston direktiivi 2015/1535/EU (32015L1535); EUVL L 241, 17.9.2015, s. 1 </p>
+                    </content>
+                </hcontainer>
+                <hcontainer finlex:outline="Allekirjoitukset" name="signatures">
+                    <content>
+                        <p>Helsingissä 20 päivänä joulukuuta 2017</p>
+                        <p>
+                            <signature>
+                                <role refersTo="">Asunto-, energia- ja ympäristöministeri</role>
+                                <person refersTo="">Kimmo Tiilikainen</person>
+                            </signature>
+                            <signature>
+                                <role refersTo="">Yliarkkitehti</role>
+                                <person refersTo="">Pekka Lukkarinen</person>
+                            </signature>
+                        </p>
+                    </content>
+                </hcontainer>
+            </hcontainer>
+        </body>
+    </act>
+</akomaNtoso>

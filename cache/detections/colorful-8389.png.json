@@ -1,0 +1,88 @@
+{
+"image": "colorful-8389.png",
+"view": "/tmp/claude-1000/-mnt-Shared-w-L-Hackathon-Nov13/ac86d103-604c-4338-8c93-174f405d1d7d/scratchpad/cc3/c082_full.png",
+"protocol": "opus tiled v1: full view + 2x2 zoom tiles, points as fractions of the full image",
+"detections": {
+"doors": [
+[
+0.24,
+0.62
+],
+[
+0.22,
+0.7
+],
+[
+0.31,
+0.73
+],
+[
+0.42,
+0.62
+],
+[
+0.43,
+0.7
+],
+[
+0.69,
+0.61
+],
+[
+0.75,
+0.62
+],
+[
+0.69,
+0.82
+]
+],
+"windows": [
+[
+0.2,
+0.06
+],
+[
+0.46,
+0.06
+],
+[
+0.72,
+0.06
+],
+[
+0.02,
+0.66
+]
+],
+"wc_bowls": [
+[
+0.19,
+0.84
+]
+],
+"sinks": [
+[
+0.24,
+0.79
+],
+[
+0.36,
+0.42
+]
+],
+"showers_baths": [
+[
+0.4,
+0.93
+]
+],
+"floors": 1,
+"saunas": 0,
+"kitchens": 1,
+"bedrooms": 1,
+"wc_rooms": 0,
+"bathrooms": 1,
+"balconies": 1
+}
+}

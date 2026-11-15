@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Essatto</title>
+  <link rel="icon" type="image/png" href="/chat/favicon.png" />
+  <link rel="stylesheet" href="/chat/chat.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="/chat/logo.png" alt="" width="24" height="24">
+      <h1>Essatto</h1>
+      <span class="tagline">Answers computed from your drawings, with the evidence shown</span>
+    </div>
+    <div class="topbar-actions">
+      <div class="session-stat" title="Questions asked and AI model cost in this session">
+        <span><b id="topQuestions">0</b> <span id="topQuestionsWord">questions</span></span>
+        <span class="sep" aria-hidden="true"></span>
+        <span>AI cost <b id="topCost">$0.0000</b></span>
+      </div>
+      <a class="btn btn-ghost" id="downloadLogBtn" href="#" download>Download session log</a>
+      <button class="btn" id="newSessionBtn" type="button">New session</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <!-- Files -->
+    <aside class="pane pane-files" id="paneLeft" aria-label="Files">
+      <div class="pane-head">
+        <h2>Files</h2>
+        <span class="count" id="docCount">0</span>
+      </div>
+      <div class="pane-scroll">
+        <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg,.dxf,.ifc" multiple hidden>
+        <button type="button" class="upload-box" id="uploadBox">
+          <span class="upload-icon" id="uploadIcon"></span>
+          <span class="upload-title" id="uploadTitle">Upload a drawing or model</span>
+          <span class="upload-sub">PDF, PNG or JPG, DXF, IFC. Up to 100 MB. Drop files here.</span>
+        </button>
+        <div id="uploadError" class="note note-bad" role="alert" hidden></div>
+
+        <div class="doc-list" id="docList"></div>
+
+        <div id="pagesPanel" class="pages-panel" hidden>
+          <h3>Pages of this PDF</h3>
+          <p class="hint">Choose the pages to read, then apply.</p>
+          <div class="pages-grid" id="pagesGrid"></div>
+          <div class="row-gap">
+            <button type="button" class="btn btn-primary grow" id="applyPagesBtn">Read selected pages</button>
+            <button type="button" class="btn" id="selectAllPagesBtn">All</button>
+          </div>
+        </div>
+      </div>
+      <div class="session-foot" id="sessionFoot">
+        <h3>How answers were produced</h3>
+        <dl class="kv">
+          <dt>By code only</dt><dd id="footCode">0</dd>
+          <dt>With a small AI model</dt><dd id="footSmall">0</dd>
+          <dt>With a large AI model</dt><dd id="footLarge">0</dd>
+          <dt>AI cost</dt><dd id="footCost">$0.0000</dd>
+        </dl>
+      </div>
+    </aside>
+
+    <!-- Questions and answers -->
+    <section class="pane pane-chat" id="paneCenter" aria-label="Questions and answers">
+      <div class="pane-head" id="activeDocBar">
+        <div class="active-doc">
+          <h2 id="activeDocTitle">Questions and answers</h2>
+          <span class="active-doc-sub" id="activeDocSummary">No file selected</span>
+        </div>
+        <button type="button" class="btn" id="openInspectBtn" hidden>What was read</button>
+      </div>
+
+      <div class="chat-feed" id="chatFeed" aria-live="polite"></div>
+
+      <form class="composer" id="askForm">
+        <div class="composer-row">
+          <textarea id="questionInput" rows="2" placeholder="Upload a file first, then ask a question about it" disabled></textarea>
+          <button type="submit" class="btn btn-primary composer-ask" id="askBtn" disabled>Ask</button>
+        </div>
+        <div class="composer-opts">
+          <label class="check">
+            <input type="checkbox" id="allowLlmCheck" checked>
+            <span>Let an AI model read unfamiliar questions</span>
+          </label>
+          <span class="hint">Check the highlighted evidence before using a number.</span>
+        </div>
+      </form>
+    </section>
+
+    <!-- Drawing and evidence -->
+    <section class="pane pane-view" id="paneRight" aria-label="Drawing and evidence">
+      <div class="pane-head tabs" role="tablist">
+        <button type="button" role="tab" id="rTabEvidence" class="tab active" aria-selected="true">Evidence on the drawing</button>
+        <button type="button" role="tab" id="rTabInspect" class="tab" aria-selected="false">What was read</button>
+      </div>
+
+      <div id="viewEvidenceWrap" class="evidence-wrap">
+        <div class="viewer-toolbar">
+          <span class="viewer-caption" id="viewerCaption">No drawing selected</span>
+          <div class="btn-group" role="group" aria-label="Zoom">
+            <button type="button" class="btn btn-icon" id="zoomOutBtn" title="Zoom out" aria-label="Zoom out"></button>
+            <button type="button" class="btn btn-icon" id="zoomInBtn" title="Zoom in" aria-label="Zoom in"></button>
+            <button type="button" class="btn" id="zoomFitBtn" title="Show the whole drawing">Fit</button>
+            <button type="button" class="btn" id="zoom100Btn" title="Actual size">100%</button>
+            <a class="btn btn-icon" id="openRawImgBtn" href="#" target="_blank" rel="noopener" title="Open the image in a new tab" aria-label="Open the image in a new tab" hidden></a>
+          </div>
+        </div>
+
+        <div class="viewer-stage" id="viewerStage">
+          <div class="viewer-empty" id="viewerEmpty"></div>
+          <div class="viewer-canvas" id="viewerCanvas" hidden>
+            <img id="viewerImg" alt="Drawing with the evidence highlighted" draggable="false" hidden>
+            <div class="viewer-marks" id="viewerMarks"></div>
+          </div>
+        </div>
+        <div class="viewer-legend" id="viewerLegend" hidden></div>
+
+        <div class="evidence-panel" id="evidenceListDrawer" hidden></div>
+      </div>
+
+      <div id="viewInspectWrap" class="inspect-wrap" hidden></div>
+    </section>
+  </main>
+</div>
+
+<div class="popover" id="aiPopover" role="dialog" aria-labelledby="aiPopTitle" hidden></div>
+<script src="/chat/chat.js"></script>
+</body>
+</html>
