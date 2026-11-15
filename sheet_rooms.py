@@ -56,10 +56,12 @@ def trace(image, det_path, work=0.5, closures=None):
     def _thick(dark):
         dist = cv2.distanceTransform(dark, cv2.DIST_L2, 3)
         hw = float(np.percentile(dist[dist > 2.5], 75)) if (dist > 2.5).any() else 4.0     # typical wall half-thickness (px, working scale)
-        t_ = max(3, int(round(hw * 0.9)))
+        t_ = max(3, int(round(hw * float(os.environ.get("BP_WALL_OPEN", "0.9")))))
         return hw, t_, cv2.morphologyEx(dark, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (t_, t_)))
     dark = (g < 110).astype(np.uint8); half_w, t, walls = _thick(dark); ink = {"rule": "darker than 110 of 255"}
+    mode = os.environ.get("BP_WALL_INK", "auto")       # auto | fixed (darkness only) | contrast (always by contrast); for benchmarking
     try:
+        if mode == "fixed": raise RuntimeError("fixed")
         sm = cv2.resize(g, (max(8, W // 8), max(8, H // 8)), interpolation=cv2.INTER_AREA)
         paper = cv2.GaussianBlur(cv2.morphologyEx(sm, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_RECT, (25, 25))), (0, 0), 6)     # local paper tone: strokes removed
         con = cv2.resize(paper, (W, H), interpolation=cv2.INTER_LINEAR).astype(np.int16) - g.astype(np.int16)
@@ -67,7 +69,7 @@ def trace(image, det_path, work=0.5, closures=None):
         cthr = max(38.0, float(os.environ.get("BP_WALL_CONTRAST", "0.33")) * span); dark_c = (con > cthr).astype(np.uint8)
         if 0 < dark_c.mean() < 0.20:
             hw_c, t_c, walls_c = _thick(dark_c)
-            if walls_c.mean() >= 1.5 * max(walls.mean(), 1e-6) and walls_c.mean() > 0.002:
+            if mode == "contrast" or (walls_c.mean() >= 1.5 * max(walls.mean(), 1e-6) and walls_c.mean() > 0.002):
                 dark, half_w, t, walls = dark_c, hw_c, t_c, walls_c
                 ink = {"rule": "by contrast with the surrounding paper", "contrast_needed": round(cthr, 1), "ink_contrast": round(span, 1), "paper_tone": round(float(np.median(paper)), 1)}
     except Exception: pass

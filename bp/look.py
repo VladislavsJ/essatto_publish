@@ -24,8 +24,8 @@ def _gemini_key():
     except Exception: return None
 
 def models():
-    g = bool(_gemini_key())
-    return (os.environ.get("BP_LOOK_L1") or ("gemini-3.8-flash" if g else "haiku"), os.environ.get("BP_LOOK_L2") or ("gemini-4-carbon" if g else "gpt-6.1-sol"))
+    from . import models as MODELS
+    return MODELS.for_task("look")          # basic model, then the smart one if it is unsure (models.json)
 
 def crop_rooms(st, rooms):
     """one PNG per room: its bounding box plus a margin, at the original resolution (reduced only above MAX_SIDE)"""
@@ -60,7 +60,11 @@ def _parse(txt):
 def _call(model, question, crops, timeout=180):
     t = time.time()
     try:
-        if model.startswith("gemini"):
+        if model.startswith("claude-"):        # Claude through the API: the crops are sent as images, tokens are logged there
+            from . import claude_api as CA
+            txt, err = CA.call(model, _prompt(question, crops, files=False), images=[c["bytes"] for c in crops], question=question, use="look")
+            if txt is None: return None, round(time.time() - t, 1), err
+        elif model.startswith("gemini"):
             import urllib.request
             parts = [{"inline_data": {"mime_type": "image/png", "data": base64.b64encode(c["bytes"]).decode()}} for c in crops] + [{"text": _prompt(question, crops, files=False)}]
             body = {"contents": [{"parts": parts}], "generationConfig": {"temperature": 0, "responseMimeType": "application/json"}}
@@ -100,6 +104,7 @@ def apply(st, a, question):
         a.status = "refused"; a.value = None; a.reason = f"{len(rooms)} rooms matched; a crop is sent for at most {MAX_ROOMS}. Name the room(s) you mean"; return a
     crops = crop_rooms(st, rooms); l1, l2 = models(); used = None; res = None; steps = []
     for level, model in ((1, l1), (2, l2)):
+        if not model or model == "none": continue
         if model in ("none", "", None): continue
         key = hashlib.sha1(b"v2" + b"".join(c["bytes"] for c in crops) + question.encode() + model.encode()).hexdigest()
         hit = _cached(key)

@@ -1,0 +1,14 @@
+{
+  "_how_to_use": "Two roles. 'basic' reads questions, looks at room crops and reviews wall spots. 'smart' is asked only when basic fails twice or says it is unsure; 'none' switches that second level off. To move to a newer model, change the name here (or set BP_MODEL_BASIC / BP_MODEL_SMART) and restart the server. The provider follows from the name: 'claude-...' uses ANTHROPIC_API_KEY, 'gemini-...' uses GEMINI_API_KEY, 'gpt-...' uses the codex command line, a bare name such as 'haiku' uses the claude command line.",
+  "basic": "claude-haiku-5-5",
+  "smart": "none",
+  "effort": "low",
+  "_prices": "US dollars per million tokens, used only for the cost shown on the page. A model with no entry is shown as 'price not set', never guessed. Add a line when you add a model.",
+  "prices_usd_per_million": {
+    "claude-haiku-5-5": {"in": 0.10, "out": 0.50, "cache_read": 0.01, "cache_write": 0.125, "source": "Anthropic list price, prompts up to 100K tokens"},
+    "claude-sonnet-5-5": {"in": 2.00, "out": 10.00, "cache_read": 0.10, "cache_write": 2.50, "source": "Anthropic list price"},
+    "claude-opus-5-5": {"in": 4.00, "out": 20.00, "cache_read": 0.20, "cache_write": 5.00, "source": "Anthropic list price"},
+    "gemini-3.8-flash": {"in": 0.30, "out": 2.50, "cache_read": 0.075, "cache_write": 0.30, "source": "ASSUMED, not checked against Google's price list"},
+    "gemini-4-carbon": {"in": 0.30, "out": 2.50, "cache_read": 0.075, "cache_write": 0.30, "source": "ASSUMED, not checked against Google's price list"}
+  }
+}

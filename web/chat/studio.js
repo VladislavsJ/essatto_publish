@@ -329,10 +329,14 @@
     const rs = await Promise.all(S.layers.map((l) => api("/api/chat/ask", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ session_id: SID, doc_id: l.doc_id, question: q, allow_llm: true }) }).then((a) => ({ l, a }), (e) => ({ l, error: e.message }))));
     const val = (a) => (a.status === "ok" ? (typeof a.value === "object" ? "see the file" : String(a.value) + (a.unit && a.unit !== "count" ? " " + a.unit : "")) : null);
     const nums = rs.filter((r) => r.a && r.a.status === "ok" && typeof r.a.value === "number"), units = new Set(nums.map((r) => r.a.unit || ""));
-    const total = nums.length > 1 && units.size === 1 ? +nums.reduce((s, r) => s + r.a.value, 0).toFixed(3) : null, unit = [...units][0], spent = rs.reduce((s, r) => s + ((r.a && r.a.cost && r.a.cost.eur) || 0), 0);
+    /* how the per-file answers combine depends on what was asked: counts and sums add up; "largest" / "smallest" picks the
+       winning file; an average cannot be combined from per-file averages, so none is shown */
+    const ops = new Set(nums.map((r) => (r.a.plan && (r.a.plan.op || (r.a.plan.recipe ? "sum" : ""))) || "")), op = ops.size === 1 ? [...ops][0] : "";
+    const same = nums.length > 1 && units.size === 1, best = same && (op === "max" || op === "min") ? nums.reduce((b, r) => ((op === "max" ? r.a.value > b.a.value : r.a.value < b.a.value) ? r : b)) : null;
+    const total = same && (op === "count" || op === "sum") ? +nums.reduce((s, r) => s + r.a.value, 0).toFixed(3) : null, unit = [...units][0], spent = rs.reduce((s, r) => s + ((r.a && r.a.cost && r.a.cost.eur) || 0), 0);
     const sess = Math.max(0, ...rs.map((r) => (r.a && r.a.cost && r.a.cost.session_total_eur) || 0));
-    note(`<div class="q">${esc(q)} · ${S.layers.length} files</div>${total != null ? `<div class="v">${total}${unit && unit !== "count" ? " " + esc(unit) : ""} in total</div><div class="t">Sum of the ${nums.length} files that gave a number${nums.length < rs.length ? "; " + (rs.length - nums.length) + " did not" : ""}.</div>` : ""}
-      <table class="rtable"><thead><tr><th>File</th><th class="n">Answer</th></tr></thead><tbody>${rs.map((r, i) => `<tr class="gofile" data-i="${i}"><td>${esc(r.l.name || r.l.label)}</td><td class="n${r.a && val(r.a) != null ? "" : " bad"}">${esc(r.error ? "Not answered: " + r.error : val(r.a) != null ? val(r.a) : "Not answered: " + ((r.a.refusal && r.a.refusal.why) || r.a.reason || "not in this file"))}</td></tr>`).join("")}</tbody></table>
+    note(`<div class="q">${esc(q)} · ${S.layers.length} files</div>${total != null ? `<div class="v">${total}${unit && unit !== "count" ? " " + esc(unit) : ""} in total</div><div class="t">Sum of the ${nums.length} files that gave a number${nums.length < rs.length ? "; " + (rs.length - nums.length) + " did not" : ""}.</div>` : ""}${best ? `<div class="v">${best.a.value}${unit && unit !== "count" ? " " + esc(unit) : ""}</div><div class="t">The ${op === "max" ? "largest" : "smallest"} of the ${nums.length} files: <b>${esc(best.l.name || best.l.label)}</b>${best.a.evidence_names && best.a.evidence_names[0] ? ", " + esc(best.a.evidence_names[0]) : ""}.</div>` : ""}
+      <table class="rtable"><thead><tr><th>File</th><th class="n">Answer</th></tr></thead><tbody>${rs.map((r, i) => `<tr class="gofile${best && r === best ? " win" : ""}" data-i="${i}"><td>${esc(r.l.name || r.l.label)}</td><td class="n${r.a && val(r.a) != null ? "" : " bad"}">${esc(r.error ? "Not answered: " + r.error : val(r.a) != null ? val(r.a) : "Not answered: " + ((r.a.refusal && r.a.refusal.why) || r.a.reason || "not in this file"))}</td></tr>`).join("")}</tbody></table>
       <div class="cost"><b>${eur(spent)}</b><span>${spent ? "model calls for this question, all files" : "computed by code, no AI model"}</span><span class="tot">session ${eur(sess)}</span></div>`);
     $("note").querySelectorAll("tr.gofile").forEach((tr) => { tr.style.cursor = "pointer"; tr.onclick = () => setLayer(Number(tr.dataset.i)); });
     idle();
@@ -410,6 +414,7 @@
   const eur = (v) => "€" + Number(v || 0).toFixed(7);
   function costHtml(a) {
     const c = a.cost; if (!c) return "";
+    if (c.unpriced && c.unpriced.length) return `<div class="cost"><b>price not set</b><span>${esc(c.unpriced.join(" + "))}, ${Number(c.total_tokens || 0).toLocaleString("en")} tokens; add its price to models.json</span></div>`;
     const how = c.eur ? `${esc((c.models && c.models.length ? c.models.join(" + ") : c.model) || "AI model")}, ${Number(c.total_tokens || 0).toLocaleString("en")} tokens`
       : c.cached_plan ? `reading reused from an earlier identical question${c.cold_est_eur ? " (first time " + eur(c.cold_est_eur) + ")" : ""}` : "computed by code, no AI model";
     return `<div class="cost" title="${esc(c.price_note || "")}"><b>${eur(c.eur)}</b><span>${how}</span><span class="tot">session ${eur(c.session_total_eur)}</span></div>`;

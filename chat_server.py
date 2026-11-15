@@ -21,7 +21,7 @@ from fastapi.responses import HTMLResponse, JSONResponse, Response, FileResponse
 from fastapi import FastAPI
 
 app = FastAPI(title="Essatto")
-from bp import ask as ASK, plan as PLAN, render as RENDER, trust as TRUST, ingest as INGEST
+from bp import ask as ASK, plan as PLAN, render as RENDER, trust as TRUST, ingest as INGEST, models as MODELS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WEB_DIR = os.path.realpath(os.path.join(HERE, "web"))
@@ -87,6 +87,7 @@ async def _parse_upload(request: Request) -> tuple[str | None, str | None, bytes
 # ---------------------------------------------------------------------------
 # Per-million-token USD rates when provider API does not return `usd` directly
 MODEL_RATES_PER_M = {
+    "claude-haiku-5-5": (0.10, 0.50, 0.01, 0.125),      # list price, prompts up to 100K tokens
     "haiku": (1.00, 5.00, 0.10, 1.25),
     "gemini-4-carbon": (0.30, 2.50, 0.075, 0.30),
     "flash": (0.30, 2.50, 0.075, 0.30),
@@ -99,8 +100,12 @@ USD_EUR = float(os.environ.get("BP_USD_EUR", "0.89"))      # ECB reference rate 
 
 
 def _model_tier(model_name: str | None) -> str:
+    """'small' = the basic model of models.json, 'large' = the smart one (older names keep their meaning)"""
     if not model_name:
         return "none"
+    r = MODELS.role(model_name)
+    if r == "smart": return "large"
+    if r == "basic": return "small"
     m = model_name.lower()
     if any(k in m for k in ("opus", "pro", "gpt-5", "sonnet")):
         return "large"
@@ -111,11 +116,14 @@ def _estimate_record_usd(rec: dict) -> float:
     if isinstance(rec.get("usd"), (int, float)):
         return float(rec["usd"])
     m = (rec.get("model") or "").lower()
-    rates = MODEL_RATES_PER_M["gemini-4-carbon"]
-    for k, r in MODEL_RATES_PER_M.items():
-        if k in m:
-            rates = r
-            break
+    rates = MODELS.price(rec.get("model") or "")          # models.json first
+    if rates is None:
+        for k, r in MODEL_RATES_PER_M.items():           # older names used through a command line (haiku, sonnet, opus)
+            if k in m and not m.startswith(("claude-", "gemini")):
+                rates = r
+                break
+    if rates is None:
+        return 0.0                                        # no price set for this model: reported as such, never guessed
     in_r, out_r, cr_r, cw_r = rates
     tok_in = int(rec.get("in") or 0)
     tok_out = int(rec.get("out") or 0)
@@ -1058,6 +1066,12 @@ def api_studio_scene3d(request: Request, session_id: str, doc_id: str):
         return JSONResponse({"ok": False, "error": f"{type(e).__name__}: {e}"}, status_code=500)
 
 
+@app.get("/api/chat/studio/models")
+def api_studio_models():
+    """which models this server uses (models.json / environment); no keys are returned"""
+    return JSONResponse({"ok": True, **MODELS.describe()})
+
+
 @app.get("/api/chat/studio/regulations")
 def api_studio_regulations(room_name: str = "", country: str = ""):
     """regulation entries that apply to a room of this name (regulations/regulations_fi_us.json), per country"""
@@ -1174,6 +1188,7 @@ async def api_chat_ask(request: Request):
         cost_info["total_tokens"] = cost_info["in_tokens"] + cost_info["out_tokens"]
         if cost_info.get("tier") == "none": cost_info["tier"] = "small"
     cost_info["models"] = sorted({str(r.get("model")) for r in new_cost_records if r.get("model")})
+    cost_info["unpriced"] = [m for m in cost_info["models"] if MODELS.price(m) is None and (m.startswith("claude-") or m.startswith("gemini"))]
     cost_info["eur"] = round(float(cost_info.get("usd") or 0) * USD_EUR, 6)
     cost_info["session_total_eur"] = round(float(cost_info.get("session_total_usd") or 0) * USD_EUR, 6)
     if cost_info.get("cold_est_usd"): cost_info["cold_est_eur"] = round(cost_info["cold_est_usd"] * USD_EUR, 6)

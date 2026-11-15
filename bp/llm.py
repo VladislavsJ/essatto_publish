@@ -155,7 +155,7 @@ def _gemini(prompt, model, question, timeout=120):
         try: key = open(os.path.expanduser("~/.config/bp_gemini_key")).read().strip()
         except Exception: key = None
     if not key: return None, "GEMINI_API_KEY is not set"
-    body = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"responseMimeType": "application/json", "thinkingConfig": {"thinkingLevel": os.environ.get("BP_GEMINI_THINKING", "low")}}}
+    body = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"responseMimeType": "application/json", "thinkingConfig": {"thinkingLevel": os.environ.get("BP_GEMINI_THINKING") or __import__("bp.models", fromlist=["effort"]).effort()}}}
     req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", data=json.dumps(body).encode(), headers={"Content-Type": "application/json", "x-goog-api-key": key})
     t0 = time.time()
     try: r = json.load(urllib.request.urlopen(req, timeout=timeout))
@@ -170,15 +170,21 @@ def _gemini(prompt, model, question, timeout=120):
 def plan(question, store, model=None, timeout=180, feedback=None, memory_block=""):
     """returns (plan|None, source, error). Planner model: BP_PLANNER_MODEL (default opus). Every call's tokens and
     cost are appended to cache/llm_cost.jsonl so inference cost is measured, not estimated."""
-    model = model or os.environ.get("BP_PLANNER_MODEL", "opus")
+    from . import models as MODELS
+    model = model or MODELS.for_task("plan")[0]
+    if MODELS.missing_key(model) and not os.environ.get("BP_NO_LLM"): _nokey = MODELS.missing_key(model)
+    else: _nokey = None
     key = hashlib.sha1(json.dumps([question, store.summary()] + ([] if model == "opus" and store.fmt != "ifc" else [model, PROMPT_V]) + ([feedback] if feedback else []), sort_keys=True, default=str).encode()).hexdigest()
     cache = _load()
     if key in cache:
         p = cache[key]; err = validate(p, store)
         return (None, "llm-cache", err) if err else (p, "llm-cache", None)
     if os.environ.get("BP_NO_LLM"): return None, "llm", "LLM fallback disabled (BP_NO_LLM)"
-    if model.startswith("gemini"):
-        out, err = _gemini(prompt_for(question, store, feedback, memory_block), model, question, timeout)
+    if _nokey: return None, "llm", _nokey
+    from . import claude_api as CA
+    if model.startswith("gemini") or CA.is_claude_api(model):
+        if CA.is_claude_api(model): out, err = CA.call(model, prompt_for(question, store, feedback, memory_block), question=question, use="plan")
+        else: out, err = _gemini(prompt_for(question, store, feedback, memory_block), model, question, timeout)
         if out is None: return None, "llm", err
         try: m = re.search(r"\{.*\}", out, re.S); p = json.loads(m.group(0)) if m else None
         except Exception as e: return None, "llm", f"planner returned invalid JSON: {e}"

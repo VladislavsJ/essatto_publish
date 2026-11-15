@@ -97,12 +97,22 @@ when level 1 fails a check or asks for help.
 | Looking at a room when the data cannot answer (`bp/look.py`) | `BP_LOOK_L1` | `BP_LOOK_L2` | Level 1 answers "escalate" or gives low confidence. |
 | Reviewing a doubtful spot in the traced walls (`sheet_review.py`) | level 1 | level 2 | Level 1 picks the tool `escalate`. |
 
-Model names are set by environment, so the same code runs with different providers:
+**Changing models takes one edit.** `models.json` names two roles:
 
-| Where | Level 1 | Level 2 |
-|---|---|---|
-| Laptop (command-line logins) | Claude Haiku | Claude Opus, or a GPT model through `codex` for pictures |
-| Demo server (one Gemini key) | Gemini Flash-class or `gemini-4-carbon` | `gemini-4-carbon`; the planner's level 2 is switched off (`BP_PLANNER_STRONG=none`) |
+```json
+{ "basic": "claude-haiku-5-5", "smart": "none", "effort": "low" }
+```
+
+- `basic` does all three tasks above at level 1. `smart` is level 2; `none` switches the second level off.
+- `effort` (low, medium, high) sets how much the model thinks.
+- The provider follows from the name, so a newer model needs no code change: `claude-...` uses the Anthropic API
+  (`ANTHROPIC_API_KEY`), `gemini-...` uses the Gemini API (`GEMINI_API_KEY`), `gpt-...` and bare names such as
+  `haiku` use command-line logins.
+- `BP_MODEL_BASIC`, `BP_MODEL_SMART` and `BP_MODEL_EFFORT` override the file without editing it. The per-task
+  settings in the table above still win when set, to pin one task to another model.
+- The same file holds the price per million tokens of each model, used for the cost on the page. A model with no
+  price is shown as "price not set", never guessed.
+- `GET /api/chat/studio/models` reports which models the running server uses and whether a needed key is missing.
 
 Measured planner cost through the `claude` command line: about $0.0017 per plan with Haiku and about $0.034 with
 Opus, a factor of 20. On the 175 new `ifc_bench` questions the large model was needed for 7.
@@ -390,8 +400,9 @@ BP_ACCESS_CODE=<at least 8 characters> .venv/bin/python serve.py     # http://12
 | Setting | Meaning |
 |---|---|
 | `GEMINI_API_KEY` | key for the planner and vision calls; stays on the server |
-| `BP_PLANNER_MODEL`, `BP_PLANNER_STRONG` | level 1 and level 2 planner (`none` switches level 2 off) |
-| `BP_LOOK_L1`, `BP_LOOK_L2` | level 1 and level 2 vision model for room crops |
+| `ANTHROPIC_API_KEY` | key for `claude-...` models; stays on the server |
+| `BP_MODEL_BASIC`, `BP_MODEL_SMART`, `BP_MODEL_EFFORT` | override `models.json`: the basic model, the smart model (`none` = off), thinking effort |
+| `BP_PLANNER_MODEL`, `BP_PLANNER_STRONG`, `BP_LOOK_L1`, `BP_LOOK_L2`, `BP_REVIEW_L1`, `BP_REVIEW_L2` | pin one task (planner, room look, wall review) to other models |
 | `BP_NO_LLM=1` | no model calls at all; unread questions are refused with a reason |
 | `BP_MEMORY=1` | turn on the solved-question memory |
 | `BP_DET_WEIGHTS`, `BP_DET_FIX_WEIGHTS`, `BP_DET_PYTHON` | detector weights, fixture specialist, and the Python that has PyTorch |
@@ -498,6 +509,7 @@ python determinism.py out.json               # run twice; the fingerprints must 
 ## 21. Keys and secrets
 
 - **No key is stored in this repository**, in any file or in its history.
+- The Claude key is read from the environment variable `ANTHROPIC_API_KEY` only.
 - The Gemini key is read from the environment variable `GEMINI_API_KEY`, or from a private file outside the
   project (`~/.config/bp_gemini_key`). It stays on the server and is never sent to the browser.
 - `BP_ACCESS_CODE` is required to start `serve.py` and must be at least 8 characters. Generate one per

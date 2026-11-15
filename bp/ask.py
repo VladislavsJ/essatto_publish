@@ -107,7 +107,8 @@ def _llm_plan(question, st, memory_block=""):
     """Cheap model first; its plan is EXECUTED and checked. A plan that fails is sent back once with the failure
     (repair); only if that also fails is the strong model asked. Returns (plan, source, error, answer)."""
     from . import llm
-    cheap = os.environ.get("BP_PLANNER_MODEL", "haiku"); strong = os.environ.get("BP_PLANNER_STRONG", "opus")
+    from . import models as MODELS
+    cheap, strong = MODELS.for_task("plan")        # basic model first, smart model only as the fallback (models.json)
     best = None; fb = None; err = None
     for stage, model in ((cheap, cheap), (cheap + "+repair", cheap), (strong, strong)):
         if stage != cheap and fb is None: break                       # nothing to repair

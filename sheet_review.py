@@ -38,9 +38,10 @@ ap.add_argument("image"); ap.add_argument("out")
 ap.add_argument("--l1", default="haiku"); ap.add_argument("--l2", default="gpt-6.1-sol"); ap.add_argument("--threads", type=int, default=2)
 ap.add_argument("--max-gap-m", type=float, default=5.0); ap.add_argument("--no-model", action="store_true")
 a = ap.parse_args()
-if a.l1 == "auto":      # server: only a Gemini key exists. laptop: command-line logins for Claude and OpenAI.
-    _g = bool(os.environ.get("GEMINI_API_KEY") or os.path.exists(os.path.expanduser("~/.config/bp_gemini_key")))
-    a.l1, a.l2 = ("gemini-3.8-flash", "gemini-4-carbon") if _g else ("haiku", "gpt-6.1-sol")
+if a.l1 == "auto":      # the basic and smart models of models.json (or BP_REVIEW_L1 / BP_REVIEW_L2 when set)
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from bp import models as MODELS
+    a.l1, a.l2 = MODELS.for_task("review")
 S = np.load(os.path.join(a.out, "state.npz")); closed = S["closed"].copy(); lab = S["lab"]; k = float(S["k"]); wall_t = float(S["wall_t"]); mpp = float(S["m_per_px"])
 room_cc = set(int(v) for v in S["room_cc"]); ocr = json.load(open(os.path.join(a.out, "ocr.json")))
 H, W = closed.shape
@@ -195,6 +196,18 @@ def call_claude(p, model):
         d = json.loads(r.stdout); return parse(d.get("result")), {"model": model, "s": round(time.time() - t, 1), "usd": d.get("total_cost_usd")}
     except Exception as e: return None, {"model": model, "s": round(time.time() - t, 1), "error": repr(e)[:200]}
 
+def call_claude_api(p, model):
+    """Claude through the API (model names starting with 'claude-'): both crops are sent as images"""
+    t = time.time()
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from bp import claude_api as CA
+        txt, err = CA.call(model, prompt_for(p).replace(f"Look at image {p['crop']} (annotated, full resolution) and {p['crop_clean']} (same crop without marks).", "The first image is the annotated crop at full resolution; the second is the same crop without marks."),
+                           images=[open(f, "rb").read() for f in (p["crop"], p["crop_clean"])], question="wall review", use="review")
+        if txt is None: return None, {"model": model, "s": round(time.time() - t, 1), "error": err}
+        return parse(txt), {"model": model, "s": round(time.time() - t, 1)}
+    except Exception as e: return None, {"model": model, "s": round(time.time() - t, 1), "error": repr(e)[:200]}
+
 def call_codex(p, model):
     t = time.time()
     try:
@@ -229,7 +242,7 @@ def _cached_call(p, model):
     try: cur = json.load(open(RCACHE))
     except Exception: cur = {}
     if key in cur: return cur[key], {"model": model, "s": 0, "cached": True}
-    fn = call_gemini if model.startswith("gemini") else call_codex if model.startswith("gpt") else call_claude
+    fn = call_claude_api if model.startswith("claude-") else call_gemini if model.startswith("gemini") else call_codex if model.startswith("gpt") else call_claude
     ans, meta = fn(p, model)
     if ans is not None:
         try: cur = json.load(open(RCACHE))
