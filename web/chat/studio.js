@@ -430,11 +430,22 @@
       if (a.findings) { S.layers.forEach((x) => { if (x === l) x.check = { findings: a.findings, room_marks: a.room_marks || {}, cost: a.cost }; }); l.answer = null; draw(); openSummary(); idle(); return; }
       if (l.simple) {
         l.answer3d = new Set(a.status === "ok" ? (a.evidence_ids || []) : []); paint3d();
-        const val0 = a.status === "ok" ? (typeof a.value === "object" ? "" : String(a.value) + (a.unit && a.unit !== "count" ? " " + a.unit : "")) : "Not answered";
+        let val0 = a.status === "ok" ? (typeof a.value === "object" ? "" : String(a.value) + (a.unit && a.unit !== "count" ? " " + a.unit : "")) : "Not answered";
         let rows = "";
         if (a.status === "ok" && a.value && typeof a.value === "object") {
-          const list = Array.isArray(a.value.rows) ? a.value.rows.slice(0, 40).map((r) => Object.entries(r).filter(([k]) => k !== "id").map(([k, v]) => `${k}: ${v}`).join(", ")) : Object.entries(a.value).slice(0, 40).map(([k, v]) => `${k}: ${v}`);
-          rows = `<div class="t">${list.map(esc).join("<br>")}</div>`;
+          if (Array.isArray(a.value.rows)) {
+            /* a list of things: a table, one row each. Internal ids are left out, and so is a column that only repeats another one */
+            const R = a.value.rows, keys = [...new Set(R.flatMap((r) => Object.keys(r)))].filter((k) => !["id", "guid", "step_id"].includes(k));
+            const same = (x, y) => R.every((r) => String(r[x] == null ? "" : r[x]) === String(r[y] == null ? "" : r[y]));
+            const cols = keys.filter((k, i) => !keys.slice(0, i).some((p) => same(p, k)) && R.some((r) => r[k] != null && r[k] !== ""));
+            const head = (k) => { const w = String(k).replace(/_/g, " "); return w.charAt(0).toUpperCase() + w.slice(1); };
+            const cell = (v) => (v == null ? "" : typeof v === "number" ? String(+v.toFixed(3)) : typeof v === "object" ? JSON.stringify(v) : String(v));
+            const noun = String((a.plan && a.plan.kind) || "item").replace(/_/g, " ");
+            val0 = `${R.length} ${noun}${R.length === 1 ? "" : (/(s|x|ch|sh)$/.test(noun) ? "es" : "s")}`;
+            rows = `<table class="rtable"><thead><tr>${cols.map((k) => `<th class="${R.every((r) => typeof r[k] === "number" || r[k] == null) ? "n" : ""}">${esc(head(k))}</th>`).join("")}</tr></thead><tbody>${R.slice(0, 200).map((r) => `<tr>${cols.map((k) => `<td class="${typeof r[k] === "number" ? "n" : ""}">${esc(cell(r[k]))}</td>`).join("")}</tr>`).join("")}</tbody></table>${R.length > 200 ? `<div class="t">Showing the first 200 of ${R.length}.</div>` : ""}`;
+          } else {
+            rows = `<table class="rtable"><tbody>${Object.entries(a.value).slice(0, 80).map(([k, v]) => `<tr><td>${esc(k)}</td><td class="n">${esc(typeof v === "number" ? +v.toFixed(3) : typeof v === "object" ? JSON.stringify(v) : v)}</td></tr>`).join("")}</tbody></table>`;
+          }
         }
         note(`<div class="main"><div class="q">${esc(q)}</div>${val0 ? `<div class="v ${a.status === "ok" ? "" : "bad"}">${esc(val0)}</div>` : ""}${rows}<div class="t">${esc(a.status === "ok" ? (((a.trust || {}).label ? a.trust.label + ". " : "") + ((a.cost && a.cost.route_line) ? a.cost.route_line + "." : "")) : ((a.refusal && a.refusal.why) || a.reason || "This cannot be answered from this file."))}</div>${costHtml(a)}<div class="hint">Click to see how this was worked out</div></div>${thinkingHtml(a)}`);
         wireThinking($("note"));
