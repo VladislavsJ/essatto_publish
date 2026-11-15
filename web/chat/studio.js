@@ -66,11 +66,18 @@
     const p = $("layerPill");
     if (S.layers.length < 2) { p.hidden = true; return; }
     p.hidden = false;
-    p.innerHTML = `<span class="k">Layers</span>` + S.layers.map((l, i) => `<button type="button" class="${i === S.active ? "active" : ""}" data-i="${i}">${esc(l.label)}</button>`).join("");
+    /* several uploaded files: a list, one row per file, with what kind of file it is and the result of its check */
+    const kindOf = (l) => ({ raster: "drawing", ifc: "IFC model", "dxf-layered": "CAD", "pdf-vector": "PDF tables" }[l.format] || (l.format || ""));
+    const dot = (l) => (l.check ? `<i class="dot ${l.check.findings.some((f) => f.status === "fail") ? "fail" : "pass"}"></i>` : l.checkError ? `<i class="dot nc"></i>` : `<i class="dot none"></i>`);
+    p.classList.toggle("filelist", !!S.files);
+    p.innerHTML = S.files
+      ? `<span class="k">Files · ${S.layers.length}</span>` + S.layers.map((l, i) => `<button type="button" class="${i === S.active ? "active" : ""}" data-i="${i}" title="${esc(l.name || l.label)}">${dot(l)}<span class="fn">${esc(l.name || l.label)}</span><span class="fk">${esc(kindOf(l))}</span></button>`).join("")
+      : `<span class="k">Layers</span>` + S.layers.map((l, i) => `<button type="button" class="${i === S.active ? "active" : ""}" data-i="${i}">${esc(l.label)}</button>`).join("");
+    $("allBtn").hidden = !(S.files && S.layers.length > 1); if ($("allBtn").hidden && S.askAll) { S.askAll = false; $("allBtn").setAttribute("aria-pressed", "false"); $("askInput").placeholder = "Ask about this drawing"; }
     p.querySelectorAll("button").forEach((b) => { b.onclick = () => setLayer(Number(b.dataset.i)); });
   }
   async function setLayer(i) {
-    S.active = i; const l = layer(); renderLayerPill(); select(null); $("card").hidden = true; $("note").hidden = true; $("view3d").hidden = true;
+    S.active = i; const l = layer(); renderLayerPill(); select(null); if (S.files) $("titleText").textContent = l.name || l.label; $("card").hidden = true; $("note").hidden = true; $("view3d").hidden = true;
     const img = $("sheetImg"), first = !S.W;
     if (!l.img) { busy("Loading the " + l.label.toLowerCase() + " layer"); l.img = await new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = () => no(new Error("The drawing could not be loaded")); im.src = l.image_url; }); idle(); }
     img.src = l.img.src; S.W = l.img.naturalWidth; S.H = l.img.naturalHeight;
@@ -93,8 +100,8 @@
     if (!same) fit(); else apply();
   }
   function renderPagePill() {
-    const l = layer(), p = $("layerPill");
-    if (!l || !l.simple || !l.pages || l.pages.length < 2) { if (l && l.simple) p.hidden = true; return; }
+    const l = layer(), p = $("pagePill"); p.style.top = (S.layers.length > 1 && !$("layerPill").hidden ? Math.round($("layerPill").getBoundingClientRect().bottom) + 8 : 14) + "px";
+    if (!l || !l.simple || !l.pages || l.pages.length < 2) { p.hidden = true; return; }
     p.hidden = false;
     p.innerHTML = `<button type="button" id="pgPrev" ${l.page <= 0 ? "disabled" : ""}>‹</button><span class="k" style="padding:0 6px">Page ${l.page + 1} of ${l.pages.length}</span><button type="button" id="pgNext" ${l.page >= l.pages.length - 1 ? "disabled" : ""}>›</button>`;
     const go = async (d) => { l.page = Math.max(0, Math.min(l.pages.length - 1, l.page + d)); renderPagePill(); busy("Loading page " + (l.page + 1)); try { await showImage(l.pages[l.page].preview_url, false); } catch (e) {} idle(); };
@@ -252,11 +259,14 @@
     const btn = $("analyseBtn"); btn.disabled = true; busy("Checking the plan against the rules");
     try {
       await Promise.all(S.layers.map(async (l) => {
-        const a = await api("/api/chat/ask", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ session_id: SID, doc_id: l.doc_id, question: "Check this plan against the regulations", allow_llm: false }) });
+        l.checkError = null;
+        let a; try { a = await api("/api/chat/ask", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ session_id: SID, doc_id: l.doc_id, question: "Check this plan against the regulations", allow_llm: false }) }); }
+        catch (e) { if (!S.files) throw e; l.checkError = e.message; return; }
+        if (!a.findings && S.files) { l.check = null; l.checkError = l.simple ? "Not a floor plan image: there are no traced rooms to check. Questions about it still work." : ((a.refusal && a.refusal.why) || a.reason || "This drawing has no traced rooms to check"); return; }
         if (!a.findings) throw new Error(l.simple ? "The plan check works on floor plan images, where rooms are traced from the walls. This file is opened in simple mode: ask questions about it below." : ((a.refusal && a.refusal.why) || a.reason || "This drawing has no traced rooms to check"));
         l.check = { findings: a.findings, room_marks: a.room_marks || {}, cost: a.cost }; l.answer = null;
       }));
-      draw(); openSummary();
+      renderLayerPill(); draw(); if (S.files && S.layers.length > 1) openFilesSummary(); else if (layer().check) openSummary(); else note(`<div class="v bad">Not checked</div><div class="t">${esc(layer().checkError || "")}</div>`);
     } catch (e) { note(`<div class="v bad">Not checked</div><div class="t">${esc(e.message)}</div>`); }
     idle(); btn.disabled = false;
   }
@@ -300,8 +310,32 @@
     const passRooms = Object.values(l.marks || {}).filter((m) => m.status === "pass").length;
     const c = card(`<div class="kick">Plan check · ${esc(l.label)} layer</div><h2>${fs.filter(([f]) => f.status === "fail").length} failed${l.key === "fire" ? `, ${passRooms} rooms pass` : ""}</h2>
       <div class="flist">${fs.map(([f, i]) => `<button type="button" data-i="${i}"><span class="s ${esc(f.status)}"></span>${esc(f.title)}</button>`).join("")}</div>
-      ${S.layers.length > 1 ? `<p class="tr" style="margin-top:8px">Other findings are on the ${esc(S.layers[1 - S.active].label)} layer.</p>` : ""}${costHtml(l.check)}`);
+      ${S.files && S.layers.length > 1 ? `<div class="links"><a href="#" id="cAllFiles">All ${S.layers.length} files</a></div>` : S.layers.length === 2 ? `<p class="tr" style="margin-top:8px">Other findings are on the ${esc(S.layers[1 - S.active].label)} layer.</p>` : ""}${costHtml(l.check)}`);
+    const af = c.querySelector("#cAllFiles"); if (af) af.onclick = (e) => { e.preventDefault(); openFilesSummary(); };
     c.querySelectorAll(".flist button").forEach((b) => { b.onclick = () => { const f = l.check.findings[Number(b.dataset.i)], r = f.room && l.data.rooms.find((x) => x.id === f.room); if (r) openFinding(r, [Number(b.dataset.i)]); else card(findingHtml(f)); }; });
+  }
+
+  /* plan check over several files: one line per file, click to open that file's findings */
+  function openFilesSummary() {
+    const n = (l, s) => l.check.findings.filter((f) => f.status === s).length, failed = S.layers.filter((l) => l.check && n(l, "fail")).length, done = S.layers.filter((l) => l.check).length;
+    const c = card(`<div class="kick">Plan check · ${S.layers.length} files</div><h2>${failed} of ${done} checked file${done === 1 ? "" : "s"} ${failed === 1 ? "has" : "have"} failed findings</h2>
+      <div class="flist">${S.layers.map((l, i) => `<button type="button" data-i="${i}"><span class="s ${l.check ? (n(l, "fail") ? "fail" : "pass") : "not_checked"}"></span><b>${esc(l.name || l.label)}</b><br><span class="tr">${l.check ? `${n(l, "fail")} failed, ${n(l, "pass")} passed, ${n(l, "not_checked")} not checked` : esc(l.checkError || "Not checked")}</span></button>`).join("")}</div>
+      ${costHtml({ cost: { eur: 0, session_total_eur: (S.layers.map((l) => l.check && l.check.cost).filter(Boolean).pop() || {}).session_total_eur } })}`);
+    c.querySelectorAll(".flist button").forEach((b) => { b.onclick = async () => { const i = Number(b.dataset.i); await setLayer(i); if (S.layers[i].check) openSummary(); else note(`<div class="q">${esc(S.layers[i].name || "")}</div><div class="t">${esc(S.layers[i].checkError || "Not checked")}</div>`); }; });
+  }
+  /* the same question to every open file, answers side by side */
+  async function askAll(q) {
+    busy(`Asking ${S.layers.length} files`);
+    const rs = await Promise.all(S.layers.map((l) => api("/api/chat/ask", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ session_id: SID, doc_id: l.doc_id, question: q, allow_llm: true }) }).then((a) => ({ l, a }), (e) => ({ l, error: e.message }))));
+    const val = (a) => (a.status === "ok" ? (typeof a.value === "object" ? "see the file" : String(a.value) + (a.unit && a.unit !== "count" ? " " + a.unit : "")) : null);
+    const nums = rs.filter((r) => r.a && r.a.status === "ok" && typeof r.a.value === "number"), units = new Set(nums.map((r) => r.a.unit || ""));
+    const total = nums.length > 1 && units.size === 1 ? +nums.reduce((s, r) => s + r.a.value, 0).toFixed(3) : null, unit = [...units][0], spent = rs.reduce((s, r) => s + ((r.a && r.a.cost && r.a.cost.eur) || 0), 0);
+    const sess = Math.max(0, ...rs.map((r) => (r.a && r.a.cost && r.a.cost.session_total_eur) || 0));
+    note(`<div class="q">${esc(q)} · ${S.layers.length} files</div>${total != null ? `<div class="v">${total}${unit && unit !== "count" ? " " + esc(unit) : ""} in total</div><div class="t">Sum of the ${nums.length} files that gave a number${nums.length < rs.length ? "; " + (rs.length - nums.length) + " did not" : ""}.</div>` : ""}
+      <table class="rtable"><thead><tr><th>File</th><th class="n">Answer</th></tr></thead><tbody>${rs.map((r, i) => `<tr class="gofile" data-i="${i}"><td>${esc(r.l.name || r.l.label)}</td><td class="n${r.a && val(r.a) != null ? "" : " bad"}">${esc(r.error ? "Not answered: " + r.error : val(r.a) != null ? val(r.a) : "Not answered: " + ((r.a.refusal && r.a.refusal.why) || r.a.reason || "not in this file"))}</td></tr>`).join("")}</tbody></table>
+      <div class="cost"><b>${eur(spent)}</b><span>${spent ? "model calls for this question, all files" : "computed by code, no AI model"}</span><span class="tot">session ${eur(sess)}</span></div>`);
+    $("note").querySelectorAll("tr.gofile").forEach((tr) => { tr.style.cursor = "pointer"; tr.onclick = () => setLayer(Number(tr.dataset.i)); });
+    idle();
   }
 
   // ---------- a room: click and right-click
@@ -384,6 +418,7 @@
   function note(html) { const n = $("note"); n.innerHTML = `<button type="button" class="x" aria-label="Close">×</button>` + html; n.hidden = false; n.querySelector(".x").onclick = () => { n.hidden = true; }; }
   async function ask(q) {
     const l = layer(); if (!l || !q.trim()) return;
+    if (S.askAll && S.layers.length > 1) return askAll(q);
     busy("Working out the answer");
     try {
       const a = await api("/api/chat/ask", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ session_id: SID, doc_id: l.doc_id, question: q, allow_llm: true }) });
@@ -424,38 +459,54 @@
     busy("Opening the school plan", true); $("startNote").textContent = "";
     try {
       const d = await api("/api/chat/studio/demo", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ session_id: SID }) });
-      if (S.is3d) hide3d(); S.layers = d.layers; S.W = 0; $("titleText").textContent = d.title; idle(); await setLayer(0);
+      if (S.is3d) hide3d(); S.layers = d.layers; S.files = false; S.W = 0; $("titleText").textContent = d.title; idle(); await setLayer(0);
       /* load the second layer in the background so the switch is instant */
       S.layers.slice(1).forEach((l) => { const im = new Image(); im.onload = () => { l.img = im; }; im.src = l.image_url; api(`/api/chat/studio/rooms?session_id=${SID}&doc_id=${l.doc_id}`).then((x) => { l.data = x; }).catch(() => {}); });
     } catch (e) { idle(); $("startNote").textContent = e.message; }
   }
-  async function upload(file) {
-    busy("Uploading " + file.name, true); $("startNote").textContent = "";
-    /* an image is already in the browser: put it on screen now, and let the server's reading arrive on top of it */
+  /* Open one or several files. Each file becomes a tab in the top-left pill; Analyse and "All files" questions run over all of
+     them. append=true (the Add file button) adds to what is open instead of replacing it. */
+  const shortName = (n) => { const b = String(n || "file").replace(/\.[a-z0-9]+$/i, ""); return b.length > 22 ? b.slice(0, 20) + "…" : b; };
+  function docLayer(doc, i) {
+    /* images get the full treatment (rooms, marks drawn here). Tables, CAD files and models have no room layer on an image yet:
+       they open in a simple mode, where the server paints the evidence of each answer onto the page or plan. */
+    return { key: "file" + i, label: shortName(doc.display_name), doc_id: doc.doc_id, image_url: doc.preview_url, name: doc.display_name, simple: doc.format !== "raster", format: doc.format,
+             summary: doc.understood_summary, pages: (doc.pages || []).filter((p) => p.preview_url), page: 0, suggested: doc.suggested_questions || [] };
+  }
+  async function upload(files, append) {
+    files = [...files]; if (!files.length) return;
+    const many = files.length > 1, keep = append && S.layers.length && !$("dock").hidden ? S.layers : [];
+    busy(many ? `Reading ${files.length} files` : "Uploading " + files[0].name, true); $("startNote").textContent = "";
+    /* a single image is already in the browser: put it on screen now, and let the server's reading arrive on top of it */
     let local = null;
-    if (/^image\/(png|jpeg|webp)$/.test(file.type)) {
-      const im = new Image(); im.src = URL.createObjectURL(file);
+    if (!many && !keep.length && /^image\/(png|jpeg|webp)$/.test(files[0].type)) {
+      const im = new Image(); im.src = URL.createObjectURL(files[0]);
       im.decode().then(() => { if ($("busy").hidden || local === false) return; local = im; if (S.is3d) hide3d(); S.layers = []; $("sheetSvg").innerHTML = ""; $("sheetPins").innerHTML = ""; $("sheetImg").src = im.src; S.W = im.naturalWidth; S.H = im.naturalHeight;
-        $("sheet").style.width = S.W + "px"; $("sheet").style.height = S.H + "px"; $("sheet").hidden = false; $("start").hidden = true; $("layerPill").hidden = true; $("resultPill").hidden = true; $("card").hidden = true; $("note").hidden = true; fit(); }).catch(() => {});
+        $("sheet").style.width = S.W + "px"; $("sheet").style.height = S.H + "px"; $("sheet").hidden = false; $("start").hidden = true; $("layerPill").hidden = true; $("pagePill").hidden = true; $("resultPill").hidden = true; $("card").hidden = true; $("note").hidden = true; fit(); }).catch(() => {});
     }
-    try {
-      const d = await api(`/api/chat/upload?session_id=${SID}&filename=${encodeURIComponent(file.name)}`, { method: "POST", headers: { "content-type": file.type || "application/octet-stream" }, body: file });
-      const doc = d.document;
-      /* images get the full treatment (rooms, marks drawn here). Tables, CAD files and models have no room layer on an image yet:
-         they open in a simple mode, where the server paints the evidence of each answer onto the page or plan. */
-      const simple = doc.format !== "raster";
-      S.layers = [{ key: "sheet", label: "Sheet", doc_id: doc.doc_id, image_url: doc.preview_url, name: doc.display_name, simple, format: doc.format, summary: doc.understood_summary,
-                    pages: (doc.pages || []).filter((p) => p.preview_url), page: 0, suggested: doc.suggested_questions || [] }];
-      if (!simple && local && local.naturalWidth) S.layers[0].img = local;      /* same picture: no second download */
-      const shown = !simple && local && S.W === local.naturalWidth; local = false;
-      if (S.is3d) hide3d(); if (!shown) S.W = 0; $("titleText").textContent = doc.display_name; idle(); await setLayer(0);
-      if (doc.timings) console.info("Reading steps (s):", doc.timings.map((t) => t[0] + " " + t[1]).join(" | "));
-      if (simple) note(`<div class="q">${esc(doc.display_name)}</div><div class="t">${esc(doc.understood_summary || "")}</div><div class="t">Ask a question below. Room clicks, layers and the plan check work on floor plan images.</div>`);
-    } catch (e) { local = false; idle(); $("startNote").textContent = e.message; $("sheet").hidden = true; $("dock").hidden = true; $("start").hidden = false; }
+    /* the files are sent at the same time; a file that cannot be read is reported and does not stop the others */
+    const res = await Promise.all(files.map((f) => api(`/api/chat/upload?session_id=${SID}&filename=${encodeURIComponent(f.name)}`, { method: "POST", headers: { "content-type": f.type || "application/octet-stream" }, body: f })
+      .then((d) => ({ doc: d.document }), (e) => ({ error: e.message, name: f.name }))));
+    const ok = res.filter((r) => r.doc), bad = res.filter((r) => r.error);
+    if (!ok.length) { local = false; idle(); const msg = bad.map((b) => (many ? b.name + ": " : "") + b.error).join(" · "); if (keep.length) note(`<div class="v bad">Not opened</div><div class="t">${esc(msg)}</div>`); else { $("startNote").textContent = msg; $("sheet").hidden = true; $("dock").hidden = true; $("start").hidden = false; } return; }
+    const fresh = ok.map((r, i) => docLayer(r.doc, keep.length + i));
+    if (!many && !keep.length && !fresh[0].simple && local && local.naturalWidth) fresh[0].img = local;      /* same picture: no second download */
+    const shown = !many && !keep.length && !fresh[0].simple && local && S.W === local.naturalWidth; local = false;
+    if (S.is3d) hide3d();
+    S.layers = keep.concat(fresh); S.files = !S.layers.some((l) => l.key === "architecture" || l.key === "fire") || S.layers.length > 2; if (!shown) S.W = 0;
+    idle(); await setLayer(keep.length);
+    ok.forEach((r) => { if (r.doc.timings) console.info(r.doc.display_name, "reading steps (s):", r.doc.timings.map((t) => t[0] + " " + t[1]).join(" | ")); });
+    const first = ok[0].doc;
+    if (S.layers.length > 1) note(`<div class="q">${S.layers.length} files open</div><div class="t">${ok.map((r) => `<b>${esc(r.doc.display_name)}</b>: ${esc(r.doc.understood_summary || "")}`).join("<br>")}</div>${bad.length ? `<div class="t bad">${bad.map((b) => esc(b.name + ": " + b.error)).join("<br>")}</div>` : ""}<div class="t">Switch files with the tabs at the top left. Analyse checks all of them; turn on "All files" to ask every file the same question.</div>`);
+    else if (fresh[0].simple) note(`<div class="q">${esc(first.display_name)}</div><div class="t">${esc(first.understood_summary || "")}</div><div class="t">Ask a question below. Room clicks, layers and the plan check work on floor plan images.</div>`);
   }
 
   $("openSampleBtn").onclick = openSample;
-  $("fileInput").onchange = (e) => { const f = e.target.files[0]; e.target.value = ""; if (f) upload(f); };
+  $("fileInput").onchange = (e) => { const fs = [...e.target.files], add = S.addMode; S.addMode = false; e.target.value = ""; if (fs.length) upload(fs, add); };
+  /* drop files anywhere on the page */
+  window.addEventListener("dragover", (e) => { e.preventDefault(); });
+  window.addEventListener("drop", (e) => { e.preventDefault(); const fs = [...((e.dataTransfer && e.dataTransfer.files) || [])]; if (fs.length) upload(fs, !$("dock").hidden); });
+  $("allBtn").onclick = () => { S.askAll = !S.askAll; $("allBtn").setAttribute("aria-pressed", String(S.askAll)); $("askInput").placeholder = S.askAll ? "Ask all " + S.layers.length + " files" : "Ask about this drawing"; };
   $("analyseBtn").onclick = analyse;
   $("fitBtn").onclick = () => { if (S.is3d) window.Studio3D.reset(); else fit(); };
   $("d3Btn").onclick = () => { if (S.is3d) hide3d(); else show3d(); };
@@ -465,9 +516,9 @@
     if (S.showRead && l && !l.simple && !l.overlay) { busy("Loading what was read"); try { l.overlay = (await api(`/api/chat/overlay?session_id=${SID}&doc_id=${l.doc_id}`)).shapes || []; } catch (e) { l.overlay = []; } idle(); }
     draw();
   };
-  $("addBtn").onclick = () => $("fileInput").click();
+  $("addBtn").onclick = () => { S.addMode = true; $("fileInput").click(); };
   $("askForm").onsubmit = (e) => { e.preventDefault(); const v = $("askInput").value; $("askInput").value = ""; ask(v); };
-  $("titleBtn").onclick = () => { $("legend").hidden = true; if (S.is3d) hide3d(); $("sheet").hidden = true; $("dock").hidden = true; $("layerPill").hidden = true; $("resultPill").hidden = true; $("card").hidden = true; $("note").hidden = true; $("start").hidden = false; };
+  $("titleBtn").onclick = () => { $("legend").hidden = true; $("pagePill").hidden = true; if (S.is3d) hide3d(); $("sheet").hidden = true; $("dock").hidden = true; $("layerPill").hidden = true; $("resultPill").hidden = true; $("card").hidden = true; $("note").hidden = true; $("start").hidden = false; };
   $("stage").addEventListener("contextmenu", (e) => { if (!$("sheet").hidden) e.preventDefault(); });
   if (new URLSearchParams(location.search).get("sample") === "1") openSample();
 })();

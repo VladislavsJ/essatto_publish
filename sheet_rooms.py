@@ -50,11 +50,27 @@ def trace(image, det_path, work=0.5, closures=None):
     doors = [b for c, s, b in boxes if c == "door"]; wins = [b for c, s, b in boxes if c == "window"]
 
     # ---- 1 walls: dark AND thick. Stroke thickness of thin lines is measured, walls are several times thicker.
-    dark = (g < 110).astype(np.uint8)
-    dist = cv2.distanceTransform(dark, cv2.DIST_L2, 3)
-    half_w = float(np.percentile(dist[dist > 2.5], 75)) if (dist > 2.5).any() else 4.0     # typical wall half-thickness (px, working scale)
-    t = max(3, int(round(half_w * 0.9)))
-    walls = cv2.morphologyEx(dark, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (t, t)))
+    # Two readings of "dark". (a) absolute: darker than 110 of 255, right for black ink on white. (b) by contrast: darker than the
+    # paper AROUND it by a share of the drawing's own ink contrast, which also reads grey or faded walls and aged or unevenly
+    # lit paper. (b) replaces (a) only when it finds clearly more wall-thick ink, so clean black drawings are read exactly as before.
+    def _thick(dark):
+        dist = cv2.distanceTransform(dark, cv2.DIST_L2, 3)
+        hw = float(np.percentile(dist[dist > 2.5], 75)) if (dist > 2.5).any() else 4.0     # typical wall half-thickness (px, working scale)
+        t_ = max(3, int(round(hw * 0.9)))
+        return hw, t_, cv2.morphologyEx(dark, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (t_, t_)))
+    dark = (g < 110).astype(np.uint8); half_w, t, walls = _thick(dark); ink = {"rule": "darker than 110 of 255"}
+    try:
+        sm = cv2.resize(g, (max(8, W // 8), max(8, H // 8)), interpolation=cv2.INTER_AREA)
+        paper = cv2.GaussianBlur(cv2.morphologyEx(sm, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_RECT, (25, 25))), (0, 0), 6)     # local paper tone: strokes removed
+        con = cv2.resize(paper, (W, H), interpolation=cv2.INTER_LINEAR).astype(np.int16) - g.astype(np.int16)
+        span = float(np.percentile(con[::4, ::4], 99.7))                                   # contrast of the darkest ink against its paper
+        cthr = max(38.0, float(os.environ.get("BP_WALL_CONTRAST", "0.33")) * span); dark_c = (con > cthr).astype(np.uint8)
+        if 0 < dark_c.mean() < 0.20:
+            hw_c, t_c, walls_c = _thick(dark_c)
+            if walls_c.mean() >= 1.5 * max(walls.mean(), 1e-6) and walls_c.mean() > 0.002:
+                dark, half_w, t, walls = dark_c, hw_c, t_c, walls_c
+                ink = {"rule": "by contrast with the surrounding paper", "contrast_needed": round(cthr, 1), "ink_contrast": round(span, 1), "paper_tone": round(float(np.median(paper)), 1)}
+    except Exception: pass
     # drop small solid blobs that are not walls (arrow heads, filled symbols): keep components with a long extent
     n, lab, st, _ = cv2.connectedComponentsWithStats(walls, 8)
     keep = np.zeros(n, bool)
@@ -145,7 +161,7 @@ def trace(image, det_path, work=0.5, closures=None):
     free = (closed == 0).astype(np.uint8)
     n, lab, st, cen = cv2.connectedComponentsWithStats(free, 4)
     border = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]])))
-    return {"image": image, "g": g, "k": k, "W0": W0, "H0": H0, "W": W, "H": H, "closed": closed, "free": free, "lab": lab, "st": st, "cen": cen, "n": n,
+    return {"ink": ink, "image": image, "g": g, "k": k, "W0": W0, "H0": H0, "W": W, "H": H, "closed": closed, "free": free, "lab": lab, "st": st, "cen": cen, "n": n,
             "border": border, "openings": openings, "unclosed": unclosed, "wall_t": wall_t, "t": t, "doors": doors, "wins": wins}
 
 def finish(A, ocr, out, scale=None, paper=None, debug=False):
@@ -279,7 +295,7 @@ def finish(A, ocr, out, scale=None, paper=None, debug=False):
     con.commit()
     np.savez(os.path.join(out, "state.npz"), closed=closed, lab=lab.astype(np.int32), k=k, wall_t=wall_t, m_per_px=(m_per_px or 0), room_cc=np.array([r["cc"] for r in rooms]))
     json.dump(ocr, open(os.path.join(out, "ocr.json"), "w"))
-    summary = {"rooms": len(rooms), "buildings": len(set(r["building"] for r in rooms)), "area_m2": round(sum(r["area_m2"] for r in rooms), 1) if m_per_px else None,
+    summary = {"wall_ink": A.get("ink"), "rooms": len(rooms), "buildings": len(set(r["building"] for r in rooms)), "area_m2": round(sum(r["area_m2"] for r in rooms), 1) if m_per_px else None,
                "doors_closed": sum(o["kind"] == "door" for o in openings), "doors": len(doors), "windows_closed": sum(o["kind"] == "window" for o in openings), "windows": len(wins), "scale": scale, "paper": paper}
     if not debug: return summary
     ov = cv2.cvtColor(g, cv2.COLOR_GRAY2BGR); rng = np.random.RandomState(3); tint = np.zeros_like(ov)

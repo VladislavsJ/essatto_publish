@@ -210,7 +210,10 @@ A detector trained on small flat plans sees nothing on an A1 sheet squeezed into
 `sheet_rooms.py` turns a scanned plan into a small SQLite database (`sheet.db`): rooms, openings, buildings and
 the scale.
 
-1. **Walls** are found as thick dark strokes; the wall thickness is measured.
+1. **Walls** are found as thick dark strokes; the wall thickness is measured. "Dark" is read two ways: darker
+   than a fixed level, which suits black ink on white, or darker than the surrounding paper by a share of the
+   drawing's own ink contrast, which also reads grey or faded walls on aged paper. The second replaces the first
+   only when it finds clearly more wall, so clean drawings are read exactly as before.
 2. **Openings are closed.** Each door and window box from the detector is bridged across its wall gap, so rooms
    become closed regions.
 3. **Rooms** are the enclosed regions. Each gets an outline, area, perimeter, the doors and windows on its
@@ -484,6 +487,8 @@ python determinism.py out.json               # run twice; the fingerprints must 
 - Cost of every answer in euros, with the model, tokens and session total
 - "How this was worked out" on every answer
 - "Add file" in the bar; an uploaded image is shown at once; a loading bar follows the server's steps
+- Several files at once: pick or drop many files; a file list at the top left with each file's kind and check result;
+  Analyse checks all of them; "All files" asks every file the same question and adds up the numbers
 
 **Running it**
 - Access code for every page and API call; cap on model calls per server start

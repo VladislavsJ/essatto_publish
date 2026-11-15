@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/chat/studio.css?v=13" />
+  <link rel="stylesheet" href="/chat/studio.css?v=15" />
   <script type="importmap">{ "imports": { "three": "/chat/three.module.js" } }</script>
 </head>
 <body>
@@ -26,10 +26,10 @@
       <div class="start-card">
       <img class="start-logo" src="/chat/logo.png" alt="" width="56" height="56" />
       <h1>Essatto</h1>
-      <p>Open a drawing. It is read into rooms, doors and symbols, and checked against the rules.</p>
+      <p>Open one or several drawings. Each is read into rooms, doors and symbols, and checked against the rules.</p>
       <div class="start-actions">
         <button type="button" class="primary" id="openSampleBtn">Open the school plan</button>
-        <label class="ghost"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>Upload a drawing<input type="file" id="fileInput" hidden accept=".png,.jpg,.jpeg,.webp,.pdf,.dxf,.dwg,.ifc,.svg,.tif,.tiff" /></label>
+        <label class="ghost"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>Upload drawings<input type="file" id="fileInput" hidden multiple accept=".png,.jpg,.jpeg,.webp,.pdf,.dxf,.dwg,.ifc,.svg,.tif,.tiff" /></label>
       </div>
       <p class="start-note" id="startNote"></p>
       </div>
@@ -38,6 +38,8 @@
 
   <!-- top left: layers of the same sheet -->
   <div class="pill pill-left" id="layerPill" hidden></div>
+  <!-- pages of the open file, when it has more than one -->
+  <div class="pill pill-left pill-pages" id="pagePill" hidden></div>
   <!-- top right: result of the plan check -->
   <div class="pill pill-right" id="resultPill" hidden></div>
 
@@ -47,7 +49,7 @@
     <button type="button" class="dock-toggle" id="addBtn" title="Open another drawing: image, PDF, DXF, DWG or IFC"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 12v6M9 15h6"/></svg><span>Add file</span></button>
     <button type="button" class="dock-main" id="analyseBtn" title="Check this plan against the rules"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg><span>Analyse</span></button>
     <button type="button" class="dock-toggle" id="readBtn" aria-pressed="false" title="Show the rooms, doors, windows and symbols that were read on this layer"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>What was read</span></button>
-    <form class="dock-ask" id="askForm"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg><input id="askInput" type="text" placeholder="Ask about this drawing" autocomplete="off" /></form>
+    <form class="dock-ask" id="askForm"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg><input id="askInput" type="text" placeholder="Ask about this drawing" autocomplete="off" /><button type="button" class="ask-all" id="allBtn" aria-pressed="false" hidden title="Ask every open file the same question">All files</button></form>
     <button type="button" class="dock-toggle" id="d3Btn" aria-pressed="false" title="Show this drawing in 3D"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg><span>3D</span></button>
     <button type="button" class="dock-toggle" id="fitBtn" title="Fit the drawing to the screen"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>Fit</span></button>
   </div>
@@ -65,7 +67,7 @@
   <div class="legend" id="legend" hidden></div>
   <div class="busy" id="busy" hidden><span class="spin" id="busySpin"></span><span id="busyText">Working</span><span class="bar" id="busyBarWrap" hidden><i id="busyBar"></i></span></div>
 
-  <script src="/chat/studio.js?v=11"></script>
+  <script src="/chat/studio.js?v=13"></script>
   <script type="module" src="/chat/studio3d.js?v=1"></script>
 </body>
 </html>

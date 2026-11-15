@@ -583,6 +583,7 @@ def _run_yolo_detector(img_path: str) -> tuple[bool, str | None]:
 
 # What the server is doing for a session right now, read by the page's loading bar (GET /api/chat/studio/progress).
 PROGRESS: dict = {}
+_MANIFEST_LOCK = threading.Lock()
 _CUR = threading.local()
 
 
@@ -1886,9 +1887,10 @@ def ingest_upload(session_id: str, filename: str | None, data: bytes, selected_p
     doc_meta["suggested_questions"] = suggest_questions(st, doc_meta)
 
     doc_meta["timings"] = _timings()
-    manifest = load_manifest(sid)
-    manifest["documents"].append(doc_meta)
-    save_manifest(sid, manifest)
+    with _MANIFEST_LOCK:        # several files of one session can be read at the same time; the list of documents is updated one at a time
+        manifest = load_manifest(sid)
+        manifest["documents"].append(doc_meta)
+        save_manifest(sid, manifest)
     return public_doc_view(doc_meta)
 
 

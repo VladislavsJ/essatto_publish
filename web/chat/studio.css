@@ -214,3 +214,23 @@ button, input { font: inherit; color: inherit; }
 .legend div { display: flex; align-items: center; gap: 8px; padding: 2px 0; } .legend i { width: 11px; height: 11px; border-radius: 3px; flex: none; border: 1.5px solid; }
 .legend b { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; padding-left: 14px; }
 .legend p { color: var(--muted); font-size: 11.5px; margin-top: 6px; max-width: 220px; line-height: 1.4; }
+
+/* ---- several files: tabs scroll sideways; the page switcher of a file sits under them */
+.pill-left { max-width: calc(100vw - 28px - 330px); overflow-x: auto; scrollbar-width: none; } .pill-left::-webkit-scrollbar { display: none; }
+.pill-left button { white-space: nowrap; flex: none; display: inline-flex; align-items: center; gap: 6px; }
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: var(--faint); } .pill .dot.fail { background: #b3261e; } .pill .dot.pass { background: var(--good); }
+.pill-pages.lower { top: 62px; }
+.ask-all { flex: none; border: 1px solid rgba(255, 255, 255, .5); background: transparent; color: #fff; font-size: 12px; font-weight: 600; padding: 4px 9px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+.ask-all[aria-pressed="true"] { background: #fff; color: var(--brand); border-color: #fff; }
+.note td.bad, .note .t.bad { color: var(--bad); }
+.flist button b { font-weight: 600; } .flist button { line-height: 1.4; }
+@media (max-width: 720px) { .pill-left { max-width: calc(100vw - 28px); } }
+
+/* ---- file list, top left: one row per uploaded file */
+.pill.filelist { flex-direction: column; align-items: stretch; gap: 1px; border-radius: 14px; padding: 6px; width: 270px; max-width: calc(100vw - 28px); max-height: 46vh; overflow-y: auto; overflow-x: hidden; }
+.pill.filelist .k { padding: 4px 8px 6px; margin: 0; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.pill.filelist button { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; border-radius: 9px; padding: 7px 8px; color: var(--ink); font-weight: 500; }
+.pill.filelist button:hover { background: var(--soft); } .pill.filelist button.active { background: var(--pine-soft); font-weight: 600; }
+.pill.filelist .fn { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pill.filelist .fk { flex: none; color: var(--muted); font-size: 11px; font-weight: 500; }
+.pill .dot.none { background: transparent; border: 1.5px solid var(--line-strong); }
