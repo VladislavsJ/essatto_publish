@@ -21,6 +21,39 @@ question ── rules ─ (memory) ─ small model ─ large model ┘        tr
             cheapest first; each step only if the one before could not read the question
 ```
 
+## Demo
+
+![Essatto showing an evacuation path and the fire-safety rule it was checked against](docs/media/screenshot.png)
+
+🎬 **[Watch the 1-minute demo](docs/media/essatto-demo.mp4)**
+
+**Open a drawing.** Start from the sample school plan or upload your own; it is read into rooms, doors and symbols.
+
+![Open a drawing](docs/media/01-open-drawing.gif)
+
+**Room data and selection.** Click a room for its area, perimeter, baseboard, doors, windows and seats;
+shift-click several rooms for a table with totals.
+
+![Room data and multi-select](docs/media/02-room-data-multiselect.gif)
+
+**Ask about the drawing.** "find area of multi purpose hall": the answer is marked on the plan, with its cost in
+euros and the session total.
+
+![Ask about the drawing](docs/media/03-ask-area.gif)
+
+**Check across the plan.** "check area of the classroom": every matching room is highlighted and listed.
+
+![Check classroom areas](docs/media/04-check-classrooms.gif)
+
+**Evacuation path.** Distance to the nearest exit, doors on the way and exit width, against Finland's fire safety
+decree 848/2017, 32 § and Table 10.
+
+![Evacuation path](docs/media/05-evacuation-path.gif)
+
+**Official text.** Each rule links to the official source on Finlex and to a saved copy.
+
+![Official regulation text](docs/media/06-official-regulation.gif)
+
 ## Contents
 
 1. [What each file format goes through](#1-what-each-file-format-goes-through)
