@@ -33,6 +33,9 @@ Building Bulletin 103, guidance).
 
 ![Essatto showing an evacuation path and the fire-safety rule it was checked against](docs/media/screenshot.png)
 
+<details>
+<summary><h3>More features: 6 short clips (click to open)</h3></summary>
+
 **Open a drawing.** Start from the sample school plan or upload your own; it is read into rooms, doors and symbols.
 
 ![Open a drawing](docs/media/01-open-drawing.gif)
@@ -59,6 +62,8 @@ decree 848/2017, 32 § and Table 10.
 **Official text.** Each rule links to the official source on Finlex and to a saved copy.
 
 ![Official regulation text](docs/media/06-official-regulation.gif)
+
+</details>
 
 ## Contents
 
