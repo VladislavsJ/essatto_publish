@@ -23,9 +23,15 @@ question ── rules ─ (memory) ─ small model ─ large model ┘        tr
 
 ## Demo
 
-![Essatto showing an evacuation path and the fire-safety rule it was checked against](docs/media/screenshot.png)
+![Plan check: Analyse marks the kitchen with no fire detector (Finland, statutory) and a classroom too small for 30 pupils (England, guidance)](docs/media/00-plan-check.gif)
+
+**Plan check.** Analyse checks the drawing against the rules. Failed rooms get a red pin and a finding card:
+here a kitchen with no fire detector (Finland, decree 848/2017) and a classroom too small for 30 pupils (England,
+Building Bulletin 103, guidance).
 
 🎬 **[Watch the 1-minute demo](docs/media/essatto-demo.mp4)**
+
+![Essatto showing an evacuation path and the fire-safety rule it was checked against](docs/media/screenshot.png)
 
 **Open a drawing.** Start from the sample school plan or upload your own; it is read into rooms, doors and symbols.
 
